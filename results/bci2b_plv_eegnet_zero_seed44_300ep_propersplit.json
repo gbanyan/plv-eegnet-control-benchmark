@@ -1,0 +1,135 @@
+{
+  "per_subject": [
+    {
+      "subject": 1,
+      "best_val_acc": 0.696875,
+      "best_epoch": 83,
+      "inner_val_best": 0.8375,
+      "eval_at_best_val": 0.696875,
+      "eval_last": 0.69375,
+      "eval_oracle_best": 0.728125,
+      "last_val_acc": 0.69375,
+      "epochs": 300,
+      "elapsed_s": 3.7
+    },
+    {
+      "subject": 2,
+      "best_val_acc": 0.5285714285714286,
+      "best_epoch": 269,
+      "inner_val_best": 0.625,
+      "eval_at_best_val": 0.5285714285714286,
+      "eval_last": 0.5428571428571428,
+      "eval_oracle_best": 0.55,
+      "last_val_acc": 0.5428571428571428,
+      "epochs": 300,
+      "elapsed_s": 3.5
+    },
+    {
+      "subject": 3,
+      "best_val_acc": 0.5375,
+      "best_epoch": 40,
+      "inner_val_best": 0.6625,
+      "eval_at_best_val": 0.5375,
+      "eval_last": 0.525,
+      "eval_oracle_best": 0.565625,
+      "last_val_acc": 0.525,
+      "epochs": 300,
+      "elapsed_s": 3.4
+    },
+    {
+      "subject": 4,
+      "best_val_acc": 0.95625,
+      "best_epoch": 71,
+      "inner_val_best": 0.9404761904761905,
+      "eval_at_best_val": 0.95625,
+      "eval_last": 0.946875,
+      "eval_oracle_best": 0.9625,
+      "last_val_acc": 0.946875,
+      "epochs": 300,
+      "elapsed_s": 3.8
+    },
+    {
+      "subject": 5,
+      "best_val_acc": 0.84375,
+      "best_epoch": 99,
+      "inner_val_best": 0.8571428571428571,
+      "eval_at_best_val": 0.84375,
+      "eval_last": 0.871875,
+      "eval_oracle_best": 0.88125,
+      "last_val_acc": 0.871875,
+      "epochs": 300,
+      "elapsed_s": 3.8
+    },
+    {
+      "subject": 6,
+      "best_val_acc": 0.721875,
+      "best_epoch": 221,
+      "inner_val_best": 0.6625,
+      "eval_at_best_val": 0.721875,
+      "eval_last": 0.715625,
+      "eval_oracle_best": 0.7375,
+      "last_val_acc": 0.715625,
+      "epochs": 300,
+      "elapsed_s": 3.4
+    },
+    {
+      "subject": 7,
+      "best_val_acc": 0.825,
+      "best_epoch": 61,
+      "inner_val_best": 0.825,
+      "eval_at_best_val": 0.825,
+      "eval_last": 0.8,
+      "eval_oracle_best": 0.840625,
+      "last_val_acc": 0.8,
+      "epochs": 300,
+      "elapsed_s": 3.4
+    },
+    {
+      "subject": 8,
+      "best_val_acc": 0.865625,
+      "best_epoch": 94,
+      "inner_val_best": 0.8409090909090909,
+      "eval_at_best_val": 0.865625,
+      "eval_last": 0.8625,
+      "eval_oracle_best": 0.903125,
+      "last_val_acc": 0.8625,
+      "epochs": 300,
+      "elapsed_s": 3.7
+    },
+    {
+      "subject": 9,
+      "best_val_acc": 0.821875,
+      "best_epoch": 61,
+      "inner_val_best": 0.775,
+      "eval_at_best_val": 0.821875,
+      "eval_last": 0.815625,
+      "eval_oracle_best": 0.825,
+      "last_val_acc": 0.815625,
+      "epochs": 300,
+      "elapsed_s": 3.5
+    }
+  ],
+  "aggregate": {
+    "dataset": "bci2b",
+    "model": "plv_eegnet_zero",
+    "subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "epochs": 300,
+    "lr": 0.001,
+    "device": "cuda",
+    "mean_best": 0.7552579365079365,
+    "std_best": 0.13866010067708115,
+    "mean_last": 0.7526785714285714,
+    "std_last": 0.13779633343018502,
+    "total_elapsed_s": 33.4
+  }
+}
