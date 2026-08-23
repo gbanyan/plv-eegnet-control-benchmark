@@ -1,16 +1,19 @@
-# PLV-EEGNet: Phase-Locking-Value Ablation with a Same-Marginal Control Benchmark
+# Fixed and Resampled Permutation Controls in Connectivity-Augmented EEG Decoding
 
-Reproducible code and result deposit for the manuscript submitted to the
-*Journal of Neuroscience Methods*. This bundle is anonymized for single-blind
-review.
+Reproducible code and result deposit for a manuscript prepared for submission to
+*Digital Signal Processing*. This bundle is anonymized for peer review.
 
 ## Overview
 
 This study asks whether a phase-locking-value (PLV) connectivity branch added to
 EEGNet improves motor-imagery decoding **because it carries genuine inter-channel
 phase-coupling information**, or because the branch merely adds capacity / acts as
-a regularizer. We answer this with an **ablation + same-marginal control
-benchmark**:
+a regularizer. We answer this with an **ablation + permutation-operator control
+benchmark**. Fixed and independently resampled permutations preserve the same
+per-presentation value multiset and static coordinate moments, but generate
+different cross-presentation stochastic processes. For a trial vector with `P`
+coordinates and coordinate variance `s2`, their expected squared
+cross-presentation displacement is respectively `0` and `2 * P * s2`:
 
 | Condition | `--model` value | What it tests |
 |-----------|-----------------|---------------|
@@ -82,7 +85,7 @@ scripts/
   bootstrap_contrasts.py # per-seed contrasts + subject-bootstrap CIs
   analyze_new_exps.py    # fixed-shuffle + bottleneck validation experiments
   precompute_csd.py      # CSD npz precompute for Lee2019/Schirrmeister aux runs
-tests/                   # smoke + loader + converter + shuffle-pairs unit tests
+tests/                   # smoke, loader, shuffle-pairs, and exact operator tests
 results/                 # authoritative per-dataset result JSONs (see manifest)
 figures/                 # rendered figures (PNG + PDF)
 requirements.txt
@@ -135,6 +138,11 @@ from `build_figures`, so keep `scripts/` intact.
 ```bash
 .venv/bin/python -m pytest tests/
 ```
+
+`tests/test_permutation_operator_moments.py` uses exact rational arithmetic and
+enumerates all permutations of a short vector. It verifies the coordinate
+moments, cross-presentation covariance, and expected squared displacement used
+in the manuscript without Monte Carlo error or GPU computation.
 
 ## Results provenance
 
