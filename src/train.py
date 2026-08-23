@@ -51,9 +51,13 @@ def build_dataset(cfg: dict, split: str) -> BCI2aNPZ:
 def run_validation(model, loader, device, criterion) -> tuple[float, float]:
     model.eval()
     total, correct, loss_sum = 0, 0, 0.0
-    for x, y in loader:
+    for batch in loader:
+        x, y = batch[:2]
+        trial_ids = batch[2] if len(batch) == 3 else None
         x, y = x.to(device), y.to(device)
-        logits = model(x)
+        if trial_ids is not None:
+            trial_ids = trial_ids.to(device)
+        logits = model(x, trial_ids=trial_ids) if trial_ids is not None else model(x)
         loss_sum += criterion(logits, y).item() * x.size(0)
         correct += (logits.argmax(dim=1) == y).sum().item()
         total += x.size(0)

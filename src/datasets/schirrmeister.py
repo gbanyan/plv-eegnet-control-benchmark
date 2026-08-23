@@ -1,6 +1,6 @@
-"""Schirrmeister 2017 High-Gamma Dataset (HGD) motor imagery loader.
+"""Schirrmeister 2017 High-Gamma Dataset (HGD) motor-execution loader.
 
-4-class motor imagery (left hand, right hand, feet, rest), 14 subjects,
+4-class executed movement (left hand, right hand, feet, rest), 14 subjects,
 128 EEG channels, 500 Hz native (resampled to 250 Hz to match the rest
 of the project's pipeline). Loaded via MOABB (Schirrmeister2017) from
 the GIN-hosted EDF mirror.

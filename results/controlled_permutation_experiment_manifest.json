@@ -1,0 +1,96 @@
+{
+  "manifest_version": 1,
+  "created_on": "2026-08-24",
+  "experiment": "controlled permutation schedule 2x2",
+  "datasets": {
+    "bci2a": {"subjects": 9, "epochs": 300, "training_host": "node_a"},
+    "bci2b": {"subjects": 9, "epochs": 300, "training_host": "node_a"},
+    "lee2019": {"subjects": 54, "epochs": 200, "training_host": "node_a"},
+    "schirrmeister_hgd": {"subjects": 14, "epochs": 200, "training_host": "node_b"}
+  },
+  "primary_conditions": [
+    "plv_eegnet_shuffle_pairs_fixed",
+    "plv_eegnet_shuffle_pairs_train_resampled_eval_fixed"
+  ],
+  "resolved_training_configuration": {
+    "seeds": [42, 43, 44],
+    "batch_size": 64,
+    "optimizer": "torch.optim.AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "betas": [0.9, 0.999],
+    "epsilon": 1e-08,
+    "amsgrad": false,
+    "loss": "unweighted mean cross entropy",
+    "label_smoothing": 0.0,
+    "dtype": "float32",
+    "automatic_mixed_precision": false,
+    "deterministic_algorithms_enabled": false,
+    "learning_rate_schedule": null,
+    "raw_eeg_augmentation": null,
+    "data_loader": {
+      "shuffle_training": true,
+      "shuffle_validation": false,
+      "shuffle_evaluation": false,
+      "num_workers": 0,
+      "explicit_generator": null,
+      "worker_init_fn": null,
+      "drop_last_rule": "true only when len(inner_train) modulo 64 equals 1"
+    },
+    "model": {
+      "F1": 8,
+      "D": 2,
+      "F2": 16,
+      "temporal_kernel_samples": 125,
+      "dropout": 0.5,
+      "phase_band_hz": [8.0, 30.0],
+      "plv_bottleneck": null
+    }
+  },
+  "environments": {
+    "node_b": {
+      "datasets": ["schirrmeister_hgd"],
+      "python": "3.12.3",
+      "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+      "pytorch": "2.11.0+cu130",
+      "cuda_runtime": "13.0",
+      "cudnn": 91900,
+      "gpu": "NVIDIA GeForce RTX 5090",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "scikit_learn": "1.8.0",
+      "mne": "1.12.1",
+      "moabb": "1.5.0"
+    },
+    "node_a": {
+      "datasets": ["bci2a", "bci2b", "lee2019"],
+      "python": "3.12.7",
+      "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+      "pytorch": "2.6.0+cu124",
+      "cuda_runtime": "12.4",
+      "cudnn": 90100,
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "scikit_learn": "1.8.0",
+      "mne": "1.12.1",
+      "moabb": "1.5.0"
+    }
+  },
+  "verified_artifact_grid": {
+    "training_runs": 24,
+    "checkpoint_files": 516,
+    "checkpoint_evaluation_jsons": 8,
+    "prediction_npz_files": 516,
+    "resampled_inference_draws_per_checkpoint": 20,
+    "fixed_score_mismatches": 0,
+    "legacy_to_reproducible_metric_mismatches": 0
+  },
+  "sha256": {
+    "src/models/plv_eegnet.py": "f351cc14de456438c7ab7c22ffa6e4cfbcb378c2e7eb2b2774cac6e342e10a5b",
+    "src/models/eegnet.py": "971d0987469cd115e6a25c311d5c04e9618348da025c3dae989c5eeec67f314e",
+    "src/preprocessing/filters.py": "7fd315f148866f0dc0accb52e0ee7fb8b03e6ef70aba34643435cb9ac24c7fe8",
+    "src/train_all_subjects.py": "3a5cb75946e1f478b7d34bedb70b3610d4cb63691a0d053c787d013542b7a531",
+    "scripts/evaluate_controlled_permutation_checkpoints.py": "cdd2847e249c11f8a0870577ad58c43dd31654927465c9c3cf6c6f8fbebc340a"
+  }
+}

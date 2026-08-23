@@ -30,6 +30,9 @@ EXPECTED_SFREQ = 250
 EXPECTED_EEG_CHANNELS = 22
 EXPECTED_EOG_CHANNELS = 3
 
+TRIAL_ID_SUBJECT_STRIDE = 2 ** 40
+TRIAL_ID_EVAL_OFFSET = 2 ** 32
+
 from pathlib import Path
 
 import numpy as np
@@ -76,6 +79,8 @@ class BCI2aNPZ(Dataset):
         bandpass: tuple[float, float] | None = (8.0, 30.0),
         notch: float | None = None,
         standardize: bool = True,
+        return_trial_id: bool = False,
+        trial_id_offset: int = 0,
     ):
         if torch is None:
             raise ImportError(
@@ -107,6 +112,8 @@ class BCI2aNPZ(Dataset):
 
         self.X = torch.from_numpy(np.ascontiguousarray(X))
         self.y = torch.from_numpy(y)
+        self.return_trial_id = bool(return_trial_id)
+        self.trial_id_offset = int(trial_id_offset)
 
         self.n_channels = self.X.shape[1]
         self.n_samples = self.X.shape[2]
@@ -116,7 +123,18 @@ class BCI2aNPZ(Dataset):
         return self.X.shape[0]
 
     def __getitem__(self, idx: int):
+        if self.return_trial_id:
+            return self.X[idx], self.y[idx], self.trial_id_offset + idx
         return self.X[idx], self.y[idx]
+
+
+def trial_id_offset(subject: int, *, evaluation: bool) -> int:
+    """Return a content-independent namespace for one subject and data split."""
+    if subject < 1:
+        raise ValueError(f"subject must be positive, got {subject}")
+    return subject * TRIAL_ID_SUBJECT_STRIDE + (
+        TRIAL_ID_EVAL_OFFSET if evaluation else 0
+    )
 
 
 def _id_for(code: str, event_id: dict[str, int]) -> int | None:

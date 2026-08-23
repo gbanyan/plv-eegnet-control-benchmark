@@ -21,7 +21,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Subset
 
-from src.datasets.bci2a import BCI2aNPZ
+from src.datasets.bci2a import BCI2aNPZ, trial_id_offset
 from src.models.eegnet import EEGNet
 from src.models.phase_eegnet import PhaseEEGNet
 from src.models.phase_transformer import PhaseTransformer
@@ -149,6 +149,12 @@ MODEL_REGISTRY = {
     "plv_eegnet_zero":      {"factory": lambda i: _plv_eegnet(i, plv_mode="zero"),        "default_lr": 1.0e-3},
     "plv_eegnet_shuffle_pairs": {"factory": lambda i: _plv_eegnet(i, plv_mode="shuffle_pairs"), "default_lr": 1.0e-3},
     "plv_eegnet_shuffle_pairs_fixed": {"factory": lambda i: _plv_eegnet(i, plv_mode="shuffle_pairs_fixed"), "default_lr": 1.0e-3},
+    "plv_eegnet_shuffle_pairs_train_resampled_eval_fixed": {
+        "factory": lambda i: _plv_eegnet(
+            i, plv_mode="shuffle_pairs_train_resampled_eval_fixed"
+        ),
+        "default_lr": 1.0e-3,
+    },
     "plv_eegnet_pli":          {"factory": lambda i: _plv_eegnet(i, plv_mode="pli"),           "default_lr": 1.0e-3},
     "plv_eegnet_wpli":         {"factory": lambda i: _plv_eegnet(i, plv_mode="wpli"),          "default_lr": 1.0e-3},
 }
@@ -208,10 +214,24 @@ def train_one_subject(
     fname_fmt = info["filename_fmt"]
     bandpass = info.get("bandpass_override", (8.0, 30.0))
     notch = info.get("notch_override", None)
-    full_train = BCI2aNPZ(data_dir / fname_fmt.format(sid=subject, suffix="T"),
-                          bandpass=bandpass, notch=notch)
-    eval_set = BCI2aNPZ(data_dir / fname_fmt.format(sid=subject, suffix="E"),
-                        bandpass=bandpass, notch=notch)
+    uses_trial_ids = model_name in {
+        "plv_eegnet_shuffle_pairs_fixed",
+        "plv_eegnet_shuffle_pairs_train_resampled_eval_fixed",
+    }
+    full_train = BCI2aNPZ(
+        data_dir / fname_fmt.format(sid=subject, suffix="T"),
+        bandpass=bandpass,
+        notch=notch,
+        return_trial_id=uses_trial_ids,
+        trial_id_offset=trial_id_offset(subject, evaluation=False),
+    )
+    eval_set = BCI2aNPZ(
+        data_dir / fname_fmt.format(sid=subject, suffix="E"),
+        bandpass=bandpass,
+        notch=notch,
+        return_trial_id=uses_trial_ids,
+        trial_id_offset=trial_id_offset(subject, evaluation=True),
+    )
 
     # Inner train/val split out of T, stratified by class. The split
     # seed is derived from the run seed so it is reproducible across
@@ -239,10 +259,17 @@ def train_one_subject(
     for epoch in range(1, epochs + 1):
         model.train()
         loss_sum, total = 0.0, 0
-        for x, y in train_loader:
+        for batch in train_loader:
+            x, y = batch[:2]
+            trial_ids = batch[2] if len(batch) == 3 else None
             x, y = x.to(device), y.to(device)
+            if trial_ids is not None:
+                trial_ids = trial_ids.to(device)
             optimizer.zero_grad()
-            loss = criterion(model(x), y)
+            logits = (
+                model(x, trial_ids=trial_ids) if trial_ids is not None else model(x)
+            )
+            loss = criterion(logits, y)
             loss.backward()
             optimizer.step()
             loss_sum += loss.item() * x.size(0)
@@ -327,9 +354,8 @@ def main() -> None:
     parser.add_argument("--notch", type=float, default=None,
                         help="line-noise notch frequency in Hz (e.g. 50 or 60); applied before bandpass")
     parser.add_argument("--plv-bottleneck-dim", type=int, default=None,
-                        help="if set, project PLV features to this dim before "
-                             "concat with EEGNet trunk (tests dimensionality "
-                             "vs content as the harm driver)")
+                        help="if set, apply a learned PLV projection of this "
+                             "width before concatenation with the EEGNet trunk")
     args = parser.parse_args()
 
     info = dict(DATASET_INFO[args.dataset])  # copy so overrides don't leak

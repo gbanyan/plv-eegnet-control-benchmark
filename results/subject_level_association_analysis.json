@@ -1,0 +1,75 @@
+{
+  "analysis": "exploratory per-dataset baseline-accuracy association",
+  "intervals": "pointwise and unadjusted",
+  "permutation_p_values": "unadjusted values plus a Holm sensitivity across four datasets",
+  "datasets": [
+    {
+      "dataset": "BCI 2a",
+      "n_subjects": 9,
+      "spearman_rho": -0.7113032974423646,
+      "bootstrap_percentile_95ci": [
+        -0.9473684210526315,
+        -0.12276740071714914
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 7,
+      "bootstrap_invalid_resamples_redrawn": 0,
+      "permutation_p_two_sided": 0.037654320987654324,
+      "permutation_method": "exact",
+      "permutation_resamples_or_enumerations": 362880,
+      "permutation_seed": null,
+      "permutation_p_holm_four_datasets": 0.11296296296296297
+    },
+    {
+      "dataset": "BCI 2b",
+      "n_subjects": 9,
+      "spearman_rho": -0.34309923758984645,
+      "bootstrap_percentile_95ci": [
+        -0.8936349520148508,
+        0.49343516379516894
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 8,
+      "bootstrap_invalid_resamples_redrawn": 0,
+      "permutation_p_two_sided": 0.3648699294532628,
+      "permutation_method": "exact",
+      "permutation_resamples_or_enumerations": 362880,
+      "permutation_seed": null,
+      "permutation_p_holm_four_datasets": 0.7297398589065256
+    },
+    {
+      "dataset": "Lee2019",
+      "n_subjects": 54,
+      "spearman_rho": -0.6649698815716905,
+      "bootstrap_percentile_95ci": [
+        -0.7868979382849899,
+        -0.4837646486584799
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 9,
+      "bootstrap_invalid_resamples_redrawn": 0,
+      "permutation_p_two_sided": 9.99990000099999e-06,
+      "permutation_method": "monte_carlo",
+      "permutation_resamples_or_enumerations": 100000,
+      "permutation_seed": 70009,
+      "permutation_p_holm_four_datasets": 3.999960000399996e-05
+    },
+    {
+      "dataset": "HGD",
+      "n_subjects": 14,
+      "spearman_rho": -0.008800885413611154,
+      "bootstrap_percentile_95ci": [
+        -0.5427440511216788,
+        0.49444622951461553
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 10,
+      "bootstrap_invalid_resamples_redrawn": 0,
+      "permutation_p_two_sided": 0.978930210697893,
+      "permutation_method": "monte_carlo",
+      "permutation_resamples_or_enumerations": 100000,
+      "permutation_seed": 70010,
+      "permutation_p_holm_four_datasets": 0.978930210697893
+    }
+  ]
+}

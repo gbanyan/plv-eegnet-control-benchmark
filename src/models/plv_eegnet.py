@@ -29,12 +29,15 @@ Modes:
                        every forward pass, so across epochs a given trial sees a
                        fresh permutation (an implicit stochastic regularizer).
     'shuffle_pairs_fixed' - same as 'shuffle_pairs' but each trial's permutation
-                       is derived deterministically from a content hash of its
-                       own input, so it is STABLE across epochs (and distinct
-                       between trials). Isolates the same-marginal pair-position
-                       effect from the per-epoch reshuffling stochastic
-                       regularizer, without plumbing trial indices through the
-                       training loop.
+                       is derived deterministically from its explicit trial ID
+                       and the run seed, so it is STABLE across epochs, devices,
+                       and batch positions (and distinct between trials), while
+                       remaining independent of signal content.
+    'shuffle_pairs_train_resampled_eval_fixed' - redraw independently on every
+                       training forward pass, but use the deterministic
+                       trial-ID-keyed permutation during validation and test.
+                       This isolates training-time resampling from
+                       inference-time resampling and validation-selection noise.
 
 Input shape: [batch, channels, time].
 """
@@ -50,7 +53,25 @@ import torch.nn as nn
 from src.models.eegnet import EEGNet
 from src.preprocessing.filters import instantaneous_phase_torch
 
-PLVMode = Literal["real", "zero", "shuffle_pairs", "shuffle_pairs_fixed", "pli", "wpli"]
+PLVMode = Literal[
+    "real",
+    "zero",
+    "shuffle_pairs",
+    "shuffle_pairs_fixed",
+    "shuffle_pairs_train_resampled_eval_fixed",
+    "pli",
+    "wpli",
+]
+
+_PLV_MODES = (
+    "real",
+    "zero",
+    "shuffle_pairs",
+    "shuffle_pairs_fixed",
+    "shuffle_pairs_train_resampled_eval_fixed",
+    "pli",
+    "wpli",
+)
 
 
 class PLVEEGNet(nn.Module):
@@ -72,10 +93,9 @@ class PLVEEGNet(nn.Module):
         dropout: float = 0.5,
     ):
         super().__init__()
-        if plv_mode not in ("real", "zero", "shuffle_pairs", "shuffle_pairs_fixed", "pli", "wpli"):
+        if plv_mode not in _PLV_MODES:
             raise ValueError(
-                "plv_mode must be 'real', 'zero', 'shuffle_pairs', 'shuffle_pairs_fixed', "
-                f"'pli', or 'wpli', got {plv_mode!r}"
+                f"plv_mode must be one of {_PLV_MODES}, got {plv_mode!r}"
             )
 
         self.n_channels = n_channels
@@ -84,6 +104,13 @@ class PLVEEGNet(nn.Module):
         self.plv_mode = plv_mode
         self.fixed_perm_salt = int(fixed_perm_salt)
         self._perm_key = str(self.fixed_perm_salt).encode()
+        # Resampled permutations must not advance PyTorch's global RNG: doing so
+        # would also change DataLoader order and Dropout masks relative to the
+        # fixed schedule. Generators are created lazily per device because a
+        # torch.Generator is device-specific and is not model state.
+        self._resampling_generators: dict[str, torch.Generator] = {}
+        self._resampling_seed = self.fixed_perm_salt
+        self._fixed_permutation_cache: dict[int, torch.Tensor] = {}
 
         # Number of unique channel pairs (upper triangle, no diagonal).
         self.n_pairs = n_channels * (n_channels - 1) // 2
@@ -104,10 +131,10 @@ class PLVEEGNet(nn.Module):
         self.eegnet.classifier = nn.Identity()  # type: ignore[assignment]
 
         self.plv_norm = nn.BatchNorm1d(self.n_pairs)
-        # Optional bottleneck projection that compresses the n_pairs PLV
-        # vector before concatenation. Tests whether the (real - shuffle)
-        # gap is dimensionality-driven (P >> N overfitting interaction with
-        # FC layer) vs content-driven (pair-indexed coupling structure).
+        # Optional learned projection that narrows the classifier-facing PLV
+        # vector before concatenation. It still estimates O(P * dim) weights
+        # and therefore is not, by itself, a parameter-matched test of P >> N
+        # overfitting or a fixed dimensionality reduction.
         self.bottleneck_dim = bottleneck_dim
         if bottleneck_dim is None:
             self.plv_proj: nn.Module = nn.Identity()
@@ -122,7 +149,64 @@ class PLVEEGNet(nn.Module):
         self.register_buffer("_triu_i", iu[0], persistent=False)
         self.register_buffer("_triu_j", iu[1], persistent=False)
 
-    def _compute_plv(self, x: torch.Tensor) -> torch.Tensor:
+    def _fixed_pair_permutations(
+        self, trial_ids: torch.Tensor, n_pairs: int
+    ) -> torch.Tensor:
+        """Return seed-and-trial-ID keyed permutations on CPU.
+
+        Trial IDs are supplied by the data pipeline and are independent of EEG
+        values. This makes the fixed assignment stable across epochs, batches,
+        and compute backends without deriving a key from signal content.
+        """
+        if trial_ids.ndim != 1:
+            raise ValueError(f"trial_ids must be one-dimensional, got {trial_ids.shape}")
+        identifiers = trial_ids.detach().to(dtype=torch.int64, device="cpu").tolist()
+        batch_size = len(identifiers)
+        permutations = torch.empty(batch_size, n_pairs, dtype=torch.long)
+        for b, identifier in enumerate(identifiers):
+            identifier = int(identifier)
+            permutation = self._fixed_permutation_cache.get(identifier)
+            if permutation is None:
+                identifier_bytes = identifier.to_bytes(8, "little", signed=True)
+                seed = int.from_bytes(
+                    hashlib.blake2b(
+                        identifier_bytes, key=self._perm_key, digest_size=8
+                    ).digest(),
+                    "little",
+                ) % (2 ** 31)
+                generator = torch.Generator().manual_seed(seed)
+                permutation = torch.randperm(n_pairs, generator=generator)
+                self._fixed_permutation_cache[identifier] = permutation
+            permutations[b] = permutation
+        return permutations
+
+    def _resampled_pair_permutations(
+        self, batch_size: int, n_pairs: int, device: torch.device
+    ) -> torch.Tensor:
+        """Draw permutations without advancing the global training RNG stream."""
+        device_key = str(device)
+        generator = self._resampling_generators.get(device_key)
+        if generator is None:
+            generator = torch.Generator(device=device)
+            generator.manual_seed(self._resampling_seed)
+            self._resampling_generators[device_key] = generator
+        # Use randperm rather than sorting finite-precision random keys. The
+        # latter produces a valid reordering but is not exactly uniform when
+        # keys tie (ties are common for P=8128 with float32 keys).
+        return torch.stack([
+            torch.randperm(n_pairs, device=device, generator=generator)
+            for _ in range(batch_size)
+        ])
+
+    def reset_resampling_stream(self, seed: int | None = None) -> None:
+        """Reset the dedicated resampling generators, optionally to a new seed."""
+        if seed is not None:
+            self._resampling_seed = int(seed)
+        self._resampling_generators.clear()
+
+    def _compute_plv(
+        self, x: torch.Tensor, trial_ids: torch.Tensor | None = None
+    ) -> torch.Tensor:
         """Pairwise coupling features over the trial window. Returns [B, n_pairs].
 
         Behavior depends on `plv_mode`:
@@ -131,8 +215,9 @@ class PLVEEGNet(nn.Module):
             [B, C, C, T] intermediate)
           - 'pli': phase-lag index, computed pair-by-pair in channel chunks
             because sign() prevents the einsum identity from working
-          - 'wpli': weighted phase-lag index (Vinck et al. 2011), debiased
-            volume-conduction-resistant variant of PLI; also chunked
+          - 'wpli': phase-only weighted phase-lag index (pwPLI), using
+            unit-amplitude phase vectors; also chunked. This is not the
+            standard amplitude-weighted or debiased wPLI estimator.
         """
         if self.plv_mode == "zero":
             return torch.zeros(x.shape[0], self.n_pairs, device=x.device, dtype=x.dtype)
@@ -149,10 +234,10 @@ class PLVEEGNet(nn.Module):
             if self.plv_mode in ("pli", "wpli"):
                 # sin(phi_i - phi_j) = s_i c_j - c_i s_j; build chunked.
                 #   PLI:  | E_t [ sign( sin diff ) ] |
-                #   wPLI: | E_t [ sin diff ] | / E_t [ |sin diff| ]
-                #         (Vinck et al. 2011; bounded in [0, 1]; equals 0
-                #          when phase-difference distribution is symmetric
-                #          around 0, which is the volume-conduction signature.)
+                #   pwPLI: | E_t [ sin diff ] | / E_t [ |sin diff| ]
+                #          Phase-only wPLI-inspired statistic, bounded in
+                #          [0, 1]. It omits analytic-amplitude products and
+                #          is not standard or debiased wPLI.
                 # Both build the full [B, C, C] matrix in row chunks to avoid
                 # the [B, C, C, T] tensor at high channel counts.
                 out_matrix = torch.zeros(B, C, C, device=x.device, dtype=x.dtype)
@@ -191,30 +276,41 @@ class PLVEEGNet(nn.Module):
             # Upper triangle (no diagonal) -> [B, n_pairs]
             plv = plv_matrix[:, self._triu_i, self._triu_j]
 
-            if self.plv_mode == "shuffle_pairs":
+            resample_pairs = self.plv_mode == "shuffle_pairs" or (
+                self.plv_mode == "shuffle_pairs_train_resampled_eval_fixed"
+                and self.training
+            )
+            fix_pairs = self.plv_mode == "shuffle_pairs_fixed" or (
+                self.plv_mode == "shuffle_pairs_train_resampled_eval_fixed"
+                and not self.training
+            )
+
+            if resample_pairs:
                 # Independent per-trial random permutation of the n_pairs
                 # dimension. Same value distribution, channel-pair identity
-                # destroyed. Applied at both train and eval time so the
-                # classifier never gets a stable per-pair signal.
+                # destroyed. The legacy shuffle_pairs mode applies this at
+                # both train and eval; the controlled mode applies it only
+                # while the module is in training mode.
                 B, P = plv.shape
-                perm = torch.rand(B, P, device=plv.device).argsort(dim=-1)
+                perm = self._resampled_pair_permutations(B, P, plv.device)
                 plv = torch.gather(plv, -1, perm)
-            elif self.plv_mode == "shuffle_pairs_fixed":
+            elif fix_pairs:
                 # Same marginal as 'shuffle_pairs', but each trial's permutation
-                # is keyed to a content hash of its own (quantized) phase
-                # features, so it is STABLE across epochs and distinct between
-                # trials. This removes the per-epoch reshuffling stochastic
+                # is keyed to an explicit content-independent trial ID, so it is
+                # stable across epochs, devices, and batches and distinct between
+                # trials. This removes the reshuffling stochastic
                 # regularizer while still destroying channel-pair identity.
-                # Quantization makes the fingerprint robust to last-bit FP noise.
                 B, P = plv.shape
-                fp = (c.reshape(B, -1)[:, :512] * 1e4).round().to(torch.int32).cpu().numpy()
-                perms = torch.empty(B, P, dtype=torch.long)
-                for b in range(B):
-                    seed = int.from_bytes(
-                        hashlib.blake2b(fp[b].tobytes(), key=self._perm_key, digest_size=8).digest(), "little"
-                    ) % (2 ** 31)
-                    g = torch.Generator().manual_seed(seed)
-                    perms[b] = torch.randperm(P, generator=g)
+                if trial_ids is None:
+                    raise ValueError(
+                        f"trial_ids are required when plv_mode={self.plv_mode!r} "
+                        "uses fixed permutations"
+                    )
+                if len(trial_ids) != B:
+                    raise ValueError(
+                        f"trial_ids length {len(trial_ids)} does not match batch {B}"
+                    )
+                perms = self._fixed_pair_permutations(trial_ids, P)
                 plv = torch.gather(plv, -1, perms.to(plv.device))
 
             return plv
@@ -232,9 +328,11 @@ class PLVEEGNet(nn.Module):
         h = self.eegnet._forward_features(h)
         return h.flatten(1)
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self, x: torch.Tensor, trial_ids: torch.Tensor | None = None
+    ) -> torch.Tensor:
         feat = self._eegnet_features(x)              # [B, eeg_flat]
-        plv = self._compute_plv(x)                   # [B, n_pairs]
+        plv = self._compute_plv(x, trial_ids=trial_ids)  # [B, n_pairs]
         plv = self.plv_norm(plv)
         plv = self.plv_proj(plv)                     # Identity or Linear(P, bn_dim)
         return self.classifier(torch.cat([feat, plv], dim=1))
