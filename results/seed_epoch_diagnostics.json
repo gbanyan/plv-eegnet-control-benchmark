@@ -1,0 +1,130 @@
+{
+  "unit": "percentage points for schedule gaps; epoch for checkpoints",
+  "conditions": "resampled-minus-fixed training at deterministic fixed inference",
+  "datasets": {
+    "bci2a": {
+      "seed_schedule_gap_pp": {
+        "42": 15.162037037037038,
+        "43": 10.95679012345679,
+        "44": 9.799382716049381
+      },
+      "leave_one_seed_out_gap_pp": {
+        "42": 10.378086419753085,
+        "43": 12.480709876543209,
+        "44": 13.059413580246915
+      },
+      "seed_sign_consistency": "3/3",
+      "selected_epoch": {
+        "fixed": {
+          "median": 126.0,
+          "q1": 48.0,
+          "q3": 193.0,
+          "ceiling_count": 0,
+          "total_runs": 27,
+          "ceiling_percent": 0.0
+        },
+        "resampled": {
+          "median": 212.0,
+          "q1": 152.0,
+          "q3": 272.5,
+          "ceiling_count": 0,
+          "total_runs": 27,
+          "ceiling_percent": 0.0
+        }
+      }
+    },
+    "bci2b": {
+      "seed_schedule_gap_pp": {
+        "42": -1.0317460317460312,
+        "43": 0.18849206349206465,
+        "44": -1.1210317460317456
+      },
+      "leave_one_seed_out_gap_pp": {
+        "42": -0.4662698412698405,
+        "43": -1.0763888888888884,
+        "44": -0.4216269841269833
+      },
+      "seed_sign_consistency": "2/3",
+      "selected_epoch": {
+        "fixed": {
+          "median": 113.0,
+          "q1": 58.0,
+          "q3": 181.5,
+          "ceiling_count": 0,
+          "total_runs": 27,
+          "ceiling_percent": 0.0
+        },
+        "resampled": {
+          "median": 98.0,
+          "q1": 53.5,
+          "q3": 200.5,
+          "ceiling_count": 0,
+          "total_runs": 27,
+          "ceiling_percent": 0.0
+        }
+      }
+    },
+    "lee2019": {
+      "seed_schedule_gap_pp": {
+        "42": 11.11111111111111,
+        "43": 12.333333333333334,
+        "44": 12.092592592592593
+      },
+      "leave_one_seed_out_gap_pp": {
+        "42": 12.212962962962964,
+        "43": 11.601851851851851,
+        "44": 11.722222222222221
+      },
+      "seed_sign_consistency": "3/3",
+      "selected_epoch": {
+        "fixed": {
+          "median": 7.0,
+          "q1": 2.0,
+          "q3": 36.0,
+          "ceiling_count": 1,
+          "total_runs": 162,
+          "ceiling_percent": 0.6172839506172839
+        },
+        "resampled": {
+          "median": 94.5,
+          "q1": 43.25,
+          "q3": 145.0,
+          "ceiling_count": 0,
+          "total_runs": 162,
+          "ceiling_percent": 0.0
+        }
+      }
+    },
+    "schirrmeister": {
+      "seed_schedule_gap_pp": {
+        "42": 29.330357142857146,
+        "43": 29.642857142857142,
+        "44": 27.946428571428573
+      },
+      "leave_one_seed_out_gap_pp": {
+        "42": 28.794642857142858,
+        "43": 28.63839285714286,
+        "44": 29.486607142857146
+      },
+      "seed_sign_consistency": "3/3",
+      "selected_epoch": {
+        "fixed": {
+          "median": 180.0,
+          "q1": 165.5,
+          "q3": 191.75,
+          "ceiling_count": 3,
+          "total_runs": 42,
+          "ceiling_percent": 7.142857142857143
+        },
+        "resampled": {
+          "median": 142.5,
+          "q1": 110.5,
+          "q3": 181.25,
+          "ceiling_count": 0,
+          "total_runs": 42,
+          "ceiling_percent": 0.0
+        }
+      }
+    }
+  }
+}

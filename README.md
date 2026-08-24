@@ -53,6 +53,8 @@ Key provenance files:
   referenced by the checkpoint-evaluation records.
 - `results/controlled_permutation_schedule_analysis.json`: all 2x2 schedule
   cells and paired contrasts.
+- `results/seed_epoch_diagnostics.json`: seed-specific schedule gaps,
+  leave-one-seed-out summaries, and selected-epoch ceiling diagnostics.
 - `results/subject_level_association_analysis.json`: prespecified per-dataset
   subject-level association analysis.
 - `results/targeted_dsp_controls_analysis_plan.md`: targeted contrasts and
@@ -93,6 +95,7 @@ association figure from archived outputs:
 
 ```bash
 .venv/bin/python -m scripts.analyze_controlled_permutation_schedule
+.venv/bin/python scripts/analyze_seed_epoch_diagnostics.py
 .venv/bin/python -m scripts.bootstrap_and_mixed
 .venv/bin/python scripts/analyze_targeted_dsp_controls.py
 ```
