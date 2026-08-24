@@ -12,11 +12,12 @@ import pytest
 from src.models.plv_eegnet import PLVEEGNet
 
 
-def _model(mode):
+def _model(mode, *, plv_normalization="batchnorm"):
     torch.manual_seed(0)
     return PLVEEGNet(
         n_channels=8, n_classes=2, n_samples=512, sampling_rate=128,
         phase_band=(8.0, 30.0), plv_mode=mode,
+        plv_normalization=plv_normalization,
     ).eval()
 
 
@@ -68,6 +69,35 @@ def test_fixed_shuffle_preserves_marginal_but_permutes():
     assert torch.allclose(r.sort(dim=-1).values, f.sort(dim=-1).values, atol=1e-6)
     # ...but actually reordered (channel-pair identity destroyed).
     assert not torch.equal(r, f)
+
+
+def test_global_fixed_shuffle_uses_one_permutation_for_every_trial():
+    real = _model("real")
+    global_fixed = _model("shuffle_pairs_global_fixed")
+    x = _input()
+    with torch.no_grad():
+        reference = real._compute_plv(x)
+        transformed = global_fixed._compute_plv(x)
+    permutation = global_fixed._global_fixed_pair_permutation(global_fixed.n_pairs)
+    assert torch.equal(transformed, reference[:, permutation])
+    assert torch.equal(
+        permutation,
+        global_fixed._global_fixed_pair_permutation(global_fixed.n_pairs),
+    )
+    assert torch.allclose(
+        reference.sort(dim=-1).values,
+        transformed.sort(dim=-1).values,
+        atol=1e-6,
+    )
+
+
+def test_plv_normalization_controls_are_explicit():
+    no_norm = _model("shuffle_pairs_fixed", plv_normalization="none")
+    layer_norm = _model("shuffle_pairs_fixed", plv_normalization="layernorm")
+    assert isinstance(no_norm.plv_norm, torch.nn.Identity)
+    assert isinstance(layer_norm.plv_norm, torch.nn.LayerNorm)
+    assert no_norm.plv_normalization == "none"
+    assert layer_norm.plv_normalization == "layernorm"
 
 
 def test_fixed_shuffle_is_trial_id_keyed_not_position_or_content_keyed():

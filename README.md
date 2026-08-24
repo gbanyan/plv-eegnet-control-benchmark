@@ -1,4 +1,4 @@
-# Fixed and resampled permutation operators in connectivity-augmented EEG decoding
+# Permutation scheduling in connectivity-augmented EEG decoding
 
 An anonymized code-and-results deposit for a manuscript submitted to *Digital
 Signal Processing*. The repository contains the final analysis inputs, the
@@ -27,6 +27,11 @@ sensitivity analyses. The deposit deliberately excludes superseded CSD,
 high-gamma/band-matching, and bottleneck outputs that are not used by the final
 manuscript.
 
+Two targeted Lee2019/HGD controls distinguish a dataset-global fixed coordinate
+relabeling from trial-specific fixed permutations and repeat the fixed/resampled
+training comparison without auxiliary-branch BatchNorm. These 18 runs were
+analyzed using a plan recorded before any targeted run completed.
+
 ## Layout
 
 ```text
@@ -50,6 +55,10 @@ Key provenance files:
   cells and paired contrasts.
 - `results/subject_level_association_analysis.json`: prespecified per-dataset
   subject-level association analysis.
+- `results/targeted_dsp_controls_analysis_plan.md`: targeted contrasts and
+  multiplicity families recorded before targeted run completion.
+- `results/targeted_dsp_controls_analysis.json`: global-fixed and
+  no-normalization control results.
 
 ## Environment
 
@@ -76,6 +85,7 @@ and fixed-assignment identity across schedules:
 
 ```bash
 .venv/bin/python scripts/verify_controlled_permutation_artifacts.py
+.venv/bin/python scripts/verify_targeted_dsp_controls.py
 ```
 
 Rebuild the controlled-schedule statistics, controlled figure, and subject-level
@@ -84,6 +94,7 @@ association figure from archived outputs:
 ```bash
 .venv/bin/python -m scripts.analyze_controlled_permutation_schedule
 .venv/bin/python -m scripts.bootstrap_and_mixed
+.venv/bin/python scripts/analyze_targeted_dsp_controls.py
 ```
 
 The shell launchers in `scripts/` document the training and checkpoint-evaluation

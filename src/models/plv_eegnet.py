@@ -33,6 +33,9 @@ Modes:
                        and the run seed, so it is STABLE across epochs, devices,
                        and batch positions (and distinct between trials), while
                        remaining independent of signal content.
+    'shuffle_pairs_global_fixed' - one run-seed-keyed permutation is shared by
+                       every trial and reused during training and inference.
+                       This is a dataset-wide coordinate relabeling sanity check.
     'shuffle_pairs_train_resampled_eval_fixed' - redraw independently on every
                        training forward pass, but use the deterministic
                        trial-ID-keyed permutation during validation and test.
@@ -58,6 +61,7 @@ PLVMode = Literal[
     "zero",
     "shuffle_pairs",
     "shuffle_pairs_fixed",
+    "shuffle_pairs_global_fixed",
     "shuffle_pairs_train_resampled_eval_fixed",
     "pli",
     "wpli",
@@ -68,6 +72,7 @@ _PLV_MODES = (
     "zero",
     "shuffle_pairs",
     "shuffle_pairs_fixed",
+    "shuffle_pairs_global_fixed",
     "shuffle_pairs_train_resampled_eval_fixed",
     "pli",
     "wpli",
@@ -85,6 +90,7 @@ class PLVEEGNet(nn.Module):
         plv_mode: PLVMode = "real",
         bottleneck_dim: int | None = None,
         fixed_perm_salt: int = 0,
+        plv_normalization: Literal["batchnorm", "layernorm", "none"] = "batchnorm",
         # Standard EEGNet knobs forwarded to the trunk.
         temporal_kernel: int | None = 125,
         F1: int = 8,
@@ -111,6 +117,7 @@ class PLVEEGNet(nn.Module):
         self._resampling_generators: dict[str, torch.Generator] = {}
         self._resampling_seed = self.fixed_perm_salt
         self._fixed_permutation_cache: dict[int, torch.Tensor] = {}
+        self._global_fixed_permutation_cache: torch.Tensor | None = None
 
         # Number of unique channel pairs (upper triangle, no diagonal).
         self.n_pairs = n_channels * (n_channels - 1) // 2
@@ -130,7 +137,18 @@ class PLVEEGNet(nn.Module):
         # only contributes flat features.
         self.eegnet.classifier = nn.Identity()  # type: ignore[assignment]
 
-        self.plv_norm = nn.BatchNorm1d(self.n_pairs)
+        if plv_normalization == "batchnorm":
+            self.plv_norm: nn.Module = nn.BatchNorm1d(self.n_pairs)
+        elif plv_normalization == "layernorm":
+            self.plv_norm = nn.LayerNorm(self.n_pairs)
+        elif plv_normalization == "none":
+            self.plv_norm = nn.Identity()
+        else:
+            raise ValueError(
+                "plv_normalization must be 'batchnorm', 'layernorm', or 'none', "
+                f"got {plv_normalization!r}"
+            )
+        self.plv_normalization = plv_normalization
         # Optional learned projection that narrows the classifier-facing PLV
         # vector before concatenation. It still estimates O(P * dim) weights
         # and therefore is not, by itself, a parameter-matched test of P >> N
@@ -197,6 +215,17 @@ class PLVEEGNet(nn.Module):
             torch.randperm(n_pairs, device=device, generator=generator)
             for _ in range(batch_size)
         ])
+
+    def _global_fixed_pair_permutation(self, n_pairs: int) -> torch.Tensor:
+        """Return one run-seed-keyed CPU permutation shared by all trials."""
+        if self._global_fixed_permutation_cache is None:
+            generator = torch.Generator().manual_seed(
+                self.fixed_perm_salt % (2 ** 31)
+            )
+            self._global_fixed_permutation_cache = torch.randperm(
+                n_pairs, generator=generator
+            )
+        return self._global_fixed_permutation_cache
 
     def reset_resampling_stream(self, seed: int | None = None) -> None:
         """Reset the dedicated resampling generators, optionally to a new seed."""
@@ -284,6 +313,7 @@ class PLVEEGNet(nn.Module):
                 self.plv_mode == "shuffle_pairs_train_resampled_eval_fixed"
                 and not self.training
             )
+            global_fix_pairs = self.plv_mode == "shuffle_pairs_global_fixed"
 
             if resample_pairs:
                 # Independent per-trial random permutation of the n_pairs
@@ -312,6 +342,10 @@ class PLVEEGNet(nn.Module):
                     )
                 perms = self._fixed_pair_permutations(trial_ids, P)
                 plv = torch.gather(plv, -1, perms.to(plv.device))
+            elif global_fix_pairs:
+                B, P = plv.shape
+                permutation = self._global_fixed_pair_permutation(P).to(plv.device)
+                plv = plv[:, permutation]
 
             return plv
 

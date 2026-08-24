@@ -123,7 +123,9 @@ def _phase_eegnet(info, *, phase_mode="phase"):
     )
 
 
-def _plv_eegnet(info, *, plv_mode="real", bottleneck_dim=None):
+def _plv_eegnet(
+    info, *, plv_mode="real", bottleneck_dim=None, plv_normalization="batchnorm"
+):
     phase_band = info.get("phase_band_override", (8.0, 30.0))
     bn = info.get("bottleneck_dim_override", bottleneck_dim)
     salt = info.get("fixed_perm_salt_override", 0)
@@ -132,6 +134,7 @@ def _plv_eegnet(info, *, plv_mode="real", bottleneck_dim=None):
         n_samples=info["n_samples"], sampling_rate=info["sampling_rate"],
         phase_band=phase_band, plv_mode=plv_mode,
         bottleneck_dim=bn, fixed_perm_salt=salt,
+        plv_normalization=plv_normalization,
         temporal_kernel=125, F1=8, D=2, F2=16, dropout=0.5,
     )
 
@@ -149,6 +152,24 @@ MODEL_REGISTRY = {
     "plv_eegnet_zero":      {"factory": lambda i: _plv_eegnet(i, plv_mode="zero"),        "default_lr": 1.0e-3},
     "plv_eegnet_shuffle_pairs": {"factory": lambda i: _plv_eegnet(i, plv_mode="shuffle_pairs"), "default_lr": 1.0e-3},
     "plv_eegnet_shuffle_pairs_fixed": {"factory": lambda i: _plv_eegnet(i, plv_mode="shuffle_pairs_fixed"), "default_lr": 1.0e-3},
+    "plv_eegnet_shuffle_pairs_global_fixed": {
+        "factory": lambda i: _plv_eegnet(i, plv_mode="shuffle_pairs_global_fixed"),
+        "default_lr": 1.0e-3,
+    },
+    "plv_eegnet_shuffle_pairs_fixed_no_norm": {
+        "factory": lambda i: _plv_eegnet(
+            i, plv_mode="shuffle_pairs_fixed", plv_normalization="none"
+        ),
+        "default_lr": 1.0e-3,
+    },
+    "plv_eegnet_shuffle_pairs_train_resampled_eval_fixed_no_norm": {
+        "factory": lambda i: _plv_eegnet(
+            i,
+            plv_mode="shuffle_pairs_train_resampled_eval_fixed",
+            plv_normalization="none",
+        ),
+        "default_lr": 1.0e-3,
+    },
     "plv_eegnet_shuffle_pairs_train_resampled_eval_fixed": {
         "factory": lambda i: _plv_eegnet(
             i, plv_mode="shuffle_pairs_train_resampled_eval_fixed"
@@ -217,6 +238,8 @@ def train_one_subject(
     uses_trial_ids = model_name in {
         "plv_eegnet_shuffle_pairs_fixed",
         "plv_eegnet_shuffle_pairs_train_resampled_eval_fixed",
+        "plv_eegnet_shuffle_pairs_fixed_no_norm",
+        "plv_eegnet_shuffle_pairs_train_resampled_eval_fixed_no_norm",
     }
     full_train = BCI2aNPZ(
         data_dir / fname_fmt.format(sid=subject, suffix="T"),
