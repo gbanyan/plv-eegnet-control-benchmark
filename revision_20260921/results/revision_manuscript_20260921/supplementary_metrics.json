@@ -1,0 +1,284 @@
+{
+  "matched_five": {
+    "bci2a": {
+      "cells": {
+        "fixed": 38.50308641975309,
+        "resampled": 52.299382716049394,
+        "real": 52.66203703703704,
+        "baseline": 53.75000000000001,
+        "zero": 53.287037037037045
+      },
+      "schedule": {
+        "mean_difference_pp": 13.796296296296296,
+        "n_subjects": 9,
+        "paired_replicates": 5,
+        "model_standard_error_pp": 2.037497317527078,
+        "model_95ci_pp": [
+          9.09781905661146,
+          18.494773535981132
+        ],
+        "model_90ci_pp": [
+          10.00747215801435,
+          17.585120434578243
+        ],
+        "between_subject_variance_pp2": 26.239390432098755,
+        "within_subject_run_variance_pp2": 55.615837191358025,
+        "t_statistic": 6.7711972809078045,
+        "p_two_sided": 0.0001419383492186041,
+        "equivalence_margin_pp": 1.0,
+        "p_equivalence": 0.9998811192966808,
+        "conditional_subject_bootstrap_95ci_pp": [
+          9.930555555555554,
+          17.507908950617285
+        ],
+        "per_replicate_mean_pp": [
+          11.226851851851851,
+          14.004629629629626,
+          15.046296296296296,
+          14.853395061728397,
+          13.85030864197531
+        ],
+        "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+      }
+    },
+    "bci2b": {
+      "cells": {
+        "fixed": 74.06051587301587,
+        "resampled": 73.81150793650794,
+        "real": 73.78472222222221,
+        "baseline": 73.61805555555556,
+        "zero": 73.85912698412699
+      },
+      "schedule": {
+        "mean_difference_pp": -0.24900793650793573,
+        "n_subjects": 9,
+        "paired_replicates": 5,
+        "model_standard_error_pp": 0.2281789164533661,
+        "model_95ci_pp": [
+          -0.7751894614158038,
+          0.27717358839993234
+        ],
+        "model_90ci_pp": [
+          -0.6733175928047193,
+          0.17530171978884784
+        ],
+        "between_subject_variance_pp2": 0.0,
+        "within_subject_run_variance_pp2": 2.34295280612245,
+        "t_statistic": -1.0912837188392317,
+        "p_two_sided": 0.30692113242227514,
+        "equivalence_margin_pp": 1.0,
+        "p_equivalence": 0.005500814011246535,
+        "conditional_subject_bootstrap_95ci_pp": [
+          -0.4771825396825389,
+          -0.02678571428571345
+        ],
+        "per_replicate_mean_pp": [
+          -0.31746031746031644,
+          0.2529761904761927,
+          -0.7936507936507933,
+          -0.3224206349206344,
+          -0.06448412698412737
+        ],
+        "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+      }
+    },
+    "lee2019": {
+      "cells": {
+        "fixed": 52.648148148148145,
+        "resampled": 63.794444444444444,
+        "real": 62.35740740740739,
+        "baseline": 65.27222222222223,
+        "zero": 65.06481481481482
+      },
+      "schedule": {
+        "mean_difference_pp": 11.146296296296295,
+        "n_subjects": 54,
+        "paired_replicates": 5,
+        "model_standard_error_pp": 1.8868419905110168,
+        "model_95ci_pp": [
+          7.361770530031228,
+          14.930822062561363
+        ],
+        "model_90ci_pp": [
+          7.987503483888604,
+          14.305089108703987
+        ],
+        "between_subject_variance_pp2": 182.87441823899368,
+        "within_subject_run_variance_pp2": 46.87453703703704,
+        "t_statistic": 5.9073819388964965,
+        "p_two_sided": 2.541196773705103e-07,
+        "equivalence_margin_pp": 1.0,
+        "p_equivalence": 0.9999991323228619,
+        "conditional_subject_bootstrap_95ci_pp": [
+          7.5999537037037035,
+          14.977916666666664
+        ],
+        "per_replicate_mean_pp": [
+          11.768518518518519,
+          10.703703703703704,
+          12.657407407407407,
+          10.268518518518519,
+          10.333333333333334
+        ],
+        "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+      }
+    },
+    "schirrmeister": {
+      "cells": {
+        "fixed": 43.35714285714286,
+        "resampled": 72.97321428571429,
+        "real": 64.32142857142857,
+        "baseline": 78.26785714285715,
+        "zero": 78.13392857142858
+      },
+      "schedule": {
+        "mean_difference_pp": 29.616071428571427,
+        "n_subjects": 14,
+        "paired_replicates": 5,
+        "model_standard_error_pp": 3.13105085309429,
+        "model_95ci_pp": [
+          22.851847303755438,
+          36.38029555338741
+        ],
+        "model_90ci_pp": [
+          24.07118890829356,
+          35.16095394884929
+        ],
+        "between_subject_variance_pp2": 114.29056490384617,
+        "within_subject_run_variance_pp2": 114.79073660714285,
+        "t_statistic": 9.458827983998749,
+        "p_two_sided": 3.4176761140655833e-07,
+        "equivalence_margin_pp": 1.0,
+        "p_equivalence": 0.999999747106648,
+        "conditional_subject_bootstrap_95ci_pp": [
+          24.169642857142858,
+          35.875
+        ],
+        "per_replicate_mean_pp": [
+          29.6875,
+          27.455357142857142,
+          26.026785714285715,
+          31.25,
+          33.660714285714285
+        ],
+        "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+      }
+    }
+  },
+  "epoch_diagnostics": {
+    "bci2a:fixed": {
+      "fits": 90,
+      "cap_without_stop": 0,
+      "primary_epoch_median": 9.5,
+      "trajectory_epoch_median": 300.0
+    },
+    "bci2a:resampled": {
+      "fits": 90,
+      "cap_without_stop": 1,
+      "primary_epoch_median": 121.0,
+      "trajectory_epoch_median": 300.0
+    },
+    "bci2a:real": {
+      "fits": 90,
+      "cap_without_stop": 1,
+      "primary_epoch_median": 49.5,
+      "trajectory_epoch_median": 300.0
+    },
+    "bci2b:fixed": {
+      "fits": 90,
+      "cap_without_stop": 0,
+      "primary_epoch_median": 84.0,
+      "trajectory_epoch_median": 300.0
+    },
+    "bci2b:resampled": {
+      "fits": 90,
+      "cap_without_stop": 0,
+      "primary_epoch_median": 79.5,
+      "trajectory_epoch_median": 300.0
+    },
+    "bci2b:real": {
+      "fits": 90,
+      "cap_without_stop": 1,
+      "primary_epoch_median": 77.0,
+      "trajectory_epoch_median": 300.0
+    },
+    "lee2019:fixed": {
+      "fits": 540,
+      "cap_without_stop": 15,
+      "primary_epoch_median": 2.0,
+      "trajectory_epoch_median": 200.0
+    },
+    "lee2019:resampled": {
+      "fits": 540,
+      "cap_without_stop": 4,
+      "primary_epoch_median": 57.0,
+      "trajectory_epoch_median": 200.0
+    },
+    "lee2019:real": {
+      "fits": 540,
+      "cap_without_stop": 3,
+      "primary_epoch_median": 12.0,
+      "trajectory_epoch_median": 200.0
+    },
+    "schirrmeister:fixed": {
+      "fits": 140,
+      "cap_without_stop": 22,
+      "primary_epoch_median": 46.0,
+      "trajectory_epoch_median": 200.0
+    },
+    "schirrmeister:resampled": {
+      "fits": 140,
+      "cap_without_stop": 0,
+      "primary_epoch_median": 74.5,
+      "trajectory_epoch_median": 200.0
+    },
+    "schirrmeister:real": {
+      "fits": 140,
+      "cap_without_stop": 0,
+      "primary_epoch_median": 6.0,
+      "trajectory_epoch_median": 200.0
+    }
+  },
+  "mc_cells": {
+    "bci2a:fixed": {
+      "fixed_accuracy": 38.67283950617284,
+      "mc_mean_accuracy": 38.76327160493827,
+      "probability_ensemble_accuracy": 42.23765432098765
+    },
+    "bci2a:resampled": {
+      "fixed_accuracy": 51.9483024691358,
+      "mc_mean_accuracy": 51.980054012345676,
+      "probability_ensemble_accuracy": 51.87114197530865
+    },
+    "bci2b:fixed": {
+      "fixed_accuracy": 73.88789682539682,
+      "mc_mean_accuracy": 73.73192460317462,
+      "probability_ensemble_accuracy": 73.78869047619048
+    },
+    "bci2b:resampled": {
+      "fixed_accuracy": 74.14632936507937,
+      "mc_mean_accuracy": 74.05865575396825,
+      "probability_ensemble_accuracy": 74.07142857142857
+    },
+    "lee2019:fixed": {
+      "fixed_accuracy": 52.42314814814816,
+      "mc_mean_accuracy": 52.15532407407407,
+      "probability_ensemble_accuracy": 52.63981481481481
+    },
+    "lee2019:resampled": {
+      "fixed_accuracy": 63.74722222222222,
+      "mc_mean_accuracy": 63.566064814814816,
+      "probability_ensemble_accuracy": 64.06203703703703
+    },
+    "schirrmeister:fixed": {
+      "fixed_accuracy": 42.98214285714286,
+      "mc_mean_accuracy": 42.68633928571428,
+      "probability_ensemble_accuracy": 47.299107142857146
+    },
+    "schirrmeister:resampled": {
+      "fixed_accuracy": 73.05803571428572,
+      "mc_mean_accuracy": 73.1715625,
+      "probability_ensemble_accuracy": 76.17857142857143
+    }
+  }
+}

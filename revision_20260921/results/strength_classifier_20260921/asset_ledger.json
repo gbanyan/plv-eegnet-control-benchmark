@@ -1,0 +1,8 @@
+{
+  "results/strength_classifier_20260921/summary.json": "9378e05440edcab7fac7ab063ed1a635acf935afc0ea5d5ce0c1cd9129705719",
+  "results/strength_classifier_20260921/verified_accuracy_grid.json": "7a5f6f7f38c504e71653c37db4ae7870e2e4512804bc301f1df2d22ca1219f61",
+  "results/strength_classifier_20260921/training_seal.json": "b820a4179774f72100a7252e937649ee42c305ac759489773b4e067f1a94059f",
+  "results/strength_classifier_20260921/E_bank_seal.json": "b1c3c2de315ed967bc786aaccbea255af5516559dda14ce15c286bc8620c194b",
+  "results/strength_classifier_20260921/E_bank_QA.json": "43f5c32e01b84a904b1f14babead46d7f4a9936b2551284b9fdab3443700ba4f",
+  "paper/revision_2026-09/tables/strength.tex": "6d31da9616ebb031c2df518988ff9bf0e97e39c986790932698af850d8ab4b8b"
+}

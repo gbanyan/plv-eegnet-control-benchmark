@@ -1,0 +1,33 @@
+{
+  "protocol": "strength-bank-T-v3-targeted-refinement-20260921",
+  "parent_plan_sha256": "52bdfd2a578f4a8784335bc103cefaf0622b430bac8cdd989e58aa33ee5763ea",
+  "parent_index": "results/strength_v3_refinement_20260921/parent_index.json",
+  "parent_index_sha256": "66b990d4928fe2fa6b18bcf5bd5af22271fa5946697b44f9974e5d9ad73399bc",
+  "expected_by_host": {
+    "gblinux": 4510,
+    "gblab146": 4174,
+    "labmk3": 2560
+  },
+  "bank_size": 16,
+  "gates": {
+    "relative_rms_max": 0.01,
+    "relative_max_max": 0.05,
+    "changed_min": 0.95,
+    "displacement_min": 0.25,
+    "diversity_min": 0.25
+  },
+  "refinement": {
+    "maximum_steps": 2048,
+    "maximum_relative": 0.025,
+    "rms_relative": 0.005
+  },
+  "source_sha256": {
+    "scripts/refine_strength_bank.py": "0b5cd11008193cb7a210294afc66fd03aa68238999de4fd90650fbc891d3634f",
+    "scripts/experimental/strength_targeted_refinement.py": "bc62d1117aff04935e608dcedc2d0b864ac1a511fff5f44aa4704832f36ad052",
+    "scripts/pilot_strength_targeted.py": "3b40203eb4fcbd3015928c3e9d06bb000103df502d737f094c75cbeadd4416ee",
+    "scripts/pilot_strength_null.py": "a9ab24d3e7cf8df2b357d90b77b3046b49c1e26bdca302ef71de29afe0dd7b65"
+  },
+  "scope": "T-only amendment after full v2 QA. Apply the identical bounded refinement rule to all 11244 banks and all 16 members, including previously passing ones. Preserve original weights exactly; do not restart, exclude trials, or relax QA. Composition reuses the exact frozen v2 prefix; it is not a mixture of v2 and v3 protocols.",
+  "algorithm": "Each step recomputes strengths, selects first maximum absolute relative-error node and a named-PCG64 uniform other node, then exhaustively selects the best edge swap by summed squared relative strength error. Accept only energy decrease below -1e-18; stop when max relative<=2.5% and RMS<=0.5%, or after 2048 steps. Final gates remain 5% and 1%.",
+  "limitations": "T-only adaptive method development disclosed; not a uniform constrained graph sampler. Banks shared across training replicates. 512-step pilot retained and failed one bank; 2048-step candidate passed all 44 known failures and 58 prescribed controls. E inputs and classifier outcomes not consulted."
+}

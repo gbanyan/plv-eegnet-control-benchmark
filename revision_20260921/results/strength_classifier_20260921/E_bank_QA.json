@@ -1,0 +1,32 @@
+{
+  "stage": "finished",
+  "partition": "E",
+  "accepted": true,
+  "classifier_manifest_sha256": "63ca4c6edfe358717dfaf5c252e1ce6b706917bef99f3710c14c8e6ace55bb39",
+  "training_seal_sha256": "b820a4179774f72100a7252e937649ee42c305ac759489773b4e067f1a94059f",
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "completed_trials": 2240,
+  "failed_trials": 0,
+  "elapsed_seconds": 5262.195794724008,
+  "maximum_relative_strength_error": 0.024993908648585077,
+  "maximum_rms_relative_strength_error": 0.0024008050754475963,
+  "minimum_changed_fraction": 0.9988927165354331,
+  "minimum_displacement_ratio": 0.2514110229339512,
+  "minimum_pairwise_diversity": 0.2536758822950631,
+  "record_hashes_verified": 2240
+}

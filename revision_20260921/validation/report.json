@@ -1,0 +1,27 @@
+{
+  "fits": {
+    "main": 10760,
+    "gcn_hgd": 280,
+    "gcn_lee": 1080,
+    "strength": 140
+  },
+  "fixed_accuracies_recomputed": 36780,
+  "mc_metrics_recomputed": 6880,
+  "bank_record_hashes": {
+    "T": 11244,
+    "E": 2240
+  },
+  "targeted_tests": {
+    "passed": 34,
+    "cuda_skipped": 3
+  },
+  "statistics_tolerance": 1e-10,
+  "evidence_parts": 134,
+  "evidence_members": 62557,
+  "compressed_bytes": 522954974,
+  "omitted_bytes_not_verified": [
+    "raw EEG",
+    "model checkpoints",
+    "full surrogate-bank arrays"
+  ]
+}

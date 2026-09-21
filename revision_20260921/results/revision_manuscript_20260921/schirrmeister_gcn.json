@@ -1,0 +1,424 @@
+{
+  "manifest_sha256": "85406729989675c8ac1c70a86123bbdb04139829effd04a3b1521b694a35cf92",
+  "complete": true,
+  "fits": 280,
+  "cells": {
+    "primary": {
+      "fixed": 52.91964285714287,
+      "resampled": 52.78571428571429,
+      "real": 53.21428571428574,
+      "baseline": 53.59821428571428
+    },
+    "accuracy": {
+      "fixed": 55.23214285714286,
+      "resampled": 55.14285714285714,
+      "real": 55.8392857142857,
+      "baseline": 56.09821428571428
+    },
+    "fixed_budget": {
+      "fixed": 56.08035714285714,
+      "resampled": 56.125,
+      "real": 56.321428571428555,
+      "baseline": 57.28571428571427
+    }
+  },
+  "contrasts": {
+    "primary:schedule": {
+      "mean_difference_pp": -0.13392857142857154,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.14201762250523983,
+      "model_95ci_pp": [
+        -0.44073899175425635,
+        0.1728818488971133
+      ],
+      "model_90ci_pp": [
+        -0.3854323219417576,
+        0.11757517908461454
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 1.4118303571428565,
+      "t_statistic": -0.9430419201928982,
+      "p_two_sided": 0.3628561178031532,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 1.8952729119189094e-05,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.36607142857142855,
+        0.08928571428571404
+      ],
+      "per_replicate_mean_pp": [
+        -0.13392857142857134,
+        0.0,
+        0.22321428571428617,
+        -0.6250000000000006,
+        -0.13392857142857176
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "single prespecified contrast in its family"
+    },
+    "primary:real_minus_identity": {
+      "mean_difference_pp": -0.3839285714285718,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.38852112003633177,
+      "model_95ci_pp": [
+        -1.2232774215288806,
+        0.4554202786717371
+      ],
+      "model_90ci_pp": [
+        -1.071973597947136,
+        0.3041164550899926
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 10.56640625,
+      "t_statistic": -0.9881794106654215,
+      "p_two_sided": 0.3411011966781383,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.06841314279405589,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -1.044642857142857,
+        0.2678571428571422
+      ],
+      "per_replicate_mean_pp": [
+        -0.44642857142857234,
+        -0.8482142857142856,
+        -1.3392857142857142,
+        0.13392857142857015,
+        0.5803571428571429
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "single prespecified contrast in its family"
+    },
+    "primary:real_minus_fixed": {
+      "mean_difference_pp": 0.29464285714285676,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.25259883512610354,
+      "model_95ci_pp": [
+        -0.25106374892258965,
+        0.8403494632083032
+      ],
+      "model_90ci_pp": [
+        -0.15269285576934188,
+        0.7419785700550554
+      ],
+      "between_subject_variance_pp2": 0.258799793956045,
+      "within_subject_run_variance_pp2": 3.172433035714286,
+      "t_statistic": 1.1664458270196052,
+      "p_two_sided": 0.26438741126812676,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.007624957066976038,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.16071428571428645,
+        0.7857142857142855
+      ],
+      "per_replicate_mean_pp": [
+        0.044642857142856575,
+        0.2232142857142854,
+        0.9821428571428574,
+        -0.35714285714285865,
+        0.5803571428571429
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "primary:real_minus_resampled": {
+      "mean_difference_pp": 0.4285714285714283,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.2803409563466202,
+      "model_95ci_pp": [
+        -0.17706838664261365,
+        1.0342112437854702
+      ],
+      "model_90ci_pp": [
+        -0.06789373328569936,
+        0.925036590428556
+      ],
+      "between_subject_variance_pp2": 0.5506095467032981,
+      "within_subject_run_variance_pp2": 2.748325892857143,
+      "t_statistic": 1.5287506832984206,
+      "p_two_sided": 0.15028736444659752,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.031197222976709918,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.06272321428571534,
+        0.9821428571428569
+      ],
+      "per_replicate_mean_pp": [
+        0.17857142857142794,
+        0.2232142857142853,
+        0.7589285714285715,
+        0.2678571428571419,
+        0.7142857142857144
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "accuracy:schedule": {
+      "mean_difference_pp": -0.08928571428571501,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.18735276793960393,
+      "model_95ci_pp": [
+        -0.49403676184398226,
+        0.3154653332725522
+      ],
+      "model_90ci_pp": [
+        -0.42107498786053826,
+        0.24250355928910822
+      ],
+      "between_subject_variance_pp2": 0.163847870879121,
+      "within_subject_run_variance_pp2": 1.637834821428571,
+      "t_statistic": -0.4765646927324695,
+      "p_two_sided": 0.6415827366382173,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.0001555021408545202,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.4464285714285717,
+        0.2589285714285706
+      ],
+      "per_replicate_mean_pp": [
+        -0.2678571428571431,
+        -0.3125000000000009,
+        0.2678571428571419,
+        -0.31250000000000167,
+        0.17857142857142863
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "accuracy:real_minus_identity": {
+      "mean_difference_pp": -0.25892857142857145,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.44936534043434345,
+      "model_95ci_pp": [
+        -1.2297233682036588,
+        0.711866225346516
+      ],
+      "model_90ci_pp": [
+        -1.0547246598027604,
+        0.5368675169456174
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 14.135044642857139,
+      "t_statistic": -0.5762094850891228,
+      "p_two_sided": 0.5743145790129239,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.06152917746349632,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -1.0180803571428578,
+        0.4464285714285716
+      ],
+      "per_replicate_mean_pp": [
+        -0.714285714285715,
+        -0.044642857142857685,
+        -1.3392857142857137,
+        1.4732142857142858,
+        -0.6696428571428567
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "accuracy:real_minus_fixed": {
+      "mean_difference_pp": 0.6071428571428569,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.36096852100344734,
+      "model_95ci_pp": [
+        -0.1726822216027215,
+        1.3869679358884353
+      ],
+      "model_90ci_pp": [
+        -0.032108351602136875,
+        1.2463940658878507
+      ],
+      "between_subject_variance_pp2": 0.5429258241758268,
+      "within_subject_run_variance_pp2": 6.40625,
+      "t_statistic": 1.681982837326301,
+      "p_two_sided": 0.116422330885819,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.14810496939750015,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -6.669268312212541e-16,
+        1.3660714285714286
+      ],
+      "per_replicate_mean_pp": [
+        -0.4464285714285716,
+        0.1339285714285706,
+        1.9196428571428577,
+        0.9374999999999994,
+        0.4910714285714288
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "accuracy:real_minus_resampled": {
+      "mean_difference_pp": 0.696428571428572,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.31874644086417575,
+      "model_95ci_pp": [
+        0.00781875122653608,
+        1.3850383916306077
+      ],
+      "model_90ci_pp": [
+        0.13194985445024832,
+        1.2609072884068957
+      ],
+      "between_subject_variance_pp2": 0.26111778846154143,
+      "within_subject_run_variance_pp2": 5.8063616071428585,
+      "t_statistic": 2.1848983459719133,
+      "p_two_sided": 0.04780408119652876,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.17913580152972863,
+      "conditional_subject_bootstrap_95ci_pp": [
+        0.11607142857142878,
+        1.321428571428573
+      ],
+      "per_replicate_mean_pp": [
+        -0.17857142857142877,
+        0.4464285714285713,
+        1.6517857142857157,
+        1.250000000000001,
+        0.3125
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "fixed_budget:schedule": {
+      "mean_difference_pp": 0.04464285714285731,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.0959561841973422,
+      "model_95ci_pp": [
+        -0.162657875590851,
+        0.2519435898765656
+      ],
+      "model_90ci_pp": [
+        -0.12528915400368376,
+        0.2145748682893984
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 0.6445312499999984,
+      "t_statistic": 0.4652421051992377,
+      "p_two_sided": 0.6494553910700713,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 9.466258734606824e-08,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.10714285714285644,
+        0.18749999999999992
+      ],
+      "per_replicate_mean_pp": [
+        -0.13392857142857095,
+        7.930164461608261e-16,
+        0.044642857142856984,
+        0.13392857142857176,
+        0.17857142857142794
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "fixed_budget:real_minus_identity": {
+      "mean_difference_pp": -0.9642857142857152,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.3382267308013537,
+      "model_95ci_pp": [
+        -1.6949801422868378,
+        -0.23359128628459258
+      ],
+      "model_90ci_pp": [
+        -1.5632627272772943,
+        -0.3653087012941362
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 8.007812499999995,
+      "t_statistic": -2.8510038576816585,
+      "p_two_sided": 0.013630705883685071,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.4587587086932775,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -1.5000000000000002,
+        -0.3392857142857147
+      ],
+      "per_replicate_mean_pp": [
+        -1.6071428571428579,
+        -1.2053571428571437,
+        -2.3660714285714297,
+        0.7142857142857127,
+        -0.35714285714285793
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "fixed_budget:real_minus_fixed": {
+      "mean_difference_pp": 0.2410714285714284,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.22939251988450707,
+      "model_95ci_pp": [
+        -0.2545009814140783,
+        0.736643838556935
+      ],
+      "model_90ci_pp": [
+        -0.16516744568162786,
+        0.6473103028244847
+      ],
+      "between_subject_variance_pp2": 0.24562156593406714,
+      "within_subject_run_variance_pp2": 2.455357142857142,
+      "t_statistic": 1.0509123344248599,
+      "p_two_sided": 0.3124427461640537,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.0028276394587741834,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.15178571428571422,
+        0.7232142857142858
+      ],
+      "per_replicate_mean_pp": [
+        0.089285714285714,
+        1.6018932212448688e-15,
+        -0.08928571428571476,
+        0.5357142857142849,
+        0.6696428571428564
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    },
+    "fixed_budget:real_minus_resampled": {
+      "mean_difference_pp": 0.19642857142857112,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.21559808747254947,
+      "model_95ci_pp": [
+        -0.2693427791404479,
+        0.6621999219975901
+      ],
+      "model_90ci_pp": [
+        -0.1853812817874657,
+        0.578238424644608
+      ],
+      "between_subject_variance_pp2": 0.27017513736263804,
+      "within_subject_run_variance_pp2": 1.9029017857142858,
+      "t_statistic": 0.9110867991979796,
+      "p_two_sided": 0.3788339775399632,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.001267651703183964,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.20535714285714354,
+        0.6249999999999998
+      ],
+      "per_replicate_mean_pp": [
+        0.22321428571428492,
+        7.930164461608261e-16,
+        -0.13392857142857179,
+        0.40178571428571325,
+        0.4910714285714283
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "status": "descriptive sensitivity"
+    }
+  },
+  "limitation": "Separate HGD channel-graph/log-power study; not a pure architecture intervention relative to PLV-EEGNet."
+}

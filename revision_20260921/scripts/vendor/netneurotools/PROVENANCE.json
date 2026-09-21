@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/netneurolab/netneurotools",
+  "commit": "49f83c023022ab606581cb10aec6a6282a306c48",
+  "file": "netneurotools/networks/randomize.py",
+  "sha256": "65a1f6fcf0756682f712370c1bfce49ff85e747e6f197e1305b88dabc66221fc",
+  "usage": "Pilot loads only original strength_preserving_rand_sa function via AST; supplies numpy, sklearn check_random_state and silent tqdm. Always supplies dense R, so BCT rewiring is not invoked."
+}

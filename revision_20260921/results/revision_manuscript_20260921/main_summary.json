@@ -1,0 +1,4550 @@
+{
+  "manifest_sha256": "c69be13ff3dffab88fb81724bbfdf47f64a1592e85a417de8f390e547e580f7e",
+  "expected_jobs": 10760,
+  "trained_jobs": 10760,
+  "evaluated_jobs": 10760,
+  "all_locked_jobs_evaluated": true,
+  "conditional_not_launched": {
+    "E6_constrained_network_null": "requires validated preservation/diversity and runtime pilot; 140 fits not silently substituted",
+    "GNN": "optional architectural extension outside the locked matrix"
+  },
+  "progress": [
+    {
+      "root": "runs/dsp-revision-collected/gblinux",
+      "stage": "evaluation",
+      "batch": "dimensions_schirrmeister",
+      "job": "schirrmeister_s14_r1005_resampled_p2048_mask3",
+      "completed_in_batch": 1260,
+      "batch_jobs": 1260,
+      "updated_unix_time": 1789954626.7746472
+    },
+    {
+      "root": "runs/dsp-revision-collected/gblab146",
+      "stage": "dimension_shard_training_complete_awaiting_full_batch_seal",
+      "host": "gblab146",
+      "completed_in_shard": 990,
+      "shard_jobs": 990,
+      "manifest_sha256": "c69be13ff3dffab88fb81724bbfdf47f64a1592e85a417de8f390e547e580f7e",
+      "jobs": [
+        "schirrmeister_s01_r1001_fixed_p128_mask1",
+        "schirrmeister_s01_r1001_resampled_p128_mask1",
+        "schirrmeister_s01_r1001_fixed_p128_mask2",
+        "schirrmeister_s01_r1001_resampled_p128_mask2",
+        "schirrmeister_s01_r1001_fixed_p128_mask3",
+        "schirrmeister_s01_r1001_resampled_p128_mask3",
+        "schirrmeister_s01_r1001_fixed_p512_mask1",
+        "schirrmeister_s01_r1001_resampled_p512_mask1",
+        "schirrmeister_s01_r1001_fixed_p512_mask2",
+        "schirrmeister_s01_r1001_resampled_p512_mask2",
+        "schirrmeister_s01_r1001_fixed_p512_mask3",
+        "schirrmeister_s01_r1001_resampled_p512_mask3",
+        "schirrmeister_s01_r1001_fixed_p2048_mask1",
+        "schirrmeister_s01_r1001_resampled_p2048_mask1",
+        "schirrmeister_s01_r1001_fixed_p2048_mask2",
+        "schirrmeister_s01_r1001_resampled_p2048_mask2",
+        "schirrmeister_s01_r1001_fixed_p2048_mask3",
+        "schirrmeister_s01_r1001_resampled_p2048_mask3",
+        "schirrmeister_s01_r1002_fixed_p128_mask1",
+        "schirrmeister_s01_r1002_resampled_p128_mask1",
+        "schirrmeister_s01_r1002_fixed_p128_mask2",
+        "schirrmeister_s01_r1002_resampled_p128_mask2",
+        "schirrmeister_s01_r1002_fixed_p128_mask3",
+        "schirrmeister_s01_r1002_resampled_p128_mask3",
+        "schirrmeister_s01_r1002_fixed_p512_mask1",
+        "schirrmeister_s01_r1002_resampled_p512_mask1",
+        "schirrmeister_s01_r1002_fixed_p512_mask2",
+        "schirrmeister_s01_r1002_resampled_p512_mask2",
+        "schirrmeister_s01_r1002_fixed_p512_mask3",
+        "schirrmeister_s01_r1002_resampled_p512_mask3",
+        "schirrmeister_s01_r1002_fixed_p2048_mask1",
+        "schirrmeister_s01_r1002_resampled_p2048_mask1",
+        "schirrmeister_s01_r1002_fixed_p2048_mask2",
+        "schirrmeister_s01_r1002_resampled_p2048_mask2",
+        "schirrmeister_s01_r1002_fixed_p2048_mask3",
+        "schirrmeister_s01_r1002_resampled_p2048_mask3",
+        "schirrmeister_s01_r1003_fixed_p128_mask1",
+        "schirrmeister_s01_r1003_resampled_p128_mask1",
+        "schirrmeister_s01_r1003_fixed_p128_mask2",
+        "schirrmeister_s01_r1003_resampled_p128_mask2",
+        "schirrmeister_s01_r1003_fixed_p128_mask3",
+        "schirrmeister_s01_r1003_resampled_p128_mask3",
+        "schirrmeister_s01_r1003_fixed_p512_mask1",
+        "schirrmeister_s01_r1003_resampled_p512_mask1",
+        "schirrmeister_s01_r1003_fixed_p512_mask2",
+        "schirrmeister_s01_r1003_resampled_p512_mask2",
+        "schirrmeister_s01_r1003_fixed_p512_mask3",
+        "schirrmeister_s01_r1003_resampled_p512_mask3",
+        "schirrmeister_s01_r1003_fixed_p2048_mask1",
+        "schirrmeister_s01_r1003_resampled_p2048_mask1",
+        "schirrmeister_s01_r1003_fixed_p2048_mask2",
+        "schirrmeister_s01_r1003_resampled_p2048_mask2",
+        "schirrmeister_s01_r1003_fixed_p2048_mask3",
+        "schirrmeister_s01_r1003_resampled_p2048_mask3",
+        "schirrmeister_s01_r1004_fixed_p128_mask1",
+        "schirrmeister_s01_r1004_resampled_p128_mask1",
+        "schirrmeister_s01_r1004_fixed_p128_mask2",
+        "schirrmeister_s01_r1004_resampled_p128_mask2",
+        "schirrmeister_s01_r1004_fixed_p128_mask3",
+        "schirrmeister_s01_r1004_resampled_p128_mask3",
+        "schirrmeister_s01_r1004_fixed_p512_mask1",
+        "schirrmeister_s01_r1004_resampled_p512_mask1",
+        "schirrmeister_s01_r1004_fixed_p512_mask2",
+        "schirrmeister_s01_r1004_resampled_p512_mask2",
+        "schirrmeister_s01_r1004_fixed_p512_mask3",
+        "schirrmeister_s01_r1004_resampled_p512_mask3",
+        "schirrmeister_s01_r1004_fixed_p2048_mask1",
+        "schirrmeister_s01_r1004_resampled_p2048_mask1",
+        "schirrmeister_s01_r1004_fixed_p2048_mask2",
+        "schirrmeister_s01_r1004_resampled_p2048_mask2",
+        "schirrmeister_s01_r1004_fixed_p2048_mask3",
+        "schirrmeister_s01_r1004_resampled_p2048_mask3",
+        "schirrmeister_s01_r1005_fixed_p128_mask1",
+        "schirrmeister_s01_r1005_resampled_p128_mask1",
+        "schirrmeister_s01_r1005_fixed_p128_mask2",
+        "schirrmeister_s01_r1005_resampled_p128_mask2",
+        "schirrmeister_s01_r1005_fixed_p128_mask3",
+        "schirrmeister_s01_r1005_resampled_p128_mask3",
+        "schirrmeister_s01_r1005_fixed_p512_mask1",
+        "schirrmeister_s01_r1005_resampled_p512_mask1",
+        "schirrmeister_s01_r1005_fixed_p512_mask2",
+        "schirrmeister_s01_r1005_resampled_p512_mask2",
+        "schirrmeister_s01_r1005_fixed_p512_mask3",
+        "schirrmeister_s01_r1005_resampled_p512_mask3",
+        "schirrmeister_s01_r1005_fixed_p2048_mask1",
+        "schirrmeister_s01_r1005_resampled_p2048_mask1",
+        "schirrmeister_s01_r1005_fixed_p2048_mask2",
+        "schirrmeister_s01_r1005_resampled_p2048_mask2",
+        "schirrmeister_s01_r1005_fixed_p2048_mask3",
+        "schirrmeister_s01_r1005_resampled_p2048_mask3",
+        "schirrmeister_s02_r1001_fixed_p128_mask1",
+        "schirrmeister_s02_r1001_resampled_p128_mask1",
+        "schirrmeister_s02_r1001_fixed_p128_mask2",
+        "schirrmeister_s02_r1001_resampled_p128_mask2",
+        "schirrmeister_s02_r1001_fixed_p128_mask3",
+        "schirrmeister_s02_r1001_resampled_p128_mask3",
+        "schirrmeister_s02_r1001_fixed_p512_mask1",
+        "schirrmeister_s02_r1001_resampled_p512_mask1",
+        "schirrmeister_s02_r1001_fixed_p512_mask2",
+        "schirrmeister_s02_r1001_resampled_p512_mask2",
+        "schirrmeister_s02_r1001_fixed_p512_mask3",
+        "schirrmeister_s02_r1001_resampled_p512_mask3",
+        "schirrmeister_s02_r1001_fixed_p2048_mask1",
+        "schirrmeister_s02_r1001_resampled_p2048_mask1",
+        "schirrmeister_s02_r1001_fixed_p2048_mask2",
+        "schirrmeister_s02_r1001_resampled_p2048_mask2",
+        "schirrmeister_s02_r1001_fixed_p2048_mask3",
+        "schirrmeister_s02_r1001_resampled_p2048_mask3",
+        "schirrmeister_s02_r1002_fixed_p128_mask1",
+        "schirrmeister_s02_r1002_resampled_p128_mask1",
+        "schirrmeister_s02_r1002_fixed_p128_mask2",
+        "schirrmeister_s02_r1002_resampled_p128_mask2",
+        "schirrmeister_s02_r1002_fixed_p128_mask3",
+        "schirrmeister_s02_r1002_resampled_p128_mask3",
+        "schirrmeister_s02_r1002_fixed_p512_mask1",
+        "schirrmeister_s02_r1002_resampled_p512_mask1",
+        "schirrmeister_s02_r1002_fixed_p512_mask2",
+        "schirrmeister_s02_r1002_resampled_p512_mask2",
+        "schirrmeister_s02_r1002_fixed_p512_mask3",
+        "schirrmeister_s02_r1002_resampled_p512_mask3",
+        "schirrmeister_s02_r1002_fixed_p2048_mask1",
+        "schirrmeister_s02_r1002_resampled_p2048_mask1",
+        "schirrmeister_s02_r1002_fixed_p2048_mask2",
+        "schirrmeister_s02_r1002_resampled_p2048_mask2",
+        "schirrmeister_s02_r1002_fixed_p2048_mask3",
+        "schirrmeister_s02_r1002_resampled_p2048_mask3",
+        "schirrmeister_s02_r1003_fixed_p128_mask1",
+        "schirrmeister_s02_r1003_resampled_p128_mask1",
+        "schirrmeister_s02_r1003_fixed_p128_mask2",
+        "schirrmeister_s02_r1003_resampled_p128_mask2",
+        "schirrmeister_s02_r1003_fixed_p128_mask3",
+        "schirrmeister_s02_r1003_resampled_p128_mask3",
+        "schirrmeister_s02_r1003_fixed_p512_mask1",
+        "schirrmeister_s02_r1003_resampled_p512_mask1",
+        "schirrmeister_s02_r1003_fixed_p512_mask2",
+        "schirrmeister_s02_r1003_resampled_p512_mask2",
+        "schirrmeister_s02_r1003_fixed_p512_mask3",
+        "schirrmeister_s02_r1003_resampled_p512_mask3",
+        "schirrmeister_s02_r1003_fixed_p2048_mask1",
+        "schirrmeister_s02_r1003_resampled_p2048_mask1",
+        "schirrmeister_s02_r1003_fixed_p2048_mask2",
+        "schirrmeister_s02_r1003_resampled_p2048_mask2",
+        "schirrmeister_s02_r1003_fixed_p2048_mask3",
+        "schirrmeister_s02_r1003_resampled_p2048_mask3",
+        "schirrmeister_s02_r1004_fixed_p128_mask1",
+        "schirrmeister_s02_r1004_resampled_p128_mask1",
+        "schirrmeister_s02_r1004_fixed_p128_mask2",
+        "schirrmeister_s02_r1004_resampled_p128_mask2",
+        "schirrmeister_s02_r1004_fixed_p128_mask3",
+        "schirrmeister_s02_r1004_resampled_p128_mask3",
+        "schirrmeister_s02_r1004_fixed_p512_mask1",
+        "schirrmeister_s02_r1004_resampled_p512_mask1",
+        "schirrmeister_s02_r1004_fixed_p512_mask2",
+        "schirrmeister_s02_r1004_resampled_p512_mask2",
+        "schirrmeister_s02_r1004_fixed_p512_mask3",
+        "schirrmeister_s02_r1004_resampled_p512_mask3",
+        "schirrmeister_s02_r1004_fixed_p2048_mask1",
+        "schirrmeister_s02_r1004_resampled_p2048_mask1",
+        "schirrmeister_s02_r1004_fixed_p2048_mask2",
+        "schirrmeister_s02_r1004_resampled_p2048_mask2",
+        "schirrmeister_s02_r1004_fixed_p2048_mask3",
+        "schirrmeister_s02_r1004_resampled_p2048_mask3",
+        "schirrmeister_s02_r1005_fixed_p128_mask1",
+        "schirrmeister_s02_r1005_resampled_p128_mask1",
+        "schirrmeister_s02_r1005_fixed_p128_mask2",
+        "schirrmeister_s02_r1005_resampled_p128_mask2",
+        "schirrmeister_s02_r1005_fixed_p128_mask3",
+        "schirrmeister_s02_r1005_resampled_p128_mask3",
+        "schirrmeister_s02_r1005_fixed_p512_mask1",
+        "schirrmeister_s02_r1005_resampled_p512_mask1",
+        "schirrmeister_s02_r1005_fixed_p512_mask2",
+        "schirrmeister_s02_r1005_resampled_p512_mask2",
+        "schirrmeister_s02_r1005_fixed_p512_mask3",
+        "schirrmeister_s02_r1005_resampled_p512_mask3",
+        "schirrmeister_s02_r1005_fixed_p2048_mask1",
+        "schirrmeister_s02_r1005_resampled_p2048_mask1",
+        "schirrmeister_s02_r1005_fixed_p2048_mask2",
+        "schirrmeister_s02_r1005_resampled_p2048_mask2",
+        "schirrmeister_s02_r1005_fixed_p2048_mask3",
+        "schirrmeister_s02_r1005_resampled_p2048_mask3",
+        "schirrmeister_s03_r1001_fixed_p128_mask1",
+        "schirrmeister_s03_r1001_resampled_p128_mask1",
+        "schirrmeister_s03_r1001_fixed_p128_mask2",
+        "schirrmeister_s03_r1001_resampled_p128_mask2",
+        "schirrmeister_s03_r1001_fixed_p128_mask3",
+        "schirrmeister_s03_r1001_resampled_p128_mask3",
+        "schirrmeister_s03_r1001_fixed_p512_mask1",
+        "schirrmeister_s03_r1001_resampled_p512_mask1",
+        "schirrmeister_s03_r1001_fixed_p512_mask2",
+        "schirrmeister_s03_r1001_resampled_p512_mask2",
+        "schirrmeister_s03_r1001_fixed_p512_mask3",
+        "schirrmeister_s03_r1001_resampled_p512_mask3",
+        "schirrmeister_s03_r1001_fixed_p2048_mask1",
+        "schirrmeister_s03_r1001_resampled_p2048_mask1",
+        "schirrmeister_s03_r1001_fixed_p2048_mask2",
+        "schirrmeister_s03_r1001_resampled_p2048_mask2",
+        "schirrmeister_s03_r1001_fixed_p2048_mask3",
+        "schirrmeister_s03_r1001_resampled_p2048_mask3",
+        "schirrmeister_s03_r1002_fixed_p128_mask1",
+        "schirrmeister_s03_r1002_resampled_p128_mask1",
+        "schirrmeister_s03_r1002_fixed_p128_mask2",
+        "schirrmeister_s03_r1002_resampled_p128_mask2",
+        "schirrmeister_s03_r1002_fixed_p128_mask3",
+        "schirrmeister_s03_r1002_resampled_p128_mask3",
+        "schirrmeister_s03_r1002_fixed_p512_mask1",
+        "schirrmeister_s03_r1002_resampled_p512_mask1",
+        "schirrmeister_s03_r1002_fixed_p512_mask2",
+        "schirrmeister_s03_r1002_resampled_p512_mask2",
+        "schirrmeister_s03_r1002_fixed_p512_mask3",
+        "schirrmeister_s03_r1002_resampled_p512_mask3",
+        "schirrmeister_s03_r1002_fixed_p2048_mask1",
+        "schirrmeister_s03_r1002_resampled_p2048_mask1",
+        "schirrmeister_s03_r1002_fixed_p2048_mask2",
+        "schirrmeister_s03_r1002_resampled_p2048_mask2",
+        "schirrmeister_s03_r1002_fixed_p2048_mask3",
+        "schirrmeister_s03_r1002_resampled_p2048_mask3",
+        "schirrmeister_s03_r1003_fixed_p128_mask1",
+        "schirrmeister_s03_r1003_resampled_p128_mask1",
+        "schirrmeister_s03_r1003_fixed_p128_mask2",
+        "schirrmeister_s03_r1003_resampled_p128_mask2",
+        "schirrmeister_s03_r1003_fixed_p128_mask3",
+        "schirrmeister_s03_r1003_resampled_p128_mask3",
+        "schirrmeister_s03_r1003_fixed_p512_mask1",
+        "schirrmeister_s03_r1003_resampled_p512_mask1",
+        "schirrmeister_s03_r1003_fixed_p512_mask2",
+        "schirrmeister_s03_r1003_resampled_p512_mask2",
+        "schirrmeister_s03_r1003_fixed_p512_mask3",
+        "schirrmeister_s03_r1003_resampled_p512_mask3",
+        "schirrmeister_s03_r1003_fixed_p2048_mask1",
+        "schirrmeister_s03_r1003_resampled_p2048_mask1",
+        "schirrmeister_s03_r1003_fixed_p2048_mask2",
+        "schirrmeister_s03_r1003_resampled_p2048_mask2",
+        "schirrmeister_s03_r1003_fixed_p2048_mask3",
+        "schirrmeister_s03_r1003_resampled_p2048_mask3",
+        "schirrmeister_s03_r1004_fixed_p128_mask1",
+        "schirrmeister_s03_r1004_resampled_p128_mask1",
+        "schirrmeister_s03_r1004_fixed_p128_mask2",
+        "schirrmeister_s03_r1004_resampled_p128_mask2",
+        "schirrmeister_s03_r1004_fixed_p128_mask3",
+        "schirrmeister_s03_r1004_resampled_p128_mask3",
+        "schirrmeister_s03_r1004_fixed_p512_mask1",
+        "schirrmeister_s03_r1004_resampled_p512_mask1",
+        "schirrmeister_s03_r1004_fixed_p512_mask2",
+        "schirrmeister_s03_r1004_resampled_p512_mask2",
+        "schirrmeister_s03_r1004_fixed_p512_mask3",
+        "schirrmeister_s03_r1004_resampled_p512_mask3",
+        "schirrmeister_s03_r1004_fixed_p2048_mask1",
+        "schirrmeister_s03_r1004_resampled_p2048_mask1",
+        "schirrmeister_s03_r1004_fixed_p2048_mask2",
+        "schirrmeister_s03_r1004_resampled_p2048_mask2",
+        "schirrmeister_s03_r1004_fixed_p2048_mask3",
+        "schirrmeister_s03_r1004_resampled_p2048_mask3",
+        "schirrmeister_s03_r1005_fixed_p128_mask1",
+        "schirrmeister_s03_r1005_resampled_p128_mask1",
+        "schirrmeister_s03_r1005_fixed_p128_mask2",
+        "schirrmeister_s03_r1005_resampled_p128_mask2",
+        "schirrmeister_s03_r1005_fixed_p128_mask3",
+        "schirrmeister_s03_r1005_resampled_p128_mask3",
+        "schirrmeister_s03_r1005_fixed_p512_mask1",
+        "schirrmeister_s03_r1005_resampled_p512_mask1",
+        "schirrmeister_s03_r1005_fixed_p512_mask2",
+        "schirrmeister_s03_r1005_resampled_p512_mask2",
+        "schirrmeister_s03_r1005_fixed_p512_mask3",
+        "schirrmeister_s03_r1005_resampled_p512_mask3",
+        "schirrmeister_s03_r1005_fixed_p2048_mask1",
+        "schirrmeister_s03_r1005_resampled_p2048_mask1",
+        "schirrmeister_s03_r1005_fixed_p2048_mask2",
+        "schirrmeister_s03_r1005_resampled_p2048_mask2",
+        "schirrmeister_s03_r1005_fixed_p2048_mask3",
+        "schirrmeister_s03_r1005_resampled_p2048_mask3",
+        "schirrmeister_s04_r1001_fixed_p128_mask1",
+        "schirrmeister_s04_r1001_resampled_p128_mask1",
+        "schirrmeister_s04_r1001_fixed_p128_mask2",
+        "schirrmeister_s04_r1001_resampled_p128_mask2",
+        "schirrmeister_s04_r1001_fixed_p128_mask3",
+        "schirrmeister_s04_r1001_resampled_p128_mask3",
+        "schirrmeister_s04_r1001_fixed_p512_mask1",
+        "schirrmeister_s04_r1001_resampled_p512_mask1",
+        "schirrmeister_s04_r1001_fixed_p512_mask2",
+        "schirrmeister_s04_r1001_resampled_p512_mask2",
+        "schirrmeister_s04_r1001_fixed_p512_mask3",
+        "schirrmeister_s04_r1001_resampled_p512_mask3",
+        "schirrmeister_s04_r1001_fixed_p2048_mask1",
+        "schirrmeister_s04_r1001_resampled_p2048_mask1",
+        "schirrmeister_s04_r1001_fixed_p2048_mask2",
+        "schirrmeister_s04_r1001_resampled_p2048_mask2",
+        "schirrmeister_s04_r1001_fixed_p2048_mask3",
+        "schirrmeister_s04_r1001_resampled_p2048_mask3",
+        "schirrmeister_s04_r1002_fixed_p128_mask1",
+        "schirrmeister_s04_r1002_resampled_p128_mask1",
+        "schirrmeister_s04_r1002_fixed_p128_mask2",
+        "schirrmeister_s04_r1002_resampled_p128_mask2",
+        "schirrmeister_s04_r1002_fixed_p128_mask3",
+        "schirrmeister_s04_r1002_resampled_p128_mask3",
+        "schirrmeister_s04_r1002_fixed_p512_mask1",
+        "schirrmeister_s04_r1002_resampled_p512_mask1",
+        "schirrmeister_s04_r1002_fixed_p512_mask2",
+        "schirrmeister_s04_r1002_resampled_p512_mask2",
+        "schirrmeister_s04_r1002_fixed_p512_mask3",
+        "schirrmeister_s04_r1002_resampled_p512_mask3",
+        "schirrmeister_s04_r1002_fixed_p2048_mask1",
+        "schirrmeister_s04_r1002_resampled_p2048_mask1",
+        "schirrmeister_s04_r1002_fixed_p2048_mask2",
+        "schirrmeister_s04_r1002_resampled_p2048_mask2",
+        "schirrmeister_s04_r1002_fixed_p2048_mask3",
+        "schirrmeister_s04_r1002_resampled_p2048_mask3",
+        "schirrmeister_s04_r1003_fixed_p128_mask1",
+        "schirrmeister_s04_r1003_resampled_p128_mask1",
+        "schirrmeister_s04_r1003_fixed_p128_mask2",
+        "schirrmeister_s04_r1003_resampled_p128_mask2",
+        "schirrmeister_s04_r1003_fixed_p128_mask3",
+        "schirrmeister_s04_r1003_resampled_p128_mask3",
+        "schirrmeister_s04_r1003_fixed_p512_mask1",
+        "schirrmeister_s04_r1003_resampled_p512_mask1",
+        "schirrmeister_s04_r1003_fixed_p512_mask2",
+        "schirrmeister_s04_r1003_resampled_p512_mask2",
+        "schirrmeister_s04_r1003_fixed_p512_mask3",
+        "schirrmeister_s04_r1003_resampled_p512_mask3",
+        "schirrmeister_s04_r1003_fixed_p2048_mask1",
+        "schirrmeister_s04_r1003_resampled_p2048_mask1",
+        "schirrmeister_s04_r1003_fixed_p2048_mask2",
+        "schirrmeister_s04_r1003_resampled_p2048_mask2",
+        "schirrmeister_s04_r1003_fixed_p2048_mask3",
+        "schirrmeister_s04_r1003_resampled_p2048_mask3",
+        "schirrmeister_s04_r1004_fixed_p128_mask1",
+        "schirrmeister_s04_r1004_resampled_p128_mask1",
+        "schirrmeister_s04_r1004_fixed_p128_mask2",
+        "schirrmeister_s04_r1004_resampled_p128_mask2",
+        "schirrmeister_s04_r1004_fixed_p128_mask3",
+        "schirrmeister_s04_r1004_resampled_p128_mask3",
+        "schirrmeister_s04_r1004_fixed_p512_mask1",
+        "schirrmeister_s04_r1004_resampled_p512_mask1",
+        "schirrmeister_s04_r1004_fixed_p512_mask2",
+        "schirrmeister_s04_r1004_resampled_p512_mask2",
+        "schirrmeister_s04_r1004_fixed_p512_mask3",
+        "schirrmeister_s04_r1004_resampled_p512_mask3",
+        "schirrmeister_s04_r1004_fixed_p2048_mask1",
+        "schirrmeister_s04_r1004_resampled_p2048_mask1",
+        "schirrmeister_s04_r1004_fixed_p2048_mask2",
+        "schirrmeister_s04_r1004_resampled_p2048_mask2",
+        "schirrmeister_s04_r1004_fixed_p2048_mask3",
+        "schirrmeister_s04_r1004_resampled_p2048_mask3",
+        "schirrmeister_s04_r1005_fixed_p128_mask1",
+        "schirrmeister_s04_r1005_resampled_p128_mask1",
+        "schirrmeister_s04_r1005_fixed_p128_mask2",
+        "schirrmeister_s04_r1005_resampled_p128_mask2",
+        "schirrmeister_s04_r1005_fixed_p128_mask3",
+        "schirrmeister_s04_r1005_resampled_p128_mask3",
+        "schirrmeister_s04_r1005_fixed_p512_mask1",
+        "schirrmeister_s04_r1005_resampled_p512_mask1",
+        "schirrmeister_s04_r1005_fixed_p512_mask2",
+        "schirrmeister_s04_r1005_resampled_p512_mask2",
+        "schirrmeister_s04_r1005_fixed_p512_mask3",
+        "schirrmeister_s04_r1005_resampled_p512_mask3",
+        "schirrmeister_s04_r1005_fixed_p2048_mask1",
+        "schirrmeister_s04_r1005_resampled_p2048_mask1",
+        "schirrmeister_s04_r1005_fixed_p2048_mask2",
+        "schirrmeister_s04_r1005_resampled_p2048_mask2",
+        "schirrmeister_s04_r1005_fixed_p2048_mask3",
+        "schirrmeister_s04_r1005_resampled_p2048_mask3",
+        "schirrmeister_s05_r1001_fixed_p128_mask1",
+        "schirrmeister_s05_r1001_resampled_p128_mask1",
+        "schirrmeister_s05_r1001_fixed_p128_mask2",
+        "schirrmeister_s05_r1001_resampled_p128_mask2",
+        "schirrmeister_s05_r1001_fixed_p128_mask3",
+        "schirrmeister_s05_r1001_resampled_p128_mask3",
+        "schirrmeister_s05_r1001_fixed_p512_mask1",
+        "schirrmeister_s05_r1001_resampled_p512_mask1",
+        "schirrmeister_s05_r1001_fixed_p512_mask2",
+        "schirrmeister_s05_r1001_resampled_p512_mask2",
+        "schirrmeister_s05_r1001_fixed_p512_mask3",
+        "schirrmeister_s05_r1001_resampled_p512_mask3",
+        "schirrmeister_s05_r1001_fixed_p2048_mask1",
+        "schirrmeister_s05_r1001_resampled_p2048_mask1",
+        "schirrmeister_s05_r1001_fixed_p2048_mask2",
+        "schirrmeister_s05_r1001_resampled_p2048_mask2",
+        "schirrmeister_s05_r1001_fixed_p2048_mask3",
+        "schirrmeister_s05_r1001_resampled_p2048_mask3",
+        "schirrmeister_s05_r1002_fixed_p128_mask1",
+        "schirrmeister_s05_r1002_resampled_p128_mask1",
+        "schirrmeister_s05_r1002_fixed_p128_mask2",
+        "schirrmeister_s05_r1002_resampled_p128_mask2",
+        "schirrmeister_s05_r1002_fixed_p128_mask3",
+        "schirrmeister_s05_r1002_resampled_p128_mask3",
+        "schirrmeister_s05_r1002_fixed_p512_mask1",
+        "schirrmeister_s05_r1002_resampled_p512_mask1",
+        "schirrmeister_s05_r1002_fixed_p512_mask2",
+        "schirrmeister_s05_r1002_resampled_p512_mask2",
+        "schirrmeister_s05_r1002_fixed_p512_mask3",
+        "schirrmeister_s05_r1002_resampled_p512_mask3",
+        "schirrmeister_s05_r1002_fixed_p2048_mask1",
+        "schirrmeister_s05_r1002_resampled_p2048_mask1",
+        "schirrmeister_s05_r1002_fixed_p2048_mask2",
+        "schirrmeister_s05_r1002_resampled_p2048_mask2",
+        "schirrmeister_s05_r1002_fixed_p2048_mask3",
+        "schirrmeister_s05_r1002_resampled_p2048_mask3",
+        "schirrmeister_s05_r1003_fixed_p128_mask1",
+        "schirrmeister_s05_r1003_resampled_p128_mask1",
+        "schirrmeister_s05_r1003_fixed_p128_mask2",
+        "schirrmeister_s05_r1003_resampled_p128_mask2",
+        "schirrmeister_s05_r1003_fixed_p128_mask3",
+        "schirrmeister_s05_r1003_resampled_p128_mask3",
+        "schirrmeister_s05_r1003_fixed_p512_mask1",
+        "schirrmeister_s05_r1003_resampled_p512_mask1",
+        "schirrmeister_s05_r1003_fixed_p512_mask2",
+        "schirrmeister_s05_r1003_resampled_p512_mask2",
+        "schirrmeister_s05_r1003_fixed_p512_mask3",
+        "schirrmeister_s05_r1003_resampled_p512_mask3",
+        "schirrmeister_s05_r1003_fixed_p2048_mask1",
+        "schirrmeister_s05_r1003_resampled_p2048_mask1",
+        "schirrmeister_s05_r1003_fixed_p2048_mask2",
+        "schirrmeister_s05_r1003_resampled_p2048_mask2",
+        "schirrmeister_s05_r1003_fixed_p2048_mask3",
+        "schirrmeister_s05_r1003_resampled_p2048_mask3",
+        "schirrmeister_s05_r1004_fixed_p128_mask1",
+        "schirrmeister_s05_r1004_resampled_p128_mask1",
+        "schirrmeister_s05_r1004_fixed_p128_mask2",
+        "schirrmeister_s05_r1004_resampled_p128_mask2",
+        "schirrmeister_s05_r1004_fixed_p128_mask3",
+        "schirrmeister_s05_r1004_resampled_p128_mask3",
+        "schirrmeister_s05_r1004_fixed_p512_mask1",
+        "schirrmeister_s05_r1004_resampled_p512_mask1",
+        "schirrmeister_s05_r1004_fixed_p512_mask2",
+        "schirrmeister_s05_r1004_resampled_p512_mask2",
+        "schirrmeister_s05_r1004_fixed_p512_mask3",
+        "schirrmeister_s05_r1004_resampled_p512_mask3",
+        "schirrmeister_s05_r1004_fixed_p2048_mask1",
+        "schirrmeister_s05_r1004_resampled_p2048_mask1",
+        "schirrmeister_s05_r1004_fixed_p2048_mask2",
+        "schirrmeister_s05_r1004_resampled_p2048_mask2",
+        "schirrmeister_s05_r1004_fixed_p2048_mask3",
+        "schirrmeister_s05_r1004_resampled_p2048_mask3",
+        "schirrmeister_s05_r1005_fixed_p128_mask1",
+        "schirrmeister_s05_r1005_resampled_p128_mask1",
+        "schirrmeister_s05_r1005_fixed_p128_mask2",
+        "schirrmeister_s05_r1005_resampled_p128_mask2",
+        "schirrmeister_s05_r1005_fixed_p128_mask3",
+        "schirrmeister_s05_r1005_resampled_p128_mask3",
+        "schirrmeister_s05_r1005_fixed_p512_mask1",
+        "schirrmeister_s05_r1005_resampled_p512_mask1",
+        "schirrmeister_s05_r1005_fixed_p512_mask2",
+        "schirrmeister_s05_r1005_resampled_p512_mask2",
+        "schirrmeister_s05_r1005_fixed_p512_mask3",
+        "schirrmeister_s05_r1005_resampled_p512_mask3",
+        "schirrmeister_s05_r1005_fixed_p2048_mask1",
+        "schirrmeister_s05_r1005_resampled_p2048_mask1",
+        "schirrmeister_s05_r1005_fixed_p2048_mask2",
+        "schirrmeister_s05_r1005_resampled_p2048_mask2",
+        "schirrmeister_s05_r1005_fixed_p2048_mask3",
+        "schirrmeister_s05_r1005_resampled_p2048_mask3",
+        "schirrmeister_s06_r1001_fixed_p128_mask1",
+        "schirrmeister_s06_r1001_resampled_p128_mask1",
+        "schirrmeister_s06_r1001_fixed_p128_mask2",
+        "schirrmeister_s06_r1001_resampled_p128_mask2",
+        "schirrmeister_s06_r1001_fixed_p128_mask3",
+        "schirrmeister_s06_r1001_resampled_p128_mask3",
+        "schirrmeister_s06_r1001_fixed_p512_mask1",
+        "schirrmeister_s06_r1001_resampled_p512_mask1",
+        "schirrmeister_s06_r1001_fixed_p512_mask2",
+        "schirrmeister_s06_r1001_resampled_p512_mask2",
+        "schirrmeister_s06_r1001_fixed_p512_mask3",
+        "schirrmeister_s06_r1001_resampled_p512_mask3",
+        "schirrmeister_s06_r1001_fixed_p2048_mask1",
+        "schirrmeister_s06_r1001_resampled_p2048_mask1",
+        "schirrmeister_s06_r1001_fixed_p2048_mask2",
+        "schirrmeister_s06_r1001_resampled_p2048_mask2",
+        "schirrmeister_s06_r1001_fixed_p2048_mask3",
+        "schirrmeister_s06_r1001_resampled_p2048_mask3",
+        "schirrmeister_s06_r1002_fixed_p128_mask1",
+        "schirrmeister_s06_r1002_resampled_p128_mask1",
+        "schirrmeister_s06_r1002_fixed_p128_mask2",
+        "schirrmeister_s06_r1002_resampled_p128_mask2",
+        "schirrmeister_s06_r1002_fixed_p128_mask3",
+        "schirrmeister_s06_r1002_resampled_p128_mask3",
+        "schirrmeister_s06_r1002_fixed_p512_mask1",
+        "schirrmeister_s06_r1002_resampled_p512_mask1",
+        "schirrmeister_s06_r1002_fixed_p512_mask2",
+        "schirrmeister_s06_r1002_resampled_p512_mask2",
+        "schirrmeister_s06_r1002_fixed_p512_mask3",
+        "schirrmeister_s06_r1002_resampled_p512_mask3",
+        "schirrmeister_s06_r1002_fixed_p2048_mask1",
+        "schirrmeister_s06_r1002_resampled_p2048_mask1",
+        "schirrmeister_s06_r1002_fixed_p2048_mask2",
+        "schirrmeister_s06_r1002_resampled_p2048_mask2",
+        "schirrmeister_s06_r1002_fixed_p2048_mask3",
+        "schirrmeister_s06_r1002_resampled_p2048_mask3",
+        "schirrmeister_s06_r1003_fixed_p128_mask1",
+        "schirrmeister_s06_r1003_resampled_p128_mask1",
+        "schirrmeister_s06_r1003_fixed_p128_mask2",
+        "schirrmeister_s06_r1003_resampled_p128_mask2",
+        "schirrmeister_s06_r1003_fixed_p128_mask3",
+        "schirrmeister_s06_r1003_resampled_p128_mask3",
+        "schirrmeister_s06_r1003_fixed_p512_mask1",
+        "schirrmeister_s06_r1003_resampled_p512_mask1",
+        "schirrmeister_s06_r1003_fixed_p512_mask2",
+        "schirrmeister_s06_r1003_resampled_p512_mask2",
+        "schirrmeister_s06_r1003_fixed_p512_mask3",
+        "schirrmeister_s06_r1003_resampled_p512_mask3",
+        "schirrmeister_s06_r1003_fixed_p2048_mask1",
+        "schirrmeister_s06_r1003_resampled_p2048_mask1",
+        "schirrmeister_s06_r1003_fixed_p2048_mask2",
+        "schirrmeister_s06_r1003_resampled_p2048_mask2",
+        "schirrmeister_s06_r1003_fixed_p2048_mask3",
+        "schirrmeister_s06_r1003_resampled_p2048_mask3",
+        "schirrmeister_s06_r1004_fixed_p128_mask1",
+        "schirrmeister_s06_r1004_resampled_p128_mask1",
+        "schirrmeister_s06_r1004_fixed_p128_mask2",
+        "schirrmeister_s06_r1004_resampled_p128_mask2",
+        "schirrmeister_s06_r1004_fixed_p128_mask3",
+        "schirrmeister_s06_r1004_resampled_p128_mask3",
+        "schirrmeister_s06_r1004_fixed_p512_mask1",
+        "schirrmeister_s06_r1004_resampled_p512_mask1",
+        "schirrmeister_s06_r1004_fixed_p512_mask2",
+        "schirrmeister_s06_r1004_resampled_p512_mask2",
+        "schirrmeister_s06_r1004_fixed_p512_mask3",
+        "schirrmeister_s06_r1004_resampled_p512_mask3",
+        "schirrmeister_s06_r1004_fixed_p2048_mask1",
+        "schirrmeister_s06_r1004_resampled_p2048_mask1",
+        "schirrmeister_s06_r1004_fixed_p2048_mask2",
+        "schirrmeister_s06_r1004_resampled_p2048_mask2",
+        "schirrmeister_s06_r1004_fixed_p2048_mask3",
+        "schirrmeister_s06_r1004_resampled_p2048_mask3",
+        "schirrmeister_s06_r1005_fixed_p128_mask1",
+        "schirrmeister_s06_r1005_resampled_p128_mask1",
+        "schirrmeister_s06_r1005_fixed_p128_mask2",
+        "schirrmeister_s06_r1005_resampled_p128_mask2",
+        "schirrmeister_s06_r1005_fixed_p128_mask3",
+        "schirrmeister_s06_r1005_resampled_p128_mask3",
+        "schirrmeister_s06_r1005_fixed_p512_mask1",
+        "schirrmeister_s06_r1005_resampled_p512_mask1",
+        "schirrmeister_s06_r1005_fixed_p512_mask2",
+        "schirrmeister_s06_r1005_resampled_p512_mask2",
+        "schirrmeister_s06_r1005_fixed_p512_mask3",
+        "schirrmeister_s06_r1005_resampled_p512_mask3",
+        "schirrmeister_s06_r1005_fixed_p2048_mask1",
+        "schirrmeister_s06_r1005_resampled_p2048_mask1",
+        "schirrmeister_s06_r1005_fixed_p2048_mask2",
+        "schirrmeister_s06_r1005_resampled_p2048_mask2",
+        "schirrmeister_s06_r1005_fixed_p2048_mask3",
+        "schirrmeister_s06_r1005_resampled_p2048_mask3",
+        "schirrmeister_s07_r1001_fixed_p128_mask1",
+        "schirrmeister_s07_r1001_resampled_p128_mask1",
+        "schirrmeister_s07_r1001_fixed_p128_mask2",
+        "schirrmeister_s07_r1001_resampled_p128_mask2",
+        "schirrmeister_s07_r1001_fixed_p128_mask3",
+        "schirrmeister_s07_r1001_resampled_p128_mask3",
+        "schirrmeister_s07_r1001_fixed_p512_mask1",
+        "schirrmeister_s07_r1001_resampled_p512_mask1",
+        "schirrmeister_s07_r1001_fixed_p512_mask2",
+        "schirrmeister_s07_r1001_resampled_p512_mask2",
+        "schirrmeister_s07_r1001_fixed_p512_mask3",
+        "schirrmeister_s07_r1001_resampled_p512_mask3",
+        "schirrmeister_s07_r1001_fixed_p2048_mask1",
+        "schirrmeister_s07_r1001_resampled_p2048_mask1",
+        "schirrmeister_s07_r1001_fixed_p2048_mask2",
+        "schirrmeister_s07_r1001_resampled_p2048_mask2",
+        "schirrmeister_s07_r1001_fixed_p2048_mask3",
+        "schirrmeister_s07_r1001_resampled_p2048_mask3",
+        "schirrmeister_s07_r1002_fixed_p128_mask1",
+        "schirrmeister_s07_r1002_resampled_p128_mask1",
+        "schirrmeister_s07_r1002_fixed_p128_mask2",
+        "schirrmeister_s07_r1002_resampled_p128_mask2",
+        "schirrmeister_s07_r1002_fixed_p128_mask3",
+        "schirrmeister_s07_r1002_resampled_p128_mask3",
+        "schirrmeister_s07_r1002_fixed_p512_mask1",
+        "schirrmeister_s07_r1002_resampled_p512_mask1",
+        "schirrmeister_s07_r1002_fixed_p512_mask2",
+        "schirrmeister_s07_r1002_resampled_p512_mask2",
+        "schirrmeister_s07_r1002_fixed_p512_mask3",
+        "schirrmeister_s07_r1002_resampled_p512_mask3",
+        "schirrmeister_s07_r1002_fixed_p2048_mask1",
+        "schirrmeister_s07_r1002_resampled_p2048_mask1",
+        "schirrmeister_s07_r1002_fixed_p2048_mask2",
+        "schirrmeister_s07_r1002_resampled_p2048_mask2",
+        "schirrmeister_s07_r1002_fixed_p2048_mask3",
+        "schirrmeister_s07_r1002_resampled_p2048_mask3",
+        "schirrmeister_s07_r1003_fixed_p128_mask1",
+        "schirrmeister_s07_r1003_resampled_p128_mask1",
+        "schirrmeister_s07_r1003_fixed_p128_mask2",
+        "schirrmeister_s07_r1003_resampled_p128_mask2",
+        "schirrmeister_s07_r1003_fixed_p128_mask3",
+        "schirrmeister_s07_r1003_resampled_p128_mask3",
+        "schirrmeister_s07_r1003_fixed_p512_mask1",
+        "schirrmeister_s07_r1003_resampled_p512_mask1",
+        "schirrmeister_s07_r1003_fixed_p512_mask2",
+        "schirrmeister_s07_r1003_resampled_p512_mask2",
+        "schirrmeister_s07_r1003_fixed_p512_mask3",
+        "schirrmeister_s07_r1003_resampled_p512_mask3",
+        "schirrmeister_s07_r1003_fixed_p2048_mask1",
+        "schirrmeister_s07_r1003_resampled_p2048_mask1",
+        "schirrmeister_s07_r1003_fixed_p2048_mask2",
+        "schirrmeister_s07_r1003_resampled_p2048_mask2",
+        "schirrmeister_s07_r1003_fixed_p2048_mask3",
+        "schirrmeister_s07_r1003_resampled_p2048_mask3",
+        "schirrmeister_s07_r1004_fixed_p128_mask1",
+        "schirrmeister_s07_r1004_resampled_p128_mask1",
+        "schirrmeister_s07_r1004_fixed_p128_mask2",
+        "schirrmeister_s07_r1004_resampled_p128_mask2",
+        "schirrmeister_s07_r1004_fixed_p128_mask3",
+        "schirrmeister_s07_r1004_resampled_p128_mask3",
+        "schirrmeister_s07_r1004_fixed_p512_mask1",
+        "schirrmeister_s07_r1004_resampled_p512_mask1",
+        "schirrmeister_s07_r1004_fixed_p512_mask2",
+        "schirrmeister_s07_r1004_resampled_p512_mask2",
+        "schirrmeister_s07_r1004_fixed_p512_mask3",
+        "schirrmeister_s07_r1004_resampled_p512_mask3",
+        "schirrmeister_s07_r1004_fixed_p2048_mask1",
+        "schirrmeister_s07_r1004_resampled_p2048_mask1",
+        "schirrmeister_s07_r1004_fixed_p2048_mask2",
+        "schirrmeister_s07_r1004_resampled_p2048_mask2",
+        "schirrmeister_s07_r1004_fixed_p2048_mask3",
+        "schirrmeister_s07_r1004_resampled_p2048_mask3",
+        "schirrmeister_s07_r1005_fixed_p128_mask1",
+        "schirrmeister_s07_r1005_resampled_p128_mask1",
+        "schirrmeister_s07_r1005_fixed_p128_mask2",
+        "schirrmeister_s07_r1005_resampled_p128_mask2",
+        "schirrmeister_s07_r1005_fixed_p128_mask3",
+        "schirrmeister_s07_r1005_resampled_p128_mask3",
+        "schirrmeister_s07_r1005_fixed_p512_mask1",
+        "schirrmeister_s07_r1005_resampled_p512_mask1",
+        "schirrmeister_s07_r1005_fixed_p512_mask2",
+        "schirrmeister_s07_r1005_resampled_p512_mask2",
+        "schirrmeister_s07_r1005_fixed_p512_mask3",
+        "schirrmeister_s07_r1005_resampled_p512_mask3",
+        "schirrmeister_s07_r1005_fixed_p2048_mask1",
+        "schirrmeister_s07_r1005_resampled_p2048_mask1",
+        "schirrmeister_s07_r1005_fixed_p2048_mask2",
+        "schirrmeister_s07_r1005_resampled_p2048_mask2",
+        "schirrmeister_s07_r1005_fixed_p2048_mask3",
+        "schirrmeister_s07_r1005_resampled_p2048_mask3",
+        "schirrmeister_s08_r1001_fixed_p128_mask1",
+        "schirrmeister_s08_r1001_resampled_p128_mask1",
+        "schirrmeister_s08_r1001_fixed_p128_mask2",
+        "schirrmeister_s08_r1001_resampled_p128_mask2",
+        "schirrmeister_s08_r1001_fixed_p128_mask3",
+        "schirrmeister_s08_r1001_resampled_p128_mask3",
+        "schirrmeister_s08_r1001_fixed_p512_mask1",
+        "schirrmeister_s08_r1001_resampled_p512_mask1",
+        "schirrmeister_s08_r1001_fixed_p512_mask2",
+        "schirrmeister_s08_r1001_resampled_p512_mask2",
+        "schirrmeister_s08_r1001_fixed_p512_mask3",
+        "schirrmeister_s08_r1001_resampled_p512_mask3",
+        "schirrmeister_s08_r1001_fixed_p2048_mask1",
+        "schirrmeister_s08_r1001_resampled_p2048_mask1",
+        "schirrmeister_s08_r1001_fixed_p2048_mask2",
+        "schirrmeister_s08_r1001_resampled_p2048_mask2",
+        "schirrmeister_s08_r1001_fixed_p2048_mask3",
+        "schirrmeister_s08_r1001_resampled_p2048_mask3",
+        "schirrmeister_s08_r1002_fixed_p128_mask1",
+        "schirrmeister_s08_r1002_resampled_p128_mask1",
+        "schirrmeister_s08_r1002_fixed_p128_mask2",
+        "schirrmeister_s08_r1002_resampled_p128_mask2",
+        "schirrmeister_s08_r1002_fixed_p128_mask3",
+        "schirrmeister_s08_r1002_resampled_p128_mask3",
+        "schirrmeister_s08_r1002_fixed_p512_mask1",
+        "schirrmeister_s08_r1002_resampled_p512_mask1",
+        "schirrmeister_s08_r1002_fixed_p512_mask2",
+        "schirrmeister_s08_r1002_resampled_p512_mask2",
+        "schirrmeister_s08_r1002_fixed_p512_mask3",
+        "schirrmeister_s08_r1002_resampled_p512_mask3",
+        "schirrmeister_s08_r1002_fixed_p2048_mask1",
+        "schirrmeister_s08_r1002_resampled_p2048_mask1",
+        "schirrmeister_s08_r1002_fixed_p2048_mask2",
+        "schirrmeister_s08_r1002_resampled_p2048_mask2",
+        "schirrmeister_s08_r1002_fixed_p2048_mask3",
+        "schirrmeister_s08_r1002_resampled_p2048_mask3",
+        "schirrmeister_s08_r1003_fixed_p128_mask1",
+        "schirrmeister_s08_r1003_resampled_p128_mask1",
+        "schirrmeister_s08_r1003_fixed_p128_mask2",
+        "schirrmeister_s08_r1003_resampled_p128_mask2",
+        "schirrmeister_s08_r1003_fixed_p128_mask3",
+        "schirrmeister_s08_r1003_resampled_p128_mask3",
+        "schirrmeister_s08_r1003_fixed_p512_mask1",
+        "schirrmeister_s08_r1003_resampled_p512_mask1",
+        "schirrmeister_s08_r1003_fixed_p512_mask2",
+        "schirrmeister_s08_r1003_resampled_p512_mask2",
+        "schirrmeister_s08_r1003_fixed_p512_mask3",
+        "schirrmeister_s08_r1003_resampled_p512_mask3",
+        "schirrmeister_s08_r1003_fixed_p2048_mask1",
+        "schirrmeister_s08_r1003_resampled_p2048_mask1",
+        "schirrmeister_s08_r1003_fixed_p2048_mask2",
+        "schirrmeister_s08_r1003_resampled_p2048_mask2",
+        "schirrmeister_s08_r1003_fixed_p2048_mask3",
+        "schirrmeister_s08_r1003_resampled_p2048_mask3",
+        "schirrmeister_s08_r1004_fixed_p128_mask1",
+        "schirrmeister_s08_r1004_resampled_p128_mask1",
+        "schirrmeister_s08_r1004_fixed_p128_mask2",
+        "schirrmeister_s08_r1004_resampled_p128_mask2",
+        "schirrmeister_s08_r1004_fixed_p128_mask3",
+        "schirrmeister_s08_r1004_resampled_p128_mask3",
+        "schirrmeister_s08_r1004_fixed_p512_mask1",
+        "schirrmeister_s08_r1004_resampled_p512_mask1",
+        "schirrmeister_s08_r1004_fixed_p512_mask2",
+        "schirrmeister_s08_r1004_resampled_p512_mask2",
+        "schirrmeister_s08_r1004_fixed_p512_mask3",
+        "schirrmeister_s08_r1004_resampled_p512_mask3",
+        "schirrmeister_s08_r1004_fixed_p2048_mask1",
+        "schirrmeister_s08_r1004_resampled_p2048_mask1",
+        "schirrmeister_s08_r1004_fixed_p2048_mask2",
+        "schirrmeister_s08_r1004_resampled_p2048_mask2",
+        "schirrmeister_s08_r1004_fixed_p2048_mask3",
+        "schirrmeister_s08_r1004_resampled_p2048_mask3",
+        "schirrmeister_s08_r1005_fixed_p128_mask1",
+        "schirrmeister_s08_r1005_resampled_p128_mask1",
+        "schirrmeister_s08_r1005_fixed_p128_mask2",
+        "schirrmeister_s08_r1005_resampled_p128_mask2",
+        "schirrmeister_s08_r1005_fixed_p128_mask3",
+        "schirrmeister_s08_r1005_resampled_p128_mask3",
+        "schirrmeister_s08_r1005_fixed_p512_mask1",
+        "schirrmeister_s08_r1005_resampled_p512_mask1",
+        "schirrmeister_s08_r1005_fixed_p512_mask2",
+        "schirrmeister_s08_r1005_resampled_p512_mask2",
+        "schirrmeister_s08_r1005_fixed_p512_mask3",
+        "schirrmeister_s08_r1005_resampled_p512_mask3",
+        "schirrmeister_s08_r1005_fixed_p2048_mask1",
+        "schirrmeister_s08_r1005_resampled_p2048_mask1",
+        "schirrmeister_s08_r1005_fixed_p2048_mask2",
+        "schirrmeister_s08_r1005_resampled_p2048_mask2",
+        "schirrmeister_s08_r1005_fixed_p2048_mask3",
+        "schirrmeister_s08_r1005_resampled_p2048_mask3",
+        "schirrmeister_s09_r1001_fixed_p128_mask1",
+        "schirrmeister_s09_r1001_resampled_p128_mask1",
+        "schirrmeister_s09_r1001_fixed_p128_mask2",
+        "schirrmeister_s09_r1001_resampled_p128_mask2",
+        "schirrmeister_s09_r1001_fixed_p128_mask3",
+        "schirrmeister_s09_r1001_resampled_p128_mask3",
+        "schirrmeister_s09_r1001_fixed_p512_mask1",
+        "schirrmeister_s09_r1001_resampled_p512_mask1",
+        "schirrmeister_s09_r1001_fixed_p512_mask2",
+        "schirrmeister_s09_r1001_resampled_p512_mask2",
+        "schirrmeister_s09_r1001_fixed_p512_mask3",
+        "schirrmeister_s09_r1001_resampled_p512_mask3",
+        "schirrmeister_s09_r1001_fixed_p2048_mask1",
+        "schirrmeister_s09_r1001_resampled_p2048_mask1",
+        "schirrmeister_s09_r1001_fixed_p2048_mask2",
+        "schirrmeister_s09_r1001_resampled_p2048_mask2",
+        "schirrmeister_s09_r1001_fixed_p2048_mask3",
+        "schirrmeister_s09_r1001_resampled_p2048_mask3",
+        "schirrmeister_s09_r1002_fixed_p128_mask1",
+        "schirrmeister_s09_r1002_resampled_p128_mask1",
+        "schirrmeister_s09_r1002_fixed_p128_mask2",
+        "schirrmeister_s09_r1002_resampled_p128_mask2",
+        "schirrmeister_s09_r1002_fixed_p128_mask3",
+        "schirrmeister_s09_r1002_resampled_p128_mask3",
+        "schirrmeister_s09_r1002_fixed_p512_mask1",
+        "schirrmeister_s09_r1002_resampled_p512_mask1",
+        "schirrmeister_s09_r1002_fixed_p512_mask2",
+        "schirrmeister_s09_r1002_resampled_p512_mask2",
+        "schirrmeister_s09_r1002_fixed_p512_mask3",
+        "schirrmeister_s09_r1002_resampled_p512_mask3",
+        "schirrmeister_s09_r1002_fixed_p2048_mask1",
+        "schirrmeister_s09_r1002_resampled_p2048_mask1",
+        "schirrmeister_s09_r1002_fixed_p2048_mask2",
+        "schirrmeister_s09_r1002_resampled_p2048_mask2",
+        "schirrmeister_s09_r1002_fixed_p2048_mask3",
+        "schirrmeister_s09_r1002_resampled_p2048_mask3",
+        "schirrmeister_s09_r1003_fixed_p128_mask1",
+        "schirrmeister_s09_r1003_resampled_p128_mask1",
+        "schirrmeister_s09_r1003_fixed_p128_mask2",
+        "schirrmeister_s09_r1003_resampled_p128_mask2",
+        "schirrmeister_s09_r1003_fixed_p128_mask3",
+        "schirrmeister_s09_r1003_resampled_p128_mask3",
+        "schirrmeister_s09_r1003_fixed_p512_mask1",
+        "schirrmeister_s09_r1003_resampled_p512_mask1",
+        "schirrmeister_s09_r1003_fixed_p512_mask2",
+        "schirrmeister_s09_r1003_resampled_p512_mask2",
+        "schirrmeister_s09_r1003_fixed_p512_mask3",
+        "schirrmeister_s09_r1003_resampled_p512_mask3",
+        "schirrmeister_s09_r1003_fixed_p2048_mask1",
+        "schirrmeister_s09_r1003_resampled_p2048_mask1",
+        "schirrmeister_s09_r1003_fixed_p2048_mask2",
+        "schirrmeister_s09_r1003_resampled_p2048_mask2",
+        "schirrmeister_s09_r1003_fixed_p2048_mask3",
+        "schirrmeister_s09_r1003_resampled_p2048_mask3",
+        "schirrmeister_s09_r1004_fixed_p128_mask1",
+        "schirrmeister_s09_r1004_resampled_p128_mask1",
+        "schirrmeister_s09_r1004_fixed_p128_mask2",
+        "schirrmeister_s09_r1004_resampled_p128_mask2",
+        "schirrmeister_s09_r1004_fixed_p128_mask3",
+        "schirrmeister_s09_r1004_resampled_p128_mask3",
+        "schirrmeister_s09_r1004_fixed_p512_mask1",
+        "schirrmeister_s09_r1004_resampled_p512_mask1",
+        "schirrmeister_s09_r1004_fixed_p512_mask2",
+        "schirrmeister_s09_r1004_resampled_p512_mask2",
+        "schirrmeister_s09_r1004_fixed_p512_mask3",
+        "schirrmeister_s09_r1004_resampled_p512_mask3",
+        "schirrmeister_s09_r1004_fixed_p2048_mask1",
+        "schirrmeister_s09_r1004_resampled_p2048_mask1",
+        "schirrmeister_s09_r1004_fixed_p2048_mask2",
+        "schirrmeister_s09_r1004_resampled_p2048_mask2",
+        "schirrmeister_s09_r1004_fixed_p2048_mask3",
+        "schirrmeister_s09_r1004_resampled_p2048_mask3",
+        "schirrmeister_s09_r1005_fixed_p128_mask1",
+        "schirrmeister_s09_r1005_resampled_p128_mask1",
+        "schirrmeister_s09_r1005_fixed_p128_mask2",
+        "schirrmeister_s09_r1005_resampled_p128_mask2",
+        "schirrmeister_s09_r1005_fixed_p128_mask3",
+        "schirrmeister_s09_r1005_resampled_p128_mask3",
+        "schirrmeister_s09_r1005_fixed_p512_mask1",
+        "schirrmeister_s09_r1005_resampled_p512_mask1",
+        "schirrmeister_s09_r1005_fixed_p512_mask2",
+        "schirrmeister_s09_r1005_resampled_p512_mask2",
+        "schirrmeister_s09_r1005_fixed_p512_mask3",
+        "schirrmeister_s09_r1005_resampled_p512_mask3",
+        "schirrmeister_s09_r1005_fixed_p2048_mask1",
+        "schirrmeister_s09_r1005_resampled_p2048_mask1",
+        "schirrmeister_s09_r1005_fixed_p2048_mask2",
+        "schirrmeister_s09_r1005_resampled_p2048_mask2",
+        "schirrmeister_s09_r1005_fixed_p2048_mask3",
+        "schirrmeister_s09_r1005_resampled_p2048_mask3",
+        "schirrmeister_s10_r1001_fixed_p128_mask1",
+        "schirrmeister_s10_r1001_resampled_p128_mask1",
+        "schirrmeister_s10_r1001_fixed_p128_mask2",
+        "schirrmeister_s10_r1001_resampled_p128_mask2",
+        "schirrmeister_s10_r1001_fixed_p128_mask3",
+        "schirrmeister_s10_r1001_resampled_p128_mask3",
+        "schirrmeister_s10_r1001_fixed_p512_mask1",
+        "schirrmeister_s10_r1001_resampled_p512_mask1",
+        "schirrmeister_s10_r1001_fixed_p512_mask2",
+        "schirrmeister_s10_r1001_resampled_p512_mask2",
+        "schirrmeister_s10_r1001_fixed_p512_mask3",
+        "schirrmeister_s10_r1001_resampled_p512_mask3",
+        "schirrmeister_s10_r1001_fixed_p2048_mask1",
+        "schirrmeister_s10_r1001_resampled_p2048_mask1",
+        "schirrmeister_s10_r1001_fixed_p2048_mask2",
+        "schirrmeister_s10_r1001_resampled_p2048_mask2",
+        "schirrmeister_s10_r1001_fixed_p2048_mask3",
+        "schirrmeister_s10_r1001_resampled_p2048_mask3",
+        "schirrmeister_s10_r1002_fixed_p128_mask1",
+        "schirrmeister_s10_r1002_resampled_p128_mask1",
+        "schirrmeister_s10_r1002_fixed_p128_mask2",
+        "schirrmeister_s10_r1002_resampled_p128_mask2",
+        "schirrmeister_s10_r1002_fixed_p128_mask3",
+        "schirrmeister_s10_r1002_resampled_p128_mask3",
+        "schirrmeister_s10_r1002_fixed_p512_mask1",
+        "schirrmeister_s10_r1002_resampled_p512_mask1",
+        "schirrmeister_s10_r1002_fixed_p512_mask2",
+        "schirrmeister_s10_r1002_resampled_p512_mask2",
+        "schirrmeister_s10_r1002_fixed_p512_mask3",
+        "schirrmeister_s10_r1002_resampled_p512_mask3",
+        "schirrmeister_s10_r1002_fixed_p2048_mask1",
+        "schirrmeister_s10_r1002_resampled_p2048_mask1",
+        "schirrmeister_s10_r1002_fixed_p2048_mask2",
+        "schirrmeister_s10_r1002_resampled_p2048_mask2",
+        "schirrmeister_s10_r1002_fixed_p2048_mask3",
+        "schirrmeister_s10_r1002_resampled_p2048_mask3",
+        "schirrmeister_s10_r1003_fixed_p128_mask1",
+        "schirrmeister_s10_r1003_resampled_p128_mask1",
+        "schirrmeister_s10_r1003_fixed_p128_mask2",
+        "schirrmeister_s10_r1003_resampled_p128_mask2",
+        "schirrmeister_s10_r1003_fixed_p128_mask3",
+        "schirrmeister_s10_r1003_resampled_p128_mask3",
+        "schirrmeister_s10_r1003_fixed_p512_mask1",
+        "schirrmeister_s10_r1003_resampled_p512_mask1",
+        "schirrmeister_s10_r1003_fixed_p512_mask2",
+        "schirrmeister_s10_r1003_resampled_p512_mask2",
+        "schirrmeister_s10_r1003_fixed_p512_mask3",
+        "schirrmeister_s10_r1003_resampled_p512_mask3",
+        "schirrmeister_s10_r1003_fixed_p2048_mask1",
+        "schirrmeister_s10_r1003_resampled_p2048_mask1",
+        "schirrmeister_s10_r1003_fixed_p2048_mask2",
+        "schirrmeister_s10_r1003_resampled_p2048_mask2",
+        "schirrmeister_s10_r1003_fixed_p2048_mask3",
+        "schirrmeister_s10_r1003_resampled_p2048_mask3",
+        "schirrmeister_s10_r1004_fixed_p128_mask1",
+        "schirrmeister_s10_r1004_resampled_p128_mask1",
+        "schirrmeister_s10_r1004_fixed_p128_mask2",
+        "schirrmeister_s10_r1004_resampled_p128_mask2",
+        "schirrmeister_s10_r1004_fixed_p128_mask3",
+        "schirrmeister_s10_r1004_resampled_p128_mask3",
+        "schirrmeister_s10_r1004_fixed_p512_mask1",
+        "schirrmeister_s10_r1004_resampled_p512_mask1",
+        "schirrmeister_s10_r1004_fixed_p512_mask2",
+        "schirrmeister_s10_r1004_resampled_p512_mask2",
+        "schirrmeister_s10_r1004_fixed_p512_mask3",
+        "schirrmeister_s10_r1004_resampled_p512_mask3",
+        "schirrmeister_s10_r1004_fixed_p2048_mask1",
+        "schirrmeister_s10_r1004_resampled_p2048_mask1",
+        "schirrmeister_s10_r1004_fixed_p2048_mask2",
+        "schirrmeister_s10_r1004_resampled_p2048_mask2",
+        "schirrmeister_s10_r1004_fixed_p2048_mask3",
+        "schirrmeister_s10_r1004_resampled_p2048_mask3",
+        "schirrmeister_s10_r1005_fixed_p128_mask1",
+        "schirrmeister_s10_r1005_resampled_p128_mask1",
+        "schirrmeister_s10_r1005_fixed_p128_mask2",
+        "schirrmeister_s10_r1005_resampled_p128_mask2",
+        "schirrmeister_s10_r1005_fixed_p128_mask3",
+        "schirrmeister_s10_r1005_resampled_p128_mask3",
+        "schirrmeister_s10_r1005_fixed_p512_mask1",
+        "schirrmeister_s10_r1005_resampled_p512_mask1",
+        "schirrmeister_s10_r1005_fixed_p512_mask2",
+        "schirrmeister_s10_r1005_resampled_p512_mask2",
+        "schirrmeister_s10_r1005_fixed_p512_mask3",
+        "schirrmeister_s10_r1005_resampled_p512_mask3",
+        "schirrmeister_s10_r1005_fixed_p2048_mask1",
+        "schirrmeister_s10_r1005_resampled_p2048_mask1",
+        "schirrmeister_s10_r1005_fixed_p2048_mask2",
+        "schirrmeister_s10_r1005_resampled_p2048_mask2",
+        "schirrmeister_s10_r1005_fixed_p2048_mask3",
+        "schirrmeister_s10_r1005_resampled_p2048_mask3",
+        "schirrmeister_s14_r1001_fixed_p128_mask1",
+        "schirrmeister_s14_r1001_resampled_p128_mask1",
+        "schirrmeister_s14_r1001_fixed_p128_mask2",
+        "schirrmeister_s14_r1001_resampled_p128_mask2",
+        "schirrmeister_s14_r1001_fixed_p128_mask3",
+        "schirrmeister_s14_r1001_resampled_p128_mask3",
+        "schirrmeister_s14_r1001_fixed_p512_mask1",
+        "schirrmeister_s14_r1001_resampled_p512_mask1",
+        "schirrmeister_s14_r1001_fixed_p512_mask2",
+        "schirrmeister_s14_r1001_resampled_p512_mask2",
+        "schirrmeister_s14_r1001_fixed_p512_mask3",
+        "schirrmeister_s14_r1001_resampled_p512_mask3",
+        "schirrmeister_s14_r1001_fixed_p2048_mask1",
+        "schirrmeister_s14_r1001_resampled_p2048_mask1",
+        "schirrmeister_s14_r1001_fixed_p2048_mask2",
+        "schirrmeister_s14_r1001_resampled_p2048_mask2",
+        "schirrmeister_s14_r1001_fixed_p2048_mask3",
+        "schirrmeister_s14_r1001_resampled_p2048_mask3",
+        "schirrmeister_s14_r1002_fixed_p128_mask1",
+        "schirrmeister_s14_r1002_resampled_p128_mask1",
+        "schirrmeister_s14_r1002_fixed_p128_mask2",
+        "schirrmeister_s14_r1002_resampled_p128_mask2",
+        "schirrmeister_s14_r1002_fixed_p128_mask3",
+        "schirrmeister_s14_r1002_resampled_p128_mask3",
+        "schirrmeister_s14_r1002_fixed_p512_mask1",
+        "schirrmeister_s14_r1002_resampled_p512_mask1",
+        "schirrmeister_s14_r1002_fixed_p512_mask2",
+        "schirrmeister_s14_r1002_resampled_p512_mask2",
+        "schirrmeister_s14_r1002_fixed_p512_mask3",
+        "schirrmeister_s14_r1002_resampled_p512_mask3",
+        "schirrmeister_s14_r1002_fixed_p2048_mask1",
+        "schirrmeister_s14_r1002_resampled_p2048_mask1",
+        "schirrmeister_s14_r1002_fixed_p2048_mask2",
+        "schirrmeister_s14_r1002_resampled_p2048_mask2",
+        "schirrmeister_s14_r1002_fixed_p2048_mask3",
+        "schirrmeister_s14_r1002_resampled_p2048_mask3",
+        "schirrmeister_s14_r1003_fixed_p128_mask1",
+        "schirrmeister_s14_r1003_resampled_p128_mask1",
+        "schirrmeister_s14_r1003_fixed_p128_mask2",
+        "schirrmeister_s14_r1003_resampled_p128_mask2",
+        "schirrmeister_s14_r1003_fixed_p128_mask3",
+        "schirrmeister_s14_r1003_resampled_p128_mask3",
+        "schirrmeister_s14_r1003_fixed_p512_mask1",
+        "schirrmeister_s14_r1003_resampled_p512_mask1",
+        "schirrmeister_s14_r1003_fixed_p512_mask2",
+        "schirrmeister_s14_r1003_resampled_p512_mask2",
+        "schirrmeister_s14_r1003_fixed_p512_mask3",
+        "schirrmeister_s14_r1003_resampled_p512_mask3",
+        "schirrmeister_s14_r1003_fixed_p2048_mask1",
+        "schirrmeister_s14_r1003_resampled_p2048_mask1",
+        "schirrmeister_s14_r1003_fixed_p2048_mask2",
+        "schirrmeister_s14_r1003_resampled_p2048_mask2",
+        "schirrmeister_s14_r1003_fixed_p2048_mask3",
+        "schirrmeister_s14_r1003_resampled_p2048_mask3",
+        "schirrmeister_s14_r1004_fixed_p128_mask1",
+        "schirrmeister_s14_r1004_resampled_p128_mask1",
+        "schirrmeister_s14_r1004_fixed_p128_mask2",
+        "schirrmeister_s14_r1004_resampled_p128_mask2",
+        "schirrmeister_s14_r1004_fixed_p128_mask3",
+        "schirrmeister_s14_r1004_resampled_p128_mask3",
+        "schirrmeister_s14_r1004_fixed_p512_mask1",
+        "schirrmeister_s14_r1004_resampled_p512_mask1",
+        "schirrmeister_s14_r1004_fixed_p512_mask2",
+        "schirrmeister_s14_r1004_resampled_p512_mask2",
+        "schirrmeister_s14_r1004_fixed_p512_mask3",
+        "schirrmeister_s14_r1004_resampled_p512_mask3",
+        "schirrmeister_s14_r1004_fixed_p2048_mask1",
+        "schirrmeister_s14_r1004_resampled_p2048_mask1",
+        "schirrmeister_s14_r1004_fixed_p2048_mask2",
+        "schirrmeister_s14_r1004_resampled_p2048_mask2",
+        "schirrmeister_s14_r1004_fixed_p2048_mask3",
+        "schirrmeister_s14_r1004_resampled_p2048_mask3",
+        "schirrmeister_s14_r1005_fixed_p128_mask1",
+        "schirrmeister_s14_r1005_resampled_p128_mask1",
+        "schirrmeister_s14_r1005_fixed_p128_mask2",
+        "schirrmeister_s14_r1005_resampled_p128_mask2",
+        "schirrmeister_s14_r1005_fixed_p128_mask3",
+        "schirrmeister_s14_r1005_resampled_p128_mask3",
+        "schirrmeister_s14_r1005_fixed_p512_mask1",
+        "schirrmeister_s14_r1005_resampled_p512_mask1",
+        "schirrmeister_s14_r1005_fixed_p512_mask2",
+        "schirrmeister_s14_r1005_resampled_p512_mask2",
+        "schirrmeister_s14_r1005_fixed_p512_mask3",
+        "schirrmeister_s14_r1005_resampled_p512_mask3",
+        "schirrmeister_s14_r1005_fixed_p2048_mask1",
+        "schirrmeister_s14_r1005_resampled_p2048_mask1",
+        "schirrmeister_s14_r1005_fixed_p2048_mask2",
+        "schirrmeister_s14_r1005_resampled_p2048_mask2",
+        "schirrmeister_s14_r1005_fixed_p2048_mask3",
+        "schirrmeister_s14_r1005_resampled_p2048_mask3"
+      ],
+      "updated_unix_time": 1789954274.1805184
+    }
+  ],
+  "batches": {
+    "core_bci2a": {
+      "expected": 270,
+      "trained": 270,
+      "evaluated": 270
+    },
+    "core_bci2b": {
+      "expected": 270,
+      "trained": 270,
+      "evaluated": 270
+    },
+    "core_lee2019": {
+      "expected": 1620,
+      "trained": 1620,
+      "evaluated": 1620
+    },
+    "core_schirrmeister": {
+      "expected": 420,
+      "trained": 420,
+      "evaluated": 420
+    },
+    "normalization_lee2019": {
+      "expected": 2160,
+      "trained": 2160,
+      "evaluated": 2160
+    },
+    "normalization_schirrmeister": {
+      "expected": 560,
+      "trained": 560,
+      "evaluated": 560
+    },
+    "bands_lee2019": {
+      "expected": 1080,
+      "trained": 1080,
+      "evaluated": 1080
+    },
+    "bands_schirrmeister": {
+      "expected": 280,
+      "trained": 280,
+      "evaluated": 280
+    },
+    "anchors_bci2a": {
+      "expected": 90,
+      "trained": 90,
+      "evaluated": 90
+    },
+    "anchors_bci2b": {
+      "expected": 90,
+      "trained": 90,
+      "evaluated": 90
+    },
+    "anchors_lee2019": {
+      "expected": 810,
+      "trained": 810,
+      "evaluated": 810
+    },
+    "anchors_schirrmeister": {
+      "expected": 210,
+      "trained": 210,
+      "evaluated": 210
+    },
+    "refresh_schirrmeister": {
+      "expected": 280,
+      "trained": 280,
+      "evaluated": 280
+    },
+    "donors_lee2019": {
+      "expected": 540,
+      "trained": 540,
+      "evaluated": 540
+    },
+    "edges_lee2019": {
+      "expected": 540,
+      "trained": 540,
+      "evaluated": 540
+    },
+    "donors_schirrmeister": {
+      "expected": 140,
+      "trained": 140,
+      "evaluated": 140
+    },
+    "edges_schirrmeister": {
+      "expected": 140,
+      "trained": 140,
+      "evaluated": 140
+    },
+    "dimensions_schirrmeister": {
+      "expected": 1260,
+      "trained": 1260,
+      "evaluated": 1260
+    }
+  },
+  "cells": {
+    "bci2a:real": {
+      "mean_accuracy_percent": 52.469135802469125,
+      "subjects": 9,
+      "replicates": 10
+    },
+    "bci2a:fixed": {
+      "mean_accuracy_percent": 38.67283950617284,
+      "subjects": 9,
+      "replicates": 10
+    },
+    "bci2a:resampled": {
+      "mean_accuracy_percent": 51.94830246913581,
+      "subjects": 9,
+      "replicates": 10
+    },
+    "bci2a:baseline": {
+      "mean_accuracy_percent": 53.75000000000001,
+      "subjects": 9,
+      "replicates": 5
+    },
+    "bci2a:zero": {
+      "mean_accuracy_percent": 53.287037037037045,
+      "subjects": 9,
+      "replicates": 5
+    },
+    "bci2b:real": {
+      "mean_accuracy_percent": 74.03521825396825,
+      "subjects": 9,
+      "replicates": 10
+    },
+    "bci2b:fixed": {
+      "mean_accuracy_percent": 73.88789682539682,
+      "subjects": 9,
+      "replicates": 10
+    },
+    "bci2b:resampled": {
+      "mean_accuracy_percent": 74.14632936507938,
+      "subjects": 9,
+      "replicates": 10
+    },
+    "bci2b:baseline": {
+      "mean_accuracy_percent": 73.61805555555556,
+      "subjects": 9,
+      "replicates": 5
+    },
+    "bci2b:zero": {
+      "mean_accuracy_percent": 73.85912698412699,
+      "subjects": 9,
+      "replicates": 5
+    },
+    "lee2019:real": {
+      "mean_accuracy_percent": 62.38240740740741,
+      "subjects": 54,
+      "replicates": 10
+    },
+    "lee2019:fixed": {
+      "mean_accuracy_percent": 52.423148148148144,
+      "subjects": 54,
+      "replicates": 10
+    },
+    "lee2019:resampled": {
+      "mean_accuracy_percent": 63.74722222222222,
+      "subjects": 54,
+      "replicates": 10
+    },
+    "lee2019:baseline": {
+      "mean_accuracy_percent": 65.27222222222223,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:zero": {
+      "mean_accuracy_percent": 65.06481481481482,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:global": {
+      "mean_accuracy_percent": 62.157407407407405,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:fixed_none": {
+      "mean_accuracy_percent": 64.17592592592594,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:resampled_none": {
+      "mean_accuracy_percent": 64.89814814814817,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:fixed_layernorm": {
+      "mean_accuracy_percent": 52.52777777777777,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:resampled_layernorm": {
+      "mean_accuracy_percent": 64.24629629629631,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:fixed_frozen": {
+      "mean_accuracy_percent": 52.481481481481474,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:resampled_frozen": {
+      "mean_accuracy_percent": 63.96666666666667,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:fixed_bn_noaffine": {
+      "mean_accuracy_percent": 52.72777777777778,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:resampled_bn_noaffine": {
+      "mean_accuracy_percent": 63.92037037037037,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:fixed_mu": {
+      "mean_accuracy_percent": 52.5037037037037,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:resampled_mu": {
+      "mean_accuracy_percent": 63.71111111111111,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:fixed_beta": {
+      "mean_accuracy_percent": 52.57962962962963,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:resampled_beta": {
+      "mean_accuracy_percent": 63.62592592592593,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:fixed_edge": {
+      "mean_accuracy_percent": 52.59259259259259,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:resampled_edge": {
+      "mean_accuracy_percent": 63.64074074074073,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:donor_fixed": {
+      "mean_accuracy_percent": 56.087037037037035,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "lee2019:donor_resampled": {
+      "mean_accuracy_percent": 64.41481481481482,
+      "subjects": 54,
+      "replicates": 5
+    },
+    "schirrmeister:real": {
+      "mean_accuracy_percent": 64.46428571428572,
+      "subjects": 14,
+      "replicates": 10
+    },
+    "schirrmeister:fixed": {
+      "mean_accuracy_percent": 42.98214285714286,
+      "subjects": 14,
+      "replicates": 10
+    },
+    "schirrmeister:resampled": {
+      "mean_accuracy_percent": 73.05803571428572,
+      "subjects": 14,
+      "replicates": 10
+    },
+    "schirrmeister:baseline": {
+      "mean_accuracy_percent": 78.26785714285715,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:zero": {
+      "mean_accuracy_percent": 78.13392857142858,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:global": {
+      "mean_accuracy_percent": 64.0,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_none": {
+      "mean_accuracy_percent": 74.75892857142856,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_none": {
+      "mean_accuracy_percent": 77.50892857142856,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_layernorm": {
+      "mean_accuracy_percent": 44.151785714285715,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_layernorm": {
+      "mean_accuracy_percent": 72.81250000000001,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_frozen": {
+      "mean_accuracy_percent": 45.723214285714285,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_frozen": {
+      "mean_accuracy_percent": 73.04464285714286,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_bn_noaffine": {
+      "mean_accuracy_percent": 44.78571428571429,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_bn_noaffine": {
+      "mean_accuracy_percent": 73.11607142857144,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_mu": {
+      "mean_accuracy_percent": 44.9732142857143,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_mu": {
+      "mean_accuracy_percent": 73.82142857142856,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_beta": {
+      "mean_accuracy_percent": 42.544642857142854,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_beta": {
+      "mean_accuracy_percent": 72.47321428571429,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_edge": {
+      "mean_accuracy_percent": 42.839285714285715,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_edge": {
+      "mean_accuracy_percent": 72.17857142857143,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:donor_fixed": {
+      "mean_accuracy_percent": 56.14285714285715,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:donor_resampled": {
+      "mean_accuracy_percent": 75.00892857142857,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p128_mask1": {
+      "mean_accuracy_percent": 72.05357142857143,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p128_mask1": {
+      "mean_accuracy_percent": 77.8482142857143,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p128_mask2": {
+      "mean_accuracy_percent": 72.0,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p128_mask2": {
+      "mean_accuracy_percent": 78.09821428571428,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p128_mask3": {
+      "mean_accuracy_percent": 72.26785714285712,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p128_mask3": {
+      "mean_accuracy_percent": 77.91071428571428,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p512_mask1": {
+      "mean_accuracy_percent": 63.133928571428555,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p512_mask1": {
+      "mean_accuracy_percent": 78.04464285714286,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p512_mask2": {
+      "mean_accuracy_percent": 63.22321428571429,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p512_mask2": {
+      "mean_accuracy_percent": 77.46428571428571,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p512_mask3": {
+      "mean_accuracy_percent": 63.28571428571429,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p512_mask3": {
+      "mean_accuracy_percent": 77.63392857142857,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p2048_mask1": {
+      "mean_accuracy_percent": 55.80357142857143,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p2048_mask1": {
+      "mean_accuracy_percent": 76.48214285714286,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p2048_mask2": {
+      "mean_accuracy_percent": 55.39285714285713,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p2048_mask2": {
+      "mean_accuracy_percent": 76.41071428571428,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:fixed_p2048_mask3": {
+      "mean_accuracy_percent": 56.57142857142857,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:resampled_p2048_mask3": {
+      "mean_accuracy_percent": 76.4375,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:refresh_q0.05_batchnorm": {
+      "mean_accuracy_percent": 57.21428571428571,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:refresh_q0.2_batchnorm": {
+      "mean_accuracy_percent": 66.26785714285714,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:refresh_q0.05_none": {
+      "mean_accuracy_percent": 76.74107142857143,
+      "subjects": 14,
+      "replicates": 5
+    },
+    "schirrmeister:refresh_q0.2_none": {
+      "mean_accuracy_percent": 77.50892857142858,
+      "subjects": 14,
+      "replicates": 5
+    }
+  },
+  "contrasts": {
+    "bci2a:schedule": {
+      "dataset": "bci2a",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": "primary",
+      "mean_difference_pp": 13.275462962962962,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.9052100173072815,
+      "model_95ci_pp": [
+        8.88204078461997,
+        17.668885141305953
+      ],
+      "model_90ci_pp": [
+        9.732633414195,
+        16.818292511730924
+      ],
+      "between_subject_variance_pp2": 27.034862432841795,
+      "within_subject_run_variance_pp2": 56.33564457590306,
+      "t_statistic": 6.967978775235377,
+      "p_two_sided": 0.0001163031402683724,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999001168565136,
+      "conditional_subject_bootstrap_95ci_pp": [
+        9.807002314814815,
+        16.782407407407405
+      ],
+      "per_replicate_mean_pp": [
+        11.226851851851851,
+        14.004629629629626,
+        15.046296296296296,
+        14.853395061728397,
+        13.85030864197531,
+        11.342592592592592,
+        18.67283950617284,
+        12.770061728395062,
+        10.76388888888889,
+        10.223765432098768
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.0002326062805367448
+    },
+    "bci2a:schedule:accuracy": {
+      "dataset": "bci2a",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "accuracy",
+      "family": null,
+      "mean_difference_pp": 11.292438271604937,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.244680922142778,
+      "model_95ci_pp": [
+        8.422198918133956,
+        14.162677625075917
+      ],
+      "model_90ci_pp": [
+        8.977894305482186,
+        13.606982237727687
+      ],
+      "between_subject_variance_pp2": 11.28197605881343,
+      "within_subject_run_variance_pp2": 26.61099322702332,
+      "t_statistic": 9.072556725754632,
+      "p_two_sided": 1.746826255591063e-05,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999828066948597,
+      "conditional_subject_bootstrap_95ci_pp": [
+        9.0625,
+        13.611111111111107
+      ],
+      "per_replicate_mean_pp": [
+        10.841049382716049,
+        13.001543209876543,
+        10.416666666666666,
+        13.541666666666666,
+        10.995370370370372,
+        10.95679012345679,
+        12.268518518518515,
+        9.915123456790123,
+        9.567901234567898,
+        11.419753086419755
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "bci2a:schedule:fixed_budget": {
+      "dataset": "bci2a",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "fixed_budget",
+      "family": null,
+      "mean_difference_pp": 10.771604938271604,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.2296027664835514,
+      "model_95ci_pp": [
+        7.936135874102053,
+        13.607074002441156
+      ],
+      "model_90ci_pp": [
+        8.485099526914555,
+        13.058110349628654
+      ],
+      "between_subject_variance_pp2": 11.681152120484688,
+      "within_subject_run_variance_pp2": 19.261545496113396,
+      "t_statistic": 8.760231541342826,
+      "p_two_sided": 2.2590559098047118e-05,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999770956638319,
+      "conditional_subject_bootstrap_95ci_pp": [
+        8.317901234567902,
+        12.785493827160494
+      ],
+      "per_replicate_mean_pp": [
+        10.53240740740741,
+        12.770061728395063,
+        9.375000000000002,
+        11.766975308641975,
+        10.493827160493826,
+        9.259259259259258,
+        11.882716049382719,
+        10.378086419753089,
+        10.108024691358024,
+        11.14969135802469
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "bci2a:real_minus_fixed": {
+      "dataset": "bci2a",
+      "terms": {
+        "real": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 13.796296296296296,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.6574886340793396,
+      "model_95ci_pp": [
+        9.974120652055435,
+        17.61847194053716
+      ],
+      "model_90ci_pp": [
+        10.714116559564292,
+        16.8784760330283
+      ],
+      "between_subject_variance_pp2": 20.985723075988794,
+      "within_subject_run_variance_pp2": 37.396940729309556,
+      "t_statistic": 8.323614420414724,
+      "p_two_sided": 3.278820321228163e-05,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999718164273007,
+      "conditional_subject_bootstrap_95ci_pp": [
+        10.540123456790123,
+        16.732253086419753
+      ],
+      "per_replicate_mean_pp": [
+        11.921296296296292,
+        11.882716049382717,
+        15.66358024691358,
+        15.200617283950615,
+        16.126543209876544,
+        11.574074074074073,
+        17.399691358024693,
+        12.847222222222225,
+        11.574074074074078,
+        13.773148148148145
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "bci2a:real_minus_resampled": {
+      "dataset": "bci2a",
+      "terms": {
+        "real": 1,
+        "resampled": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 0.5208333333333331,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.884460444032577,
+      "model_95ci_pp": [
+        -3.8247402432344675,
+        4.866406909901134
+      ],
+      "model_90ci_pp": [
+        -2.983411387172049,
+        4.025078053838715
+      ],
+      "between_subject_variance_pp2": 29.70888137526673,
+      "within_subject_run_variance_pp2": 22.51839110844383,
+      "t_statistic": 0.27638326661757695,
+      "p_two_sided": 0.7892597287988757,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.4028493250034064,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -2.897569444444445,
+        4.051022376543208
+      ],
+      "per_replicate_mean_pp": [
+        0.6944444444444444,
+        -2.121913580246911,
+        0.6172839506172838,
+        0.3472222222222222,
+        2.2762345679012324,
+        0.23148148148148254,
+        -1.2731481481481486,
+        0.07716049382716081,
+        0.8101851851851873,
+        3.549382716049379
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "bci2a:real_minus_baseline": {
+      "dataset": "bci2a",
+      "terms": {
+        "real": 1,
+        "baseline": -1
+      },
+      "rule": "primary",
+      "family": "augmentation",
+      "mean_difference_pp": -1.0879629629629641,
+      "n_subjects": 9,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.2441995046645082,
+      "model_95ci_pp": [
+        -3.957092165738295,
+        1.7811662398123667
+      ],
+      "model_90ci_pp": [
+        -3.401611710158765,
+        1.2256857842328368
+      ],
+      "between_subject_variance_pp2": 10.196973593964339,
+      "within_subject_run_variance_pp2": 18.67659036351166,
+      "t_statistic": -0.8744280630913187,
+      "p_two_sided": 0.4073686970439662,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.5273134221308469,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -3.518518518518521,
+        1.0879629629629624
+      ],
+      "per_replicate_mean_pp": [
+        -1.041666666666669,
+        -0.848765432098765,
+        -2.0833333333333335,
+        0.6944444444444419,
+        -2.1604938271604954
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 1.0
+    },
+    "bci2a:real_minus_zero": {
+      "dataset": "bci2a",
+      "terms": {
+        "real": 1,
+        "zero": -1
+      },
+      "rule": "primary",
+      "family": "augmentation",
+      "mean_difference_pp": -0.6249999999999998,
+      "n_subjects": 9,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.5800200876464376,
+      "model_95ci_pp": [
+        -4.268532855818333,
+        3.018532855818334
+      ],
+      "model_90ci_pp": [
+        -3.5631232532423294,
+        2.3131232532423303
+      ],
+      "between_subject_variance_pp2": 16.947177211934168,
+      "within_subject_run_variance_pp2": 27.60497042181069,
+      "t_statistic": -0.39556459116351217,
+      "p_two_sided": 0.7027654432031667,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.4091795448461012,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -3.333333333333334,
+        2.5385802469135808
+      ],
+      "per_replicate_mean_pp": [
+        0.6558641975308627,
+        -2.8549382716049374,
+        -1.080246913580246,
+        -0.27006172839506193,
+        0.4243827160493831
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 1.0
+    },
+    "bci2a:inference:fixed": {
+      "dataset": "bci2a",
+      "family": "inference",
+      "mean_difference_pp": 0.09043209876543203,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.24695948571991247,
+      "model_95ci_pp": [
+        -0.47905749653258023,
+        0.6599216940634443
+      ],
+      "model_90ci_pp": [
+        -0.3688009282546709,
+        0.549665125785535
+      ],
+      "between_subject_variance_pp2": 0.14073626910853348,
+      "within_subject_run_variance_pp2": 4.081646191748594,
+      "t_statistic": 0.36618192049523063,
+      "p_two_sided": 0.723723935470599,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.003095871133748385,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.3526639660493824,
+        0.5399382716049381
+      ],
+      "per_replicate_mean_pp": [
+        -1.099537037037037,
+        -0.00964506172839514,
+        0.5868055555555544,
+        0.9513888888888871,
+        0.47608024691357986,
+        1.0432098765432076,
+        0.335262345679012,
+        -0.8707561728395067,
+        -1.1176697530864168,
+        0.6091820987654345
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "mc_standard_error_of_grand_mean_pp": 0.023196263696582724,
+      "family_complete": true,
+      "p_holm": 1.0,
+      "p_equivalence_holm": 0.00619174226749677
+    },
+    "bci2a:inference:resampled": {
+      "dataset": "bci2a",
+      "family": "inference",
+      "mean_difference_pp": 0.03175154320987707,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.13306103579988268,
+      "model_95ci_pp": [
+        -0.27508775557920195,
+        0.33859084199895606
+      ],
+      "model_90ci_pp": [
+        -0.2156818447836233,
+        0.2791849312033774
+      ],
+      "between_subject_variance_pp2": 0.04307795985808642,
+      "within_subject_run_variance_pp2": 1.1626919337515256,
+      "t_statistic": 0.23862389931812827,
+      "p_two_sided": 0.8173962181415962,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 4.289963204620508e-05,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.21501832561728332,
+        0.27388117283950786
+      ],
+      "per_replicate_mean_pp": [
+        0.29359567901234596,
+        -0.16628086419752666,
+        0.1454475308642012,
+        0.07986111111111557,
+        0.29976851851851477,
+        -0.3885030864197546,
+        -0.3503086419753091,
+        0.2843364197530883,
+        -0.10532407407407389,
+        0.22492283950616912
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "mc_standard_error_of_grand_mean_pp": 0.011952343542993453,
+      "family_complete": true,
+      "p_holm": 1.0,
+      "p_equivalence_holm": 0.0002144981602310254
+    },
+    "bci2b:schedule": {
+      "dataset": "bci2b",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": "primary",
+      "mean_difference_pp": 0.2584325396825398,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.21080986095015797,
+      "model_95ci_pp": [
+        -0.22769587141033965,
+        0.7445609507754193
+      ],
+      "model_90ci_pp": [
+        -0.1335785235394878,
+        0.6504436029045675
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 3.9996717726442443,
+      "t_statistic": 1.2259034682615788,
+      "p_two_sided": 0.25509492009642315,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.00393613155329236,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.07146577380952446,
+        0.6750992063492062
+      ],
+      "per_replicate_mean_pp": [
+        -0.31746031746031644,
+        0.2529761904761927,
+        -0.7936507936507933,
+        -0.3224206349206344,
+        -0.06448412698412737,
+        1.5823412698412684,
+        0.32738095238095066,
+        0.6051587301587305,
+        0.5803571428571432,
+        0.734126984126984
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.25509492009642315
+    },
+    "bci2b:schedule:accuracy": {
+      "dataset": "bci2b",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "accuracy",
+      "family": null,
+      "mean_difference_pp": 0.14533730158730027,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.18511275924507892,
+      "model_95ci_pp": [
+        -0.28153348671090495,
+        0.5722080898855054
+      ],
+      "model_90ci_pp": [
+        -0.19888876658881574,
+        0.4895633697634163
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 3.0840060271793894,
+      "t_statistic": 0.7851284923849134,
+      "p_two_sided": 0.4549985616172297,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.0008584707246813174,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.19097222222222388,
+        0.46775793650793523
+      ],
+      "per_replicate_mean_pp": [
+        -0.1339285714285734,
+        -1.1408730158730156,
+        0.5555555555555536,
+        0.674603174603176,
+        0.05952380952380808,
+        -0.014880952380955412,
+        0.09920634920634762,
+        0.009920634920634885,
+        0.6349206349206309,
+        0.7093253968253962
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "bci2b:schedule:fixed_budget": {
+      "dataset": "bci2b",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "fixed_budget",
+      "family": null,
+      "mean_difference_pp": 0.19940476190476225,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.13449162396787775,
+      "model_95ci_pp": [
+        -0.11073347911548753,
+        0.5095430029250121
+      ],
+      "model_90ci_pp": [
+        -0.050688873509048216,
+        0.4494983973185727
+      ],
+      "between_subject_variance_pp2": 0.0633991190515559,
+      "within_subject_run_variance_pp2": 0.9939285320609736,
+      "t_statistic": 1.4826556184077937,
+      "p_two_sided": 0.17645133019076978,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.00017046260855772282,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.038690476190475456,
+        0.4513888888888889
+      ],
+      "per_replicate_mean_pp": [
+        0.3621031746031739,
+        -0.5753968253968258,
+        0.07936507936508032,
+        0.5257936507936526,
+        0.34722222222222343,
+        -0.09424603174603144,
+        0.3174603174603188,
+        0.3422619047619054,
+        0.23313492063492042,
+        0.45634920634920473
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "bci2b:real_minus_fixed": {
+      "dataset": "bci2b",
+      "terms": {
+        "real": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 0.14732142857142852,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.301361330763291,
+      "model_95ci_pp": [
+        -0.547619046359351,
+        0.842261903502208
+      ],
+      "model_90ci_pp": [
+        -0.413074442637149,
+        0.707717299780006
+      ],
+      "between_subject_variance_pp2": 0.29517856404714604,
+      "within_subject_run_variance_pp2": 5.221893010676494,
+      "t_statistic": 0.4888531259079966,
+      "p_two_sided": 0.6380649498409481,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.011084952373218326,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.4221230158730154,
+        0.7013888888888888
+      ],
+      "per_replicate_mean_pp": [
+        0.2182539682539669,
+        -0.10912698412698003,
+        -0.16865079365079305,
+        -0.8283730158730153,
+        -0.49107142857142805,
+        1.2996031746031724,
+        0.9771825396825362,
+        0.7142857142857154,
+        0.7638888888888886,
+        -0.9027777777777778
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "bci2b:real_minus_resampled": {
+      "dataset": "bci2b",
+      "terms": {
+        "real": 1,
+        "resampled": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": -0.11111111111111126,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.1832780433436033,
+      "model_95ci_pp": [
+        -0.5337510369535887,
+        0.31152881473136623
+      ],
+      "model_90ci_pp": [
+        -0.4519254369332115,
+        0.22970321471098898
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 3.023175705467375,
+      "t_statistic": -0.6062434380249467,
+      "p_two_sided": 0.5611570710323796,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.0006359695659563929,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.4201388888888889,
+        0.24652777777777793
+      ],
+      "per_replicate_mean_pp": [
+        0.5357142857142831,
+        -0.3621031746031727,
+        0.6250000000000002,
+        -0.5059523809523809,
+        -0.42658730158730074,
+        -0.28273809523809607,
+        0.6498015873015857,
+        0.10912698412698497,
+        0.18353174603174535,
+        -1.6369047619047619
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "bci2b:real_minus_baseline": {
+      "dataset": "bci2b",
+      "terms": {
+        "real": 1,
+        "baseline": -1
+      },
+      "rule": "primary",
+      "family": "augmentation",
+      "mean_difference_pp": 0.1666666666666669,
+      "n_subjects": 9,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.507538654794993,
+      "model_95ci_pp": [
+        -1.0037195700665467,
+        1.3370529033998806
+      ],
+      "model_90ci_pp": [
+        -0.777125842828434,
+        1.110459176161768
+      ],
+      "between_subject_variance_pp2": 0.9061481363378681,
+      "within_subject_run_variance_pp2": 7.061056193310662,
+      "t_statistic": 0.3283822130434332,
+      "p_two_sided": 0.7510530007012005,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.06961747182476669,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.7499999999999994,
+        1.152951388888887
+      ],
+      "per_replicate_mean_pp": [
+        -0.9275793650793661,
+        0.41666666666666763,
+        1.517857142857143,
+        0.1537698412698407,
+        -0.3273809523809506
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 1.0
+    },
+    "bci2b:real_minus_zero": {
+      "dataset": "bci2b",
+      "terms": {
+        "real": 1,
+        "zero": -1
+      },
+      "rule": "primary",
+      "family": "augmentation",
+      "mean_difference_pp": -0.07440476190476152,
+      "n_subjects": 9,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.2812814923159736,
+      "model_95ci_pp": [
+        -0.7230410463417954,
+        0.5742315225322724
+      ],
+      "model_90ci_pp": [
+        -0.5974612089346925,
+        0.4486516851251694
+      ],
+      "between_subject_variance_pp2": 0.33579356221655327,
+      "within_subject_run_variance_pp2": 1.881399695294783,
+      "t_statistic": -0.2645206454649351,
+      "p_two_sided": 0.7980660375125003,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.005505784450208219,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.5327380952380939,
+        0.5138888888888893
+      ],
+      "per_replicate_mean_pp": [
+        0.3224206349206332,
+        -0.9920634920634898,
+        0.38690476190476236,
+        0.27281746031746124,
+        -0.36210317460317454
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 1.0
+    },
+    "bci2b:inference:fixed": {
+      "dataset": "bci2b",
+      "family": "inference",
+      "mean_difference_pp": -0.15597222222222082,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.15095348938741676,
+      "model_95ci_pp": [
+        -0.504071592973102,
+        0.1921271485286604
+      ],
+      "model_90ci_pp": [
+        -0.43667748717103283,
+        0.12473304272659116
+      ],
+      "between_subject_variance_pp2": 0.12883477981578945,
+      "within_subject_run_variance_pp2": 0.7624782380834303,
+      "t_statistic": -1.0332468819049532,
+      "p_two_sided": 0.3317099465881844,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.0002577228755396328,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.47291666666666576,
+        0.06795138888888966
+      ],
+      "per_replicate_mean_pp": [
+        -0.0984623015872975,
+        -0.2502480158730083,
+        0.05684523809524148,
+        -0.8695436507936515,
+        -0.24568452380952818,
+        -0.13120039682539522,
+        0.13809523809523527,
+        -0.21329365079364943,
+        0.3153273809523843,
+        -0.2615575396825393
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "mc_standard_error_of_grand_mean_pp": 0.008725014301259004,
+      "family_complete": true,
+      "p_holm": 1.0,
+      "p_equivalence_holm": 0.0010308915021585313
+    },
+    "bci2b:inference:resampled": {
+      "dataset": "bci2b",
+      "family": "inference",
+      "mean_difference_pp": -0.08767361111111162,
+      "n_subjects": 9,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.05378395794149575,
+      "model_95ci_pp": [
+        -0.21169964053184775,
+        0.03635241830962452
+      ],
+      "model_90ci_pp": [
+        -0.18768746455186436,
+        0.012340242329641135
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 0.26034427186673254,
+      "t_statistic": -1.6301070889293758,
+      "p_two_sided": 0.1417261247446734,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 7.40154649468853e-08,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.18440972222222118,
+        -0.021458333333334974
+      ],
+      "per_replicate_mean_pp": [
+        0.05654761904760762,
+        0.04295634920634549,
+        0.09692460317460973,
+        -0.39340277777778243,
+        -0.16701388888889315,
+        -0.11741071428570764,
+        0.04161706349206404,
+        -0.08467261904762349,
+        -0.04017857142857295,
+        -0.3121031746031634
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "mc_standard_error_of_grand_mean_pp": 0.005030314083204211,
+      "family_complete": true,
+      "p_holm": 0.8503567484680403,
+      "p_equivalence_holm": 5.181082546281972e-07
+    },
+    "lee2019:schedule": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": "primary",
+      "mean_difference_pp": 11.324074074074076,
+      "n_subjects": 54,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.8642728271099878,
+      "model_95ci_pp": [
+        7.584816316918297,
+        15.063331831229856
+      ],
+      "model_90ci_pp": [
+        8.203064664564852,
+        14.4450834835833
+      ],
+      "between_subject_variance_pp2": 182.3078348474261,
+      "within_subject_run_variance_pp2": 53.69876543209877,
+      "t_statistic": 6.074257967718575,
+      "p_two_sided": 1.3789194043213847e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999995131150575,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.866574074074076,
+        15.036365740740735
+      ],
+      "per_replicate_mean_pp": [
+        11.768518518518519,
+        10.703703703703704,
+        12.657407407407407,
+        10.268518518518519,
+        10.333333333333334,
+        11.037037037037036,
+        11.351851851851851,
+        13.203703703703704,
+        11.722222222222221,
+        10.194444444444445
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 4.136758212964154e-07
+    },
+    "lee2019:schedule:accuracy": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "accuracy",
+      "family": null,
+      "mean_difference_pp": 11.98888888888889,
+      "n_subjects": 54,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.6512889459012956,
+      "model_95ci_pp": [
+        8.676822698534703,
+        15.300955079243078
+      ],
+      "model_90ci_pp": [
+        9.224439253067183,
+        14.753338524710598
+      ],
+      "between_subject_variance_pp2": 142.41613789890522,
+      "within_subject_run_variance_pp2": 48.28641975308642,
+      "t_statistic": 7.260321652759078,
+      "p_two_sided": 1.718818937652419e-09,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999918968591,
+      "conditional_subject_bootstrap_95ci_pp": [
+        8.95275462962963,
+        15.29914351851852
+      ],
+      "per_replicate_mean_pp": [
+        12.657407407407407,
+        12.685185185185185,
+        12.972222222222221,
+        10.074074074074074,
+        11.148148148148149,
+        12.768518518518519,
+        12.305555555555555,
+        12.037037037037036,
+        12.61111111111111,
+        10.62962962962963
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:schedule:fixed_budget": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "fixed_budget",
+      "family": null,
+      "mean_difference_pp": 12.737037037037036,
+      "n_subjects": 54,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.6147729216127693,
+      "model_95ci_pp": [
+        9.498212716164488,
+        15.975861357909583
+      ],
+      "model_90ci_pp": [
+        10.033719470376596,
+        15.440354603697475
+      ],
+      "between_subject_variance_pp2": 136.570749475891,
+      "within_subject_run_variance_pp2": 42.33796296296297,
+      "t_statistic": 7.887819312894969,
+      "p_two_sided": 1.6908912227955035e-10,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999991663514,
+      "conditional_subject_bootstrap_95ci_pp": [
+        9.65636574074074,
+        15.93162037037037
+      ],
+      "per_replicate_mean_pp": [
+        12.583333333333334,
+        12.0,
+        13.768518518518519,
+        11.842592592592593,
+        11.592592592592593,
+        12.898148148148149,
+        13.648148148148149,
+        13.11111111111111,
+        14.342592592592593,
+        11.583333333333334
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:real_minus_fixed": {
+      "dataset": "lee2019",
+      "terms": {
+        "real": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 9.959259259259259,
+      "n_subjects": 54,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.1870421064113776,
+      "model_95ci_pp": [
+        7.578354308050951,
+        12.340164210467567
+      ],
+      "model_90ci_pp": [
+        7.972012795265721,
+        11.946505723252796
+      ],
+      "between_subject_variance_pp2": 72.38240915443745,
+      "within_subject_run_variance_pp2": 37.07314814814814,
+      "t_statistic": 8.389979770277677,
+      "p_two_sided": 2.6797945910991538e-11,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999997031821,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.757337962962962,
+        12.304745370370368
+      ],
+      "per_replicate_mean_pp": [
+        10.305555555555555,
+        9.212962962962962,
+        10.74074074074074,
+        9.444444444444445,
+        8.842592592592593,
+        9.944444444444445,
+        10.37037037037037,
+        12.074074074074074,
+        9.62962962962963,
+        9.027777777777779
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:real_minus_resampled": {
+      "dataset": "lee2019",
+      "terms": {
+        "real": 1,
+        "resampled": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": -1.3648148148148147,
+      "n_subjects": 54,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.0949574957923918,
+      "model_95ci_pp": [
+        -3.5610214270436864,
+        0.831391797414057
+      ],
+      "model_90ci_pp": [
+        -3.1979009370206253,
+        0.46827130739099565
+      ],
+      "between_subject_variance_pp2": 60.52222066930663,
+      "within_subject_run_variance_pp2": 42.20102880658437,
+      "t_statistic": -1.246454606739903,
+      "p_two_sided": 0.2180786258838568,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.6298424821210333,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -3.5472685185185187,
+        0.6990740740740741
+      ],
+      "per_replicate_mean_pp": [
+        -1.4629629629629628,
+        -1.490740740740743,
+        -1.9166666666666667,
+        -0.8240740740740735,
+        -1.4907407407407405,
+        -1.0925925925925926,
+        -0.9814814814814816,
+        -1.1296296296296293,
+        -2.0925925925925917,
+        -1.1666666666666667
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:real_minus_baseline": {
+      "dataset": "lee2019",
+      "terms": {
+        "real": 1,
+        "baseline": -1
+      },
+      "rule": "primary",
+      "family": "augmentation",
+      "mean_difference_pp": -2.9148148148148145,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.1917178887040398,
+      "model_95ci_pp": [
+        -5.305098197631608,
+        -0.524531431998021
+      ],
+      "model_90ci_pp": [
+        -4.909889081863787,
+        -0.9197405477658427
+      ],
+      "between_subject_variance_pp2": 69.54950908455623,
+      "within_subject_run_variance_pp2": 35.70416666666667,
+      "t_statistic": -2.4458933128750755,
+      "p_two_sided": 0.01780278152951954,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9429763584959111,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -5.240879629629628,
+        -0.594351851851853
+      ],
+      "per_replicate_mean_pp": [
+        -2.814814814814815,
+        -3.092592592592593,
+        -3.685185185185185,
+        -2.638888888888889,
+        -2.342592592592592
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.10681668917711723
+    },
+    "lee2019:real_minus_zero": {
+      "dataset": "lee2019",
+      "terms": {
+        "real": 1,
+        "zero": -1
+      },
+      "rule": "primary",
+      "family": "augmentation",
+      "mean_difference_pp": -2.7074074074074077,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.1921237321165175,
+      "model_95ci_pp": [
+        -5.098504809023504,
+        -0.3163100057913111
+      ],
+      "model_90ci_pp": [
+        -4.703161103502767,
+        -0.711653711312048
+      ],
+      "between_subject_variance_pp2": 71.09619671558349,
+      "within_subject_run_variance_pp2": 28.23194444444444,
+      "t_statistic": -2.27107919628496,
+      "p_two_sided": 0.02723019945586714,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9210265696361005,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -5.0741203703703714,
+        -0.40740740740740805
+      ],
+      "per_replicate_mean_pp": [
+        -1.87037037037037,
+        -2.6203703703703707,
+        -3.6388888888888893,
+        -2.5185185185185186,
+        -2.888888888888888
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.1361509972793357
+    },
+    "lee2019:inference:fixed": {
+      "dataset": "lee2019",
+      "family": "inference",
+      "mean_difference_pp": -0.26782407407407455,
+      "n_subjects": 54,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.12218679321114578,
+      "model_95ci_pp": [
+        -0.5128997452380628,
+        -0.02274840291008634
+      ],
+      "model_90ci_pp": [
+        -0.4723789684995379,
+        -0.06326917964861117
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 8.061990715020583,
+      "t_statistic": -2.191923259752461,
+      "p_two_sided": 0.032799431892371195,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 9.312997903269027e-08,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.49458611111111206,
+        -0.04216944444444546
+      ],
+      "per_replicate_mean_pp": [
+        -0.07490740740740966,
+        -0.9082407407407413,
+        -0.002500000000000325,
+        0.038796296296296204,
+        -0.5616666666666672,
+        -0.3964814814814824,
+        -0.8191666666666667,
+        -0.05592592592592518,
+        0.21564814814814795,
+        -0.11379629629629671
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "mc_standard_error_of_grand_mean_pp": 0.01248486720995674,
+      "family_complete": true,
+      "p_holm": 0.26239545513896956,
+      "p_equivalence_holm": 5.587798741961416e-07
+    },
+    "lee2019:inference:resampled": {
+      "dataset": "lee2019",
+      "family": "inference",
+      "mean_difference_pp": -0.18115740740740816,
+      "n_subjects": 54,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.10181083896485202,
+      "model_95ci_pp": [
+        -0.3853640899411125,
+        0.023049275126296204
+      ],
+      "model_90ci_pp": [
+        -0.35160058599083166,
+        -0.010714228823984678
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 5.597341342592595,
+      "t_statistic": -1.77935285917788,
+      "p_two_sided": 0.08091623320701041,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 4.7807243355020134e-11,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.37206620370370486,
+        0.007876851851851122
+      ],
+      "per_replicate_mean_pp": [
+        -0.4629629629629643,
+        -0.2682407407407403,
+        -0.025833333333333916,
+        -0.5343518518518521,
+        -0.3476851851851859,
+        -0.23824074074074073,
+        -0.5020370370370395,
+        0.3956481481481465,
+        0.39842592592592624,
+        -0.2262962962962973
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "mc_standard_error_of_grand_mean_pp": 0.01025043535581388,
+      "family_complete": true,
+      "p_holm": 0.566413632449073,
+      "p_equivalence_holm": 3.8245794684016107e-10
+    },
+    "lee2019:global_minus_real": {
+      "dataset": "lee2019",
+      "terms": {
+        "global": 1,
+        "real": -1
+      },
+      "rule": "primary",
+      "family": "global",
+      "mean_difference_pp": -0.19999999999999982,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.20945505147501148,
+      "model_95ci_pp": [
+        -0.6201136306951022,
+        0.2201136306951025
+      ],
+      "model_90ci_pp": [
+        -0.5506521025338003,
+        0.15065210253380065
+      ],
+      "between_subject_variance_pp2": 0.6589640111809925,
+      "within_subject_run_variance_pp2": 8.55046296296296,
+      "t_statistic": -0.9548588042712368,
+      "p_two_sided": 0.34398416594062586,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.0001763111899416475,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.60375,
+        0.20925925925925964
+      ],
+      "per_replicate_mean_pp": [
+        -0.8148148148148141,
+        0.03703703703703724,
+        -0.5740740740740737,
+        0.3981481481481481,
+        -0.04629629629629662
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.6323655695346472,
+      "p_equivalence_holm": 0.000352622379883295
+    },
+    "lee2019:schedule:none": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_none": 1,
+        "fixed_none": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 0.7222222222222224,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.32856831790278646,
+      "model_95ci_pp": [
+        0.06319763440038018,
+        1.3812468100440647
+      ],
+      "model_90ci_pp": [
+        0.17216066635494154,
+        1.2722837780895033
+      ],
+      "between_subject_variance_pp2": 0.7525559049615627,
+      "within_subject_run_variance_pp2": 25.38564814814815,
+      "t_statistic": 2.1980884427083027,
+      "p_two_sided": 0.032332153822956705,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.2008388751796345,
+      "conditional_subject_bootstrap_95ci_pp": [
+        0.11296296296296303,
+        1.3907407407407404
+      ],
+      "per_replicate_mean_pp": [
+        -0.0648148148148147,
+        0.8611111111111108,
+        0.3240740740740745,
+        1.9351851851851853,
+        0.5555555555555557
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:normalization_interaction:none": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_none": 1,
+        "fixed_none": -1,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "normalization",
+      "mean_difference_pp": -10.424074074074074,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.8318880050562805,
+      "model_95ci_pp": [
+        -14.098376104086547,
+        -6.7497720440616
+      ],
+      "model_90ci_pp": [
+        -13.490867527160445,
+        -7.357280620987703
+      ],
+      "between_subject_variance_pp2": 163.76486373165622,
+      "within_subject_run_variance_pp2": 87.24537037037035,
+      "t_statistic": -5.6903446309501975,
+      "p_two_sided": 5.604714983474087e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999980073387155,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -14.116666666666664,
+        -6.986990740740743
+      ],
+      "per_replicate_mean_pp": [
+        -11.833333333333334,
+        -9.842592592592593,
+        -12.333333333333334,
+        -8.333333333333332,
+        -9.777777777777779
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 4.4837719867792694e-06
+    },
+    "lee2019:schedule:layernorm": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_layernorm": 1,
+        "fixed_layernorm": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 11.71851851851852,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 2.0006411866575036,
+      "model_95ci_pp": [
+        7.705740470312244,
+        15.731296566724797
+      ],
+      "model_90ci_pp": [
+        8.369212624118234,
+        15.067824412918807
+      ],
+      "between_subject_variance_pp2": 206.74231481481482,
+      "within_subject_run_variance_pp2": 46.98101851851851,
+      "t_statistic": 5.85738142185146,
+      "p_two_sided": 3.050491714098228e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999990682730664,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.914722222222223,
+        15.813148148148143
+      ],
+      "per_replicate_mean_pp": [
+        11.592592592592593,
+        12.305555555555555,
+        13.37037037037037,
+        10.555555555555555,
+        10.768518518518519
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:normalization_interaction:layernorm": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_layernorm": 1,
+        "fixed_layernorm": -1,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "normalization",
+      "mean_difference_pp": 0.5722222222222221,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.309622261087463,
+      "model_95ci_pp": [
+        -0.04880138801522038,
+        1.1932458324596644
+      ],
+      "model_90ci_pp": [
+        0.053878567690973544,
+        1.0905658767534705
+      ],
+      "between_subject_variance_pp2": 1.0675017470300467,
+      "within_subject_run_variance_pp2": 20.5462962962963,
+      "t_statistic": 1.848130106060362,
+      "p_two_sided": 0.07016646879167436,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.08644377950694382,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.007407407407407441,
+        1.2092592592592593
+      ],
+      "per_replicate_mean_pp": [
+        -0.1759259259259266,
+        1.6018518518518507,
+        0.7129629629629632,
+        0.28703703703703753,
+        0.43518518518518556
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.3508323439583718
+    },
+    "lee2019:schedule:frozen": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_frozen": 1,
+        "fixed_frozen": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 11.485185185185186,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.945349428348186,
+      "model_95ci_pp": [
+        7.583308359781906,
+        15.387062010588465
+      ],
+      "model_90ci_pp": [
+        8.228444121126392,
+        14.74192624924398
+      ],
+      "between_subject_variance_pp2": 195.1850908455625,
+      "within_subject_run_variance_pp2": 45.85833333333334,
+      "t_statistic": 5.90391886301751,
+      "p_two_sided": 2.5735720200750925e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999991703262756,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.898148148148148,
+        15.403703703703703
+      ],
+      "per_replicate_mean_pp": [
+        11.703703703703704,
+        12.61111111111111,
+        13.222222222222221,
+        10.064814814814815,
+        9.824074074074074
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:normalization_interaction:frozen": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_frozen": 1,
+        "fixed_frozen": -1,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "normalization",
+      "mean_difference_pp": 0.33888888888888896,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.2638533022457489,
+      "model_95ci_pp": [
+        -0.19033381544191702,
+        0.868111593219695
+      ],
+      "model_90ci_pp": [
+        -0.10283220850844998,
+        0.7806099862862279
+      ],
+      "between_subject_variance_pp2": 0.2320877009084561,
+      "within_subject_run_variance_pp2": 17.63657407407408,
+      "t_statistic": 1.2843837314313886,
+      "p_two_sided": 0.20459359343305145,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.00766559978019077,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.15555555555555511,
+        0.8574074074074071
+      ],
+      "per_replicate_mean_pp": [
+        -0.06481481481481524,
+        1.9074074074074068,
+        0.5648148148148149,
+        -0.20370370370370416,
+        -0.5092592592592587
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.6137807802991544
+    },
+    "lee2019:schedule:bn_noaffine": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_bn_noaffine": 1,
+        "fixed_bn_noaffine": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 11.192592592592591,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.8997054680901533,
+      "model_95ci_pp": [
+        7.382265957687309,
+        15.002919227497873
+      ],
+      "model_90ci_pp": [
+        8.012264823509202,
+        14.37292036167598
+      ],
+      "between_subject_variance_pp2": 185.5171593291405,
+      "within_subject_run_variance_pp2": 46.81203703703704,
+      "t_statistic": 5.891751527064316,
+      "p_two_sided": 2.690601207863608e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.999999094015051,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.559166666666664,
+        15.04449074074074
+      ],
+      "per_replicate_mean_pp": [
+        11.712962962962964,
+        10.972222222222221,
+        13.222222222222221,
+        10.157407407407407,
+        9.898148148148149
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:normalization_interaction:bn_noaffine": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_bn_noaffine": 1,
+        "fixed_bn_noaffine": -1,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "normalization",
+      "mean_difference_pp": 0.04629629629629615,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.1263283842910565,
+      "model_95ci_pp": [
+        -0.20708635459046718,
+        0.2996789471830595
+      ],
+      "model_90ci_pp": [
+        -0.1651921030018305,
+        0.2577846955944228
+      ],
+      "between_subject_variance_pp2": 0.16474143955276088,
+      "within_subject_run_variance_pp2": 3.4851851851851854,
+      "t_statistic": 0.36647580475367264,
+      "p_two_sided": 0.7154690501979143,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 2.947924875455027e-10,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.20375000000000046,
+        0.2925925925925925
+      ],
+      "per_replicate_mean_pp": [
+        -0.05555555555555572,
+        0.26851851851851766,
+        0.5648148148148151,
+        -0.1111111111111111,
+        -0.43518518518518523
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 1.0
+    },
+    "lee2019:schedule:mu": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_mu": 1,
+        "fixed_mu": -1
+      },
+      "rule": "primary",
+      "family": "bands",
+      "mean_difference_pp": 11.207407407407404,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.9724568352233645,
+      "model_95ci_pp": [
+        7.251160009220783,
+        15.163654805594025
+      ],
+      "model_90ci_pp": [
+        7.905285393363957,
+        14.50952942145085
+      ],
+      "between_subject_variance_pp2": 200.15775331935714,
+      "within_subject_run_variance_pp2": 49.66944444444444,
+      "t_statistic": 5.681953190188954,
+      "p_two_sided": 5.778147769334884e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999982119762832,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.516574074074075,
+        15.135416666666664
+      ],
+      "per_replicate_mean_pp": [
+        10.777777777777779,
+        11.805555555555555,
+        13.25,
+        10.101851851851851,
+        10.101851851851851
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 5.778147769334884e-07
+    },
+    "lee2019:schedule:beta": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_beta": 1,
+        "fixed_beta": -1
+      },
+      "rule": "primary",
+      "family": "bands",
+      "mean_difference_pp": 11.046296296296296,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.8786168711177855,
+      "model_95ci_pp": [
+        7.278268030315212,
+        14.81432456227738
+      ],
+      "model_90ci_pp": [
+        7.901273289813634,
+        14.191319302778957
+      ],
+      "between_subject_variance_pp2": 178.3858542976939,
+      "within_subject_run_variance_pp2": 60.95509259259259,
+      "t_statistic": 5.880015486991607,
+      "p_two_sided": 2.808482591725626e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999990348457656,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.618472222222221,
+        14.783333333333328
+      ],
+      "per_replicate_mean_pp": [
+        11.546296296296296,
+        11.064814814814815,
+        13.296296296296296,
+        9.898148148148149,
+        9.425925925925926
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 5.616965183451252e-07
+    },
+    "lee2019:schedule:edge": {
+      "dataset": "lee2019",
+      "terms": {
+        "resampled_edge": 1,
+        "fixed_edge": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 11.04814814814815,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.8990558924383338,
+      "model_95ci_pp": [
+        7.23912439700516,
+        14.857171899291139
+      ],
+      "model_90ci_pp": [
+        7.868907844210437,
+        14.227388452085862
+      ],
+      "between_subject_variance_pp2": 183.361965408805,
+      "within_subject_run_variance_pp2": 56.921759259259254,
+      "t_statistic": 5.817705625273957,
+      "p_two_sided": 3.5256664212203567e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.999998818179269,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.575879629629629,
+        14.87606481481481
+      ],
+      "per_replicate_mean_pp": [
+        11.407407407407407,
+        11.203703703703704,
+        12.277777777777779,
+        10.314814814814815,
+        10.037037037037036
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "lee2019:schedule:donor": {
+      "dataset": "lee2019",
+      "terms": {
+        "donor_resampled": 1,
+        "donor_fixed": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 8.327777777777776,
+      "n_subjects": 54,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.3602200480371647,
+      "model_95ci_pp": [
+        5.599521863676154,
+        11.056033691879398
+      ],
+      "model_90ci_pp": [
+        6.050611309869687,
+        10.604944245685864
+      ],
+      "between_subject_variance_pp2": 87.77563067784764,
+      "within_subject_run_variance_pp2": 60.675462962962946,
+      "t_statistic": 6.122375412562835,
+      "p_two_sided": 1.1555675307069644e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999991623278331,
+      "conditional_subject_bootstrap_95ci_pp": [
+        5.78888888888889,
+        11.06861111111111
+      ],
+      "per_replicate_mean_pp": [
+        7.398148148148148,
+        7.675925925925926,
+        8.694444444444445,
+        8.027777777777779,
+        9.842592592592593
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:schedule": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": "primary",
+      "mean_difference_pp": 30.075892857142858,
+      "n_subjects": 14,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 2.5830320107622455,
+      "model_95ci_pp": [
+        24.495591462452044,
+        35.656194251833675
+      ],
+      "model_90ci_pp": [
+        25.501515206380873,
+        34.65027050790484
+      ],
+      "between_subject_variance_pp2": 79.9109623015873,
+      "within_subject_run_variance_pp2": 134.97798859126985,
+      "t_statistic": 11.64363923165921,
+      "p_two_sided": 2.9975469339677744e-08,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999775842124,
+      "conditional_subject_bootstrap_95ci_pp": [
+        25.321316964285717,
+        35.227790178571425
+      ],
+      "per_replicate_mean_pp": [
+        29.6875,
+        27.455357142857142,
+        26.026785714285715,
+        31.25,
+        33.660714285714285,
+        29.910714285714285,
+        35.223214285714285,
+        27.723214285714285,
+        26.741071428571427,
+        33.080357142857146
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 1.1990187735871098e-07
+    },
+    "schirrmeister:schedule:accuracy": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "accuracy",
+      "family": null,
+      "mean_difference_pp": 27.1875,
+      "n_subjects": 14,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.8669814805993923,
+      "model_95ci_pp": [
+        23.154131727116578,
+        31.220868272883422
+      ],
+      "model_90ci_pp": [
+        23.881200146317518,
+        30.493799853682482
+      ],
+      "between_subject_variance_pp2": 44.61378205128205,
+      "within_subject_run_variance_pp2": 41.848958333333336,
+      "t_statistic": 14.562276210298286,
+      "p_two_sided": 1.988287122025555e-09,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999984252811,
+      "conditional_subject_bootstrap_95ci_pp": [
+        23.83917410714286,
+        30.848214285714285
+      ],
+      "per_replicate_mean_pp": [
+        28.392857142857142,
+        26.830357142857142,
+        25.580357142857142,
+        28.169642857142858,
+        29.553571428571427,
+        27.366071428571427,
+        29.776785714285715,
+        25.714285714285715,
+        23.303571428571427,
+        27.1875
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:schedule:fixed_budget": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled": 1,
+        "fixed": -1
+      },
+      "rule": "fixed_budget",
+      "family": null,
+      "mean_difference_pp": 29.40625,
+      "n_subjects": 14,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.8189156772845267,
+      "model_95ci_pp": [
+        25.47672158204572,
+        33.33577841795428
+      ],
+      "model_90ci_pp": [
+        26.18507148261275,
+        32.62742851738725
+      ],
+      "between_subject_variance_pp2": 42.428881448412696,
+      "within_subject_run_variance_pp2": 38.89477926587301,
+      "t_statistic": 16.16691217038759,
+      "p_two_sided": 5.459951812084918e-10,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999995806652,
+      "conditional_subject_bootstrap_95ci_pp": [
+        26.107142857142858,
+        32.964285714285715
+      ],
+      "per_replicate_mean_pp": [
+        30.9375,
+        29.151785714285715,
+        27.767857142857142,
+        29.464285714285715,
+        31.473214285714285,
+        29.6875,
+        30.491071428571427,
+        29.0625,
+        26.294642857142854,
+        29.732142857142858
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:real_minus_fixed": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "real": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 21.482142857142858,
+      "n_subjects": 14,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 2.8537002783491334,
+      "model_95ci_pp": [
+        15.317098220858247,
+        27.647187493427467
+      ],
+      "model_90ci_pp": [
+        16.428429732077344,
+        26.53585598220837
+      ],
+      "between_subject_variance_pp2": 103.152338980464,
+      "within_subject_run_variance_pp2": 108.5813492063492,
+      "t_statistic": 7.527820290072749,
+      "p_two_sided": 4.324627138768081e-06,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999964088333324,
+      "conditional_subject_bootstrap_95ci_pp": [
+        16.370535714285715,
+        27.27689732142857
+      ],
+      "per_replicate_mean_pp": [
+        22.276785714285715,
+        19.330357142857142,
+        15.3125,
+        24.598214285714285,
+        23.303571428571423,
+        20.133928571428573,
+        26.875,
+        18.839285714285715,
+        20.3125,
+        23.839285714285715
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:real_minus_resampled": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "real": 1,
+        "resampled": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": -8.593749999999998,
+      "n_subjects": 14,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 1.8477152834092043,
+      "model_95ci_pp": [
+        -12.585496184344507,
+        -4.60200381565549
+      ],
+      "model_90ci_pp": [
+        -11.865930701664707,
+        -5.321569298335289
+      ],
+      "between_subject_variance_pp2": 44.26203353937729,
+      "within_subject_run_variance_pp2": 35.34691220238095,
+      "t_statistic": -4.651014188800636,
+      "p_two_sided": 0.00045368588879496786,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9993848309815752,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -11.808035714285714,
+        -4.767857142857143
+      ],
+      "per_replicate_mean_pp": [
+        -7.410714285714282,
+        -8.125,
+        -10.714285714285712,
+        -6.651785714285714,
+        -10.357142857142858,
+        -9.776785714285714,
+        -8.348214285714285,
+        -8.883928571428571,
+        -6.428571428571429,
+        -9.241071428571427
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:real_minus_baseline": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "real": 1,
+        "baseline": -1
+      },
+      "rule": "primary",
+      "family": "augmentation",
+      "mean_difference_pp": -13.946428571428571,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.5584267944896737,
+      "model_95ci_pp": [
+        -17.31320497163584,
+        -10.5796521712213
+      ],
+      "model_90ci_pp": [
+        -16.706298626991106,
+        -11.186558515866038
+      ],
+      "between_subject_variance_pp2": 29.002833104395606,
+      "within_subject_run_variance_pp2": 24.994419642857142,
+      "t_statistic": -8.94904311241357,
+      "p_two_sided": 6.420907257633681e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999992618029505,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -16.6875,
+        -10.955357142857142
+      ],
+      "per_replicate_mean_pp": [
+        -10.9375,
+        -13.214285714285714,
+        -15.9375,
+        -14.375,
+        -15.267857142857142
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 5.136725806106945e-06
+    },
+    "schirrmeister:real_minus_zero": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "real": 1,
+        "zero": -1
+      },
+      "rule": "primary",
+      "family": "augmentation",
+      "mean_difference_pp": -13.8125,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.8037159255575392,
+      "model_95ci_pp": [
+        -17.70919135073728,
+        -9.915808649262718
+      ],
+      "model_90ci_pp": [
+        -17.00676076944322,
+        -10.618239230556782
+      ],
+      "between_subject_variance_pp2": 42.298033997252745,
+      "within_subject_run_variance_pp2": 16.247209821428577,
+      "t_statistic": -7.657802320357334,
+      "p_two_sided": 3.596856471931707e-06,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999959947023869,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -17.018080357142857,
+        -10.231696428571434
+      ],
+      "per_replicate_mean_pp": [
+        -12.544642857142856,
+        -14.6875,
+        -13.526785714285714,
+        -13.30357142857143,
+        -15.0
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 2.517799530352195e-05
+    },
+    "schirrmeister:inference:fixed": {
+      "dataset": "schirrmeister",
+      "family": "inference",
+      "mean_difference_pp": -0.2958035714285712,
+      "n_subjects": 14,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.3147645996825318,
+      "model_95ci_pp": [
+        -0.9758111467467707,
+        0.38420400388962833
+      ],
+      "model_90ci_pp": [
+        -0.8532307128808057,
+        0.26162357002366327
+      ],
+      "between_subject_variance_pp2": 0.2929768019307075,
+      "within_subject_run_variance_pp2": 10.940977430555554,
+      "t_statistic": -0.9397612429317513,
+      "p_two_sided": 0.36447446389569005,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.021709813151805275,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.8981328124999997,
+        0.2925904017857144
+      ],
+      "per_replicate_mean_pp": [
+        -0.8602678571428596,
+        0.11294642857142553,
+        -1.7879464285714275,
+        -0.7491071428571413,
+        -0.4566964285714299,
+        0.7611607142857161,
+        0.16383928571428566,
+        0.34419642857143096,
+        -0.7066964285714263,
+        0.2205357142857134
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "mc_standard_error_of_grand_mean_pp": 0.02771745569652093,
+      "family_complete": true,
+      "p_holm": 1.0,
+      "p_equivalence_holm": 0.021709813151805275
+    },
+    "schirrmeister:inference:resampled": {
+      "dataset": "schirrmeister",
+      "family": "inference",
+      "mean_difference_pp": 0.11352678571428633,
+      "n_subjects": 14,
+      "paired_replicates": 10,
+      "model_standard_error_pp": 0.21202798464776554,
+      "model_95ci_pp": [
+        -0.34453182661172027,
+        0.571585398040293
+      ],
+      "model_90ci_pp": [
+        -0.2619606531822336,
+        0.48901422461080624
+      ],
+      "between_subject_variance_pp2": 0.07709388688568253,
+      "within_subject_run_variance_pp2": 5.5228824094742075,
+      "t_statistic": 0.535433027403832,
+      "p_two_sided": 0.6013906624400555,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.0005385979952868443,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.3087578124999991,
+        0.48960044642857187
+      ],
+      "per_replicate_mean_pp": [
+        0.013392857142858443,
+        0.7321428571428579,
+        -0.9455357142857139,
+        0.5562499999999982,
+        0.03214285714285919,
+        -0.0812499999999978,
+        -0.6549107142857181,
+        0.4392857142857171,
+        0.9133928571428562,
+        0.13035714285714636
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "mc_standard_error_of_grand_mean_pp": 0.019970798063613255,
+      "family_complete": true,
+      "p_holm": 1.0,
+      "p_equivalence_holm": 0.0016157939858605329
+    },
+    "schirrmeister:global_minus_real": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "global": 1,
+        "real": -1
+      },
+      "rule": "primary",
+      "family": "global",
+      "mean_difference_pp": -0.321428571428572,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.30832672588985716,
+      "model_95ci_pp": [
+        -0.987527965990814,
+        0.34467082313367
+      ],
+      "model_90ci_pp": [
+        -0.8674546671822103,
+        0.22459752432506636
+      ],
+      "between_subject_variance_pp2": 0.0,
+      "within_subject_run_variance_pp2": 6.654575892857138,
+      "t_statistic": -1.0424933826313687,
+      "p_two_sided": 0.3161827847673236,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.023213801860503862,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -0.7055803571428589,
+        0.1160714285714278
+      ],
+      "per_replicate_mean_pp": [
+        -0.08928571428571638,
+        -0.3125,
+        -0.7142857142857165,
+        0.4910714285714296,
+        -0.9821428571428565
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.6323655695346472,
+      "p_equivalence_holm": 0.023213801860503862
+    },
+    "schirrmeister:schedule:none": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_none": 1,
+        "fixed_none": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 2.7499999999999996,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.5971831773021973,
+      "model_95ci_pp": [
+        1.4598641815894708,
+        4.040135818410528
+      ],
+      "model_90ci_pp": [
+        1.6924283677939886,
+        3.8075716322060105
+      ],
+      "between_subject_variance_pp2": 0.3136589972527517,
+      "within_subject_run_variance_pp2": 23.395647321428573,
+      "t_statistic": 4.604952223241204,
+      "p_two_sided": 0.0004932373583996153,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9941480835020203,
+      "conditional_subject_bootstrap_95ci_pp": [
+        1.6785714285714277,
+        3.9285714285714293
+      ],
+      "per_replicate_mean_pp": [
+        1.7857142857142847,
+        4.776785714285715,
+        1.3392857142857124,
+        2.6339285714285725,
+        3.214285714285713
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:normalization_interaction:none": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_none": 1,
+        "fixed_none": -1,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "normalization",
+      "mean_difference_pp": -26.866071428571427,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 3.401338625403604,
+      "model_95ci_pp": [
+        -34.21421678490961,
+        -19.517926072233244
+      ],
+      "model_90ci_pp": [
+        -32.889615591358755,
+        -20.8425272657841
+      ],
+      "between_subject_variance_pp2": 132.9083104395604,
+      "within_subject_run_variance_pp2": 145.2957589285714,
+      "t_statistic": -7.898675900104915,
+      "p_two_sided": 2.5703348079624767e-06,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999980613778289,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -33.68772321428571,
+        -20.847991071428574
+      ],
+      "per_replicate_mean_pp": [
+        -27.901785714285715,
+        -22.678571428571427,
+        -24.6875,
+        -28.616071428571427,
+        -30.446428571428573
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 1.7992343655737337e-05
+    },
+    "schirrmeister:schedule:layernorm": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_layernorm": 1,
+        "fixed_layernorm": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 28.660714285714285,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 3.060219451709577,
+      "model_95ci_pp": [
+        22.049512100343165,
+        35.271916471085405
+      ],
+      "model_90ci_pp": [
+        23.24126945963316,
+        34.08015911179541
+      ],
+      "between_subject_variance_pp2": 108.62036401098901,
+      "within_subject_run_variance_pp2": 112.44419642857144,
+      "t_statistic": 9.365574834740402,
+      "p_two_sided": 3.8280705314231633e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999997132443605,
+      "conditional_subject_bootstrap_95ci_pp": [
+        23.267410714285713,
+        34.714508928571426
+      ],
+      "per_replicate_mean_pp": [
+        26.116071428571427,
+        28.928571428571427,
+        26.741071428571427,
+        29.508928571428573,
+        32.00892857142857
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:normalization_interaction:layernorm": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_layernorm": 1,
+        "fixed_layernorm": -1,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "normalization",
+      "mean_difference_pp": -0.9553571428571418,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.9145376786982848,
+      "model_95ci_pp": [
+        -5.091464335533947,
+        3.1807500498196632
+      ],
+      "model_90ci_pp": [
+        -4.345875855939119,
+        2.4351615702248357
+      ],
+      "between_subject_variance_pp2": 33.617702609890124,
+      "within_subject_run_variance_pp2": 88.49330357142858,
+      "t_statistic": -0.49900148400667654,
+      "p_two_sided": 0.6261155019771202,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.49087543623036345,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -4.767857142857141,
+        2.402008928571427
+      ],
+      "per_replicate_mean_pp": [
+        -3.5714285714285685,
+        1.4732142857142871,
+        0.7142857142857132,
+        -1.7410714285714282,
+        -1.651785714285713
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 1.0
+    },
+    "schirrmeister:schedule:frozen": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_frozen": 1,
+        "fixed_frozen": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 27.321428571428573,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 2.6934659148062225,
+      "model_95ci_pp": [
+        21.50254923183033,
+        33.14030791102682
+      ],
+      "model_90ci_pp": [
+        22.5514798319459,
+        32.09137731091125
+      ],
+      "between_subject_variance_pp2": 80.83615212912089,
+      "within_subject_run_variance_pp2": 103.65234375,
+      "t_statistic": 10.143595440076016,
+      "p_two_sided": 1.5245372607657451e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999998825583021,
+      "conditional_subject_bootstrap_95ci_pp": [
+        22.776785714285715,
+        32.794642857142854
+      ],
+      "per_replicate_mean_pp": [
+        27.5,
+        25.714285714285715,
+        25.401785714285715,
+        25.714285714285715,
+        32.276785714285715
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:normalization_interaction:frozen": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_frozen": 1,
+        "fixed_frozen": -1,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "normalization",
+      "mean_difference_pp": -2.2946428571428568,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.0267379348654067,
+      "model_95ci_pp": [
+        -4.512775310027417,
+        -0.07651040425829736
+      ],
+      "model_90ci_pp": [
+        -4.1129273549226,
+        -0.47635835936311355
+      ],
+      "between_subject_variance_pp2": 7.217376373626376,
+      "within_subject_run_variance_pp2": 37.70647321428572,
+      "t_statistic": -2.234886604675474,
+      "p_two_sided": 0.043606507713570275,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.8852525180080069,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -4.348214285714286,
+        -0.5267857142857134
+      ],
+      "per_replicate_mean_pp": [
+        -2.1874999999999996,
+        -1.7410714285714275,
+        -0.624999999999999,
+        -5.535714285714285,
+        -1.3839285714285714
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.26163904628142165
+    },
+    "schirrmeister:schedule:bn_noaffine": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_bn_noaffine": 1,
+        "fixed_bn_noaffine": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 28.330357142857142,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 2.793290846640329,
+      "model_95ci_pp": [
+        22.29581914939096,
+        34.36489513632332
+      ],
+      "model_90ci_pp": [
+        23.38362509783734,
+        33.277089187876946
+      ],
+      "between_subject_variance_pp2": 90.95784684065933,
+      "within_subject_run_variance_pp2": 91.38392857142857,
+      "t_statistic": 10.142286893229143,
+      "p_two_sided": 1.526827861207535e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999998842051586,
+      "conditional_subject_bootstrap_95ci_pp": [
+        23.348214285714285,
+        34.00915178571428
+      ],
+      "per_replicate_mean_pp": [
+        28.839285714285715,
+        26.830357142857142,
+        26.026785714285715,
+        27.008928571428573,
+        32.94642857142857
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:normalization_interaction:bn_noaffine": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_bn_noaffine": 1,
+        "fixed_bn_noaffine": -1,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "normalization",
+      "mean_difference_pp": -1.2857142857142854,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.8258807914176555,
+      "model_95ci_pp": [
+        -3.0699212614676723,
+        0.4984926900391018
+      ],
+      "model_90ci_pp": [
+        -2.74829416033988,
+        0.17686558891130932
+      ],
+      "between_subject_variance_pp2": 3.582589285714283,
+      "within_subject_run_variance_pp2": 29.832589285714295,
+      "t_statistic": -1.5567795002318778,
+      "p_two_sided": 0.14352490190151146,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.6325429485432865,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -2.9017857142857144,
+        0.16964285714285657
+      ],
+      "per_replicate_mean_pp": [
+        -0.8482142857142841,
+        -0.6250000000000012,
+        2.0301221021717147e-15,
+        -4.24107142857143,
+        -0.7142857142857147
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.5740996076060458
+    },
+    "schirrmeister:schedule:mu": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_mu": 1,
+        "fixed_mu": -1
+      },
+      "rule": "primary",
+      "family": "bands",
+      "mean_difference_pp": 28.848214285714285,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 2.663963141138957,
+      "model_95ci_pp": [
+        23.09307181362552,
+        34.60335675780305
+      ],
+      "model_90ci_pp": [
+        24.130512993393214,
+        33.56591557803535
+      ],
+      "between_subject_variance_pp2": 72.19587053571428,
+      "within_subject_run_variance_pp2": 135.78962053571428,
+      "t_statistic": 10.829059096283311,
+      "p_two_sided": 7.087104636478167e-08,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999463647395,
+      "conditional_subject_bootstrap_95ci_pp": [
+        23.856919642857143,
+        33.88392857142857
+      ],
+      "per_replicate_mean_pp": [
+        29.821428571428573,
+        24.553571428571427,
+        28.125,
+        32.589285714285715,
+        29.151785714285715
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 2.834841854591267e-07
+    },
+    "schirrmeister:schedule:beta": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_beta": 1,
+        "fixed_beta": -1
+      },
+      "rule": "primary",
+      "family": "bands",
+      "mean_difference_pp": 29.928571428571427,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 2.8409871189512805,
+      "model_95ci_pp": [
+        23.790991903374554,
+        36.0661509537683
+      ],
+      "model_90ci_pp": [
+        24.897372462052076,
+        34.95977039509078
+      ],
+      "between_subject_variance_pp2": 89.07057005494508,
+      "within_subject_run_variance_pp2": 119.63169642857143,
+      "t_statistic": 10.53456780177843,
+      "p_two_sided": 9.800635576495108e-08,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999271022246,
+      "conditional_subject_bootstrap_95ci_pp": [
+        24.919419642857143,
+        35.6875
+      ],
+      "per_replicate_mean_pp": [
+        29.598214285714285,
+        28.928571428571427,
+        25.848214285714285,
+        32.142857142857146,
+        33.125
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 2.940190672948532e-07
+    },
+    "schirrmeister:schedule:edge": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_edge": 1,
+        "fixed_edge": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 29.339285714285715,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 3.2403552095149157,
+      "model_95ci_pp": [
+        22.33892388384377,
+        36.33964754472766
+      ],
+      "model_90ci_pp": [
+        23.60083245889571,
+        35.07773896967572
+      ],
+      "between_subject_variance_pp2": 123.47295673076923,
+      "within_subject_run_variance_pp2": 117.62834821428571,
+      "t_statistic": 9.054342446202938,
+      "p_two_sided": 5.624514783818712e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999995840518138,
+      "conditional_subject_bootstrap_95ci_pp": [
+        23.53549107142857,
+        35.57142857142857
+      ],
+      "per_replicate_mean_pp": [
+        27.1875,
+        27.276785714285715,
+        28.794642857142858,
+        30.803571428571427,
+        32.63392857142857
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:schedule:donor": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "donor_resampled": 1,
+        "donor_fixed": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 18.866071428571427,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 2.4903475847789056,
+      "model_95ci_pp": [
+        13.486002562717266,
+        24.246140294425587
+      ],
+      "model_90ci_pp": [
+        14.455831723071213,
+        23.27631113407164
+      ],
+      "between_subject_variance_pp2": 77.97686298076923,
+      "within_subject_run_variance_pp2": 44.24386160714284,
+      "t_statistic": 7.575678007311725,
+      "p_two_sided": 4.0399780821867294e-06,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999963915250271,
+      "conditional_subject_bootstrap_95ci_pp": [
+        14.419419642857143,
+        23.910937499999996
+      ],
+      "per_replicate_mean_pp": [
+        21.964285714285715,
+        19.330357142857142,
+        17.09821428571429,
+        17.232142857142858,
+        18.705357142857142
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:dimension:128": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_p128_mask1": 0.3333333333333333,
+        "fixed_p128_mask1": -0.3333333333333333,
+        "resampled_p128_mask2": 0.3333333333333333,
+        "fixed_p128_mask2": -0.3333333333333333,
+        "resampled_p128_mask3": 0.3333333333333333,
+        "fixed_p128_mask3": -0.3333333333333333
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 5.845238095238093,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.9551770424651487,
+      "model_95ci_pp": [
+        3.7817035513235573,
+        7.9087726391526285
+      ],
+      "model_90ci_pp": [
+        4.15368317165659,
+        7.536793018819596
+      ],
+      "between_subject_variance_pp2": 11.93125667735043,
+      "within_subject_run_variance_pp2": 4.209139384920639,
+      "t_statistic": 6.119533694143792,
+      "p_two_sided": 3.663093595949063e-05,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9998931107584661,
+      "conditional_subject_bootstrap_95ci_pp": [
+        4.089285714285711,
+        7.666666666666663
+      ],
+      "per_replicate_mean_pp": [
+        5.029761904761902,
+        4.806547619047616,
+        6.175595238095236,
+        6.75595238095238,
+        6.458333333333331
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:dimension_interaction:128": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_p128_mask1": 0.3333333333333333,
+        "fixed_p128_mask1": -0.3333333333333333,
+        "resampled_p128_mask2": 0.3333333333333333,
+        "fixed_p128_mask2": -0.3333333333333333,
+        "resampled_p128_mask3": 0.3333333333333333,
+        "fixed_p128_mask3": -0.3333333333333333,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "dimensions",
+      "mean_difference_pp": -23.770833333333332,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 3.5889877601563223,
+      "model_95ci_pp": [
+        -31.52436999880365,
+        -16.017296667863015
+      ],
+      "model_90ci_pp": [
+        -30.12669161558229,
+        -17.414975051084376
+      ],
+      "between_subject_variance_pp2": 157.5173658806472,
+      "within_subject_run_variance_pp2": 114.07149057539684,
+      "t_statistic": -6.6232695461457824,
+      "p_two_sided": 1.6548139928002333e-05,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999872140123265,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -30.884002976190477,
+        -17.46421130952381
+      ],
+      "per_replicate_mean_pp": [
+        -24.657738095238095,
+        -22.648809523809526,
+        -19.851190476190478,
+        -24.494047619047617,
+        -27.202380952380953
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 4.9644419784006995e-05
+    },
+    "schirrmeister:dimension:512": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_p512_mask1": 0.3333333333333333,
+        "fixed_p512_mask1": -0.3333333333333333,
+        "resampled_p512_mask2": 0.3333333333333333,
+        "fixed_p512_mask2": -0.3333333333333333,
+        "resampled_p512_mask3": 0.3333333333333333,
+        "fixed_p512_mask3": -0.3333333333333333
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 14.500000000000002,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.4596801734596552,
+      "model_95ci_pp": [
+        11.346552704797592,
+        17.65344729520241
+      ],
+      "model_90ci_pp": [
+        11.915003633360387,
+        17.084996366639615
+      ],
+      "between_subject_variance_pp2": 27.135502518315022,
+      "within_subject_run_variance_pp2": 13.469122023809522,
+      "t_statistic": 9.933682914684582,
+      "p_two_sided": 1.9435445062303142e-07,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999997790692094,
+      "conditional_subject_bootstrap_95ci_pp": [
+        11.812425595238095,
+        17.226339285714285
+      ],
+      "per_replicate_mean_pp": [
+        12.410714285714288,
+        16.428571428571427,
+        13.586309523809524,
+        15.08928571428571,
+        14.985119047619047
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:dimension_interaction:512": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_p512_mask1": 0.3333333333333333,
+        "fixed_p512_mask1": -0.3333333333333333,
+        "resampled_p512_mask2": 0.3333333333333333,
+        "fixed_p512_mask2": -0.3333333333333333,
+        "resampled_p512_mask3": 0.3333333333333333,
+        "fixed_p512_mask3": -0.3333333333333333,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "dimensions",
+      "mean_difference_pp": -15.116071428571429,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 3.7791025246146646,
+      "model_95ci_pp": [
+        -23.280326072308355,
+        -6.951816784834504
+      ],
+      "model_90ci_pp": [
+        -21.80861029626984,
+        -8.423532560873017
+      ],
+      "between_subject_variance_pp2": 176.73838141025647,
+      "within_subject_run_variance_pp2": 116.02120535714286,
+      "t_statistic": -3.9999103835143335,
+      "p_two_sided": 0.00151233453455722,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9987518100133759,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -22.630952380952383,
+        -8.383854166666667
+      ],
+      "per_replicate_mean_pp": [
+        -17.27678571428571,
+        -11.026785714285717,
+        -12.440476190476192,
+        -16.16071428571429,
+        -18.675595238095237
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.00302466906911444
+    },
+    "schirrmeister:dimension:2048": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_p2048_mask1": 0.3333333333333333,
+        "fixed_p2048_mask1": -0.3333333333333333,
+        "resampled_p2048_mask2": 0.3333333333333333,
+        "fixed_p2048_mask2": -0.3333333333333333,
+        "resampled_p2048_mask3": 0.3333333333333333,
+        "fixed_p2048_mask3": -0.3333333333333333
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 20.520833333333332,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 1.6377455799220875,
+      "model_95ci_pp": [
+        16.982699115209176,
+        24.05896755145749
+      ],
+      "model_90ci_pp": [
+        17.62049499171942,
+        23.421171674947246
+      ],
+      "between_subject_variance_pp2": 32.35544967185592,
+      "within_subject_run_variance_pp2": 25.9774925595238,
+      "t_statistic": 12.529927471585404,
+      "p_two_sided": 1.242392894865779e-08,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999999886711841,
+      "conditional_subject_bootstrap_95ci_pp": [
+        17.374925595238093,
+        23.642857142857146
+      ],
+      "per_replicate_mean_pp": [
+        19.300595238095237,
+        22.172619047619047,
+        20.625,
+        21.145833333333332,
+        19.360119047619044
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:dimension_interaction:2048": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "resampled_p2048_mask1": 0.3333333333333333,
+        "fixed_p2048_mask1": -0.3333333333333333,
+        "resampled_p2048_mask2": 0.3333333333333333,
+        "fixed_p2048_mask2": -0.3333333333333333,
+        "resampled_p2048_mask3": 0.3333333333333333,
+        "fixed_p2048_mask3": -0.3333333333333333,
+        "resampled": -1,
+        "fixed": 1
+      },
+      "rule": "primary",
+      "family": "dimensions",
+      "mean_difference_pp": -9.095238095238093,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 3.3700400756718607,
+      "model_95ci_pp": [
+        -16.375767045743075,
+        -1.8147091447331123
+      ],
+      "model_90ci_pp": [
+        -15.06335461105952,
+        -3.1271215794166674
+      ],
+      "between_subject_variance_pp2": 127.34320150335778,
+      "within_subject_run_variance_pp2": 158.28590029761904,
+      "t_statistic": -2.6988516133372213,
+      "p_two_sided": 0.018233848654108435,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9840210113002764,
+      "conditional_subject_bootstrap_95ci_pp": [
+        -15.661160714285717,
+        -2.874925595238096
+      ],
+      "per_replicate_mean_pp": [
+        -10.386904761904761,
+        -5.282738095238097,
+        -5.4017857142857135,
+        -10.104166666666668,
+        -14.300595238095239
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1",
+      "family_complete": true,
+      "p_holm": 0.018233848654108435
+    },
+    "schirrmeister:refresh:0.05:batchnorm": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "refresh_q0.05_batchnorm": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 13.857142857142858,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 3.546440744531635,
+      "model_95ci_pp": [
+        6.195523430654148,
+        21.518762283631567
+      ],
+      "model_90ci_pp": [
+        7.576632505763236,
+        20.13765320852248
+      ],
+      "between_subject_variance_pp2": 150.38942307692307,
+      "within_subject_run_variance_pp2": 128.45982142857142,
+      "t_statistic": 3.907338048298032,
+      "p_two_sided": 0.0018010011283192448,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9984605641412934,
+      "conditional_subject_bootstrap_95ci_pp": [
+        7.731919642857143,
+        21.080580357142853
+      ],
+      "per_replicate_mean_pp": [
+        14.151785714285714,
+        12.187500000000002,
+        10.491071428571429,
+        16.428571428571427,
+        16.026785714285715
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:refresh:0.2:batchnorm": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "refresh_q0.2_batchnorm": 1,
+        "fixed": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 22.910714285714285,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 3.8376977293492556,
+      "model_95ci_pp": [
+        14.61987239824973,
+        31.20155617317884
+      ],
+      "model_90ci_pp": [
+        16.1144072131067,
+        29.70702135832187
+      ],
+      "between_subject_variance_pp2": 180.39908138736263,
+      "within_subject_run_variance_pp2": 128.95926339285714,
+      "t_statistic": 5.969911103342464,
+      "p_two_sided": 4.6696144875732445e-05,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9999640993102101,
+      "conditional_subject_bootstrap_95ci_pp": [
+        16.03549107142857,
+        30.5625
+      ],
+      "per_replicate_mean_pp": [
+        23.973214285714285,
+        21.339285714285715,
+        19.017857142857142,
+        25.3125,
+        24.910714285714285
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:refresh:0.05:none": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "refresh_q0.05_none": 1,
+        "fixed_none": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 1.9821428571428563,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.4317930652261498,
+      "model_95ci_pp": [
+        1.0493106529502887,
+        2.914975061335424
+      ],
+      "model_90ci_pp": [
+        1.2174660977783296,
+        2.7468196165073833
+      ],
+      "between_subject_variance_pp2": 0.06614869505494436,
+      "within_subject_run_variance_pp2": 12.720424107142861,
+      "t_statistic": 4.590492568713945,
+      "p_two_sided": 0.0005063778464382965,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.979737775969432,
+      "conditional_subject_bootstrap_95ci_pp": [
+        1.205357142857142,
+        2.8124999999999996
+      ],
+      "per_replicate_mean_pp": [
+        0.9374999999999982,
+        4.24107142857143,
+        1.6517857142857133,
+        1.9196428571428588,
+        1.1607142857142845
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    },
+    "schirrmeister:refresh:0.2:none": {
+      "dataset": "schirrmeister",
+      "terms": {
+        "refresh_q0.2_none": 1,
+        "fixed_none": -1
+      },
+      "rule": "primary",
+      "family": null,
+      "mean_difference_pp": 2.749999999999999,
+      "n_subjects": 14,
+      "paired_replicates": 5,
+      "model_standard_error_pp": 0.6017659451541377,
+      "model_95ci_pp": [
+        1.449963713562293,
+        4.050036286437705
+      ],
+      "model_90ci_pp": [
+        1.6843125911589318,
+        3.8156874088410664
+      ],
+      "between_subject_variance_pp2": 1.9541981456043946,
+      "within_subject_run_variance_pp2": 15.577566964285719,
+      "t_statistic": 4.56988306191971,
+      "p_two_sided": 0.0005257376143624489,
+      "equivalence_margin_pp": 1.0,
+      "p_equivalence": 0.9938918490009891,
+      "conditional_subject_bootstrap_95ci_pp": [
+        1.6249999999999996,
+        3.9374999999999996
+      ],
+      "per_replicate_mean_pp": [
+        1.562499999999999,
+        3.9285714285714293,
+        2.6339285714285685,
+        2.3214285714285716,
+        3.303571428571427
+      ],
+      "uncertainty_model": "balanced normal random-intercept moments; t df=n_subjects-1"
+    }
+  },
+  "limitations": [
+    "Previously inspected E partitions; new runs are protocol-locked, not historically untouched.",
+    "Only complete declared grids are analyzed; cross-dataset Holm adjustment awaits every family member.",
+    "Random-intercept t intervals assume approximately normal effects; bootstrap intervals are conditional sensitivities."
+  ]
+}
