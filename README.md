@@ -1,5 +1,7 @@
 # Fixed and resampled permutations are distinct controls in connectivity-augmented EEG decoding
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24112584.svg)](https://doi.org/10.5281/zenodo.24112584)
+
 This repository contains code and evidence for the original submission and the
 September 2026 revision. Public source EEG datasets are obtained from their
 providers and are not redistributed here.
@@ -13,6 +15,9 @@ controls in connectivity-augmented EEG decoding. *Digital Signal Processing*,
 The article's data and code availability statement cites the anonymized review
 mirror of this repository. This public repository is the de-anonymized source.
 Citation metadata is in [CITATION.cff](CITATION.cff).
+
+This code and evidence are archived on Zenodo: https://doi.org/10.5281/zenodo.24112584
+(all versions; v1.0.0 is https://doi.org/10.5281/zenodo.24112585).
 
 ## Current revision
 

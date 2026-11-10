@@ -3,6 +3,7 @@ message: "If you use this code or evidence, please cite the article."
 title: "Code and evidence: Fixed and resampled permutations are distinct controls in connectivity-augmented EEG decoding"
 type: software
 license: MIT
+doi: "10.5281/zenodo.24112584"
 repository-code: "https://github.com/gbanyan/plv-eegnet-control-benchmark"
 authors:
   - family-names: Huang
