@@ -1,7 +1,8 @@
 # Permutation scheduling in connectivity-augmented EEG decoding
 
-An anonymized code-and-results deposit for a manuscript submitted to *Digital
-Signal Processing*. The repository contains the final analysis inputs, the
+The code-and-results deposit for the original submission to *Digital Signal
+Processing*, anonymized for peer review and now de-anonymized. The published
+article is https://doi.org/10.1016/j.dsp.2026.106598. The repository contains the final analysis inputs, the
 controlled-experiment manifest, compressed checkpoint predictions, verification
 code, and rendered figures. Public EEG datasets are downloaded through MOABB and
 are not redistributed.
@@ -107,5 +108,4 @@ arrays and hashes define the analyzed checkpoint-evaluation snapshot.
 
 ## License
 
-MIT. See `LICENSE`. Copyright is held by “The Authors” pending
-de-anonymization.
+MIT. See `LICENSE`. Copyright (c) 2026 Jing-Rung Huang and Wen-Hsiang Lu.

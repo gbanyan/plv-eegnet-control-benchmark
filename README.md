@@ -4,6 +4,16 @@ This repository contains code and evidence for the original submission and the
 September 2026 revision. Public source EEG datasets are obtained from their
 providers and are not redistributed here.
 
+## Article
+
+Jing-Rung Huang and Wen-Hsiang Lu. Fixed and resampled permutations are distinct
+controls in connectivity-augmented EEG decoding. *Digital Signal Processing*,
+185, 106598 (2026). https://doi.org/10.1016/j.dsp.2026.106598
+
+The article's data and code availability statement cites the anonymized review
+mirror of this repository. This public repository is the de-anonymized source.
+Citation metadata is in [CITATION.cff](CITATION.cff).
+
 ## Current revision
 
 Start with **[revision_20260921/README.md](revision_20260921/README.md)**.
@@ -30,5 +40,5 @@ three-seed/20-draw analysis with the revision's ten-replicate/100-draw core.
 
 ## License
 
-See [LICENSE](LICENSE). Third-party code retains its accompanying license and
+MIT; see [LICENSE](LICENSE). Third-party code retains its accompanying license and
 provenance. Data access remains governed by the original dataset providers.

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code or evidence, please cite the article."
+title: "Code and evidence: Fixed and resampled permutations are distinct controls in connectivity-augmented EEG decoding"
+type: software
+license: MIT
+repository-code: "https://github.com/gbanyan/plv-eegnet-control-benchmark"
+authors:
+  - family-names: Huang
+    given-names: Jing-Rung
+    orcid: "https://orcid.org/0000-0003-4776-3550"
+  - family-names: Lu
+    given-names: Wen-Hsiang
+    orcid: "https://orcid.org/0009-0002-5149-6790"
+preferred-citation:
+  type: article
+  title: "Fixed and resampled permutations are distinct controls in connectivity-augmented EEG decoding"
+  authors:
+    - family-names: Huang
+      given-names: Jing-Rung
+      orcid: "https://orcid.org/0000-0003-4776-3550"
+    - family-names: Lu
+      given-names: Wen-Hsiang
+      orcid: "https://orcid.org/0009-0002-5149-6790"
+  journal: "Digital Signal Processing"
+  volume: 185
+  start: 106598
+  year: 2026
+  doi: "10.1016/j.dsp.2026.106598"
